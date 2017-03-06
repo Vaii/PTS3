@@ -1,6 +1,6 @@
 # PTS3
 
-Onderwerp: Proftaak Hub (Hopelijk)
+Onderwerp: Proftaak Hub
 
 
 Regels over het programmeren:
