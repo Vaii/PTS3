@@ -1,4 +1,4 @@
-package sample;
+package phub.login;
 
 public interface Auth {
 }

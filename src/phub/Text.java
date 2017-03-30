@@ -1,4 +1,4 @@
-package sample;
+package phub;
 
 public class Text extends WhiteboardItem {
 
