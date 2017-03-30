@@ -1,4 +1,6 @@
-package sample;
+package phub;
+
+import java.awt.*;
 
 public class WhiteboardItem {
 

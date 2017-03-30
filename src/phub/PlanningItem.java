@@ -1,9 +1,11 @@
-package sample;
+package phub;
+
+import java.util.Date;
 
 public class PlanningItem {
 
 	private String Title;
-	private DateTime DateTime;
+	private Date DateTime;
 	private String Description;
 
 }
