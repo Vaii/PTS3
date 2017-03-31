@@ -7,4 +7,7 @@ public class User {
 	private UserType UserType;
 	private int attribute;
 
+	public User(){
+
+	}
 }
