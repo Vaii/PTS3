@@ -8,7 +8,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 
-<GridPane alignment="center" hgap="10" prefHeight="646.0" prefWidth="650.0" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="phub.LoginController">
+<GridPane alignment="center" hgap="10" prefHeight="646.0" prefWidth="650.0" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="phub.login.LoginController">
    <columnConstraints>
       <ColumnConstraints />
    </columnConstraints>

@@ -1,4 +1,4 @@
-package phub;
+package phub.Whiteboard;
 
 public class Text extends WhiteboardItem {
 
@@ -8,4 +8,8 @@ public class Text extends WhiteboardItem {
 
 	}
 
+    @Override
+    void paintUsing(Paintable paintable) {
+
+    }
 }

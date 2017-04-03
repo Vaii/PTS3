@@ -1,4 +1,4 @@
-package phub;
+package phub.Whiteboard;
 
 import java.util.ArrayList;
 
@@ -11,6 +11,13 @@ public class Whiteboard {
 	}
 
 	private String Name;
+
+	public void paintUsing(Paintable paintable){
+
+	    for(WhiteboardItem x : items){
+	        x.paintUsing(paintable);
+        }
+    }
 
 
 

@@ -1,4 +1,4 @@
-package phub;
+package phub.login;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
