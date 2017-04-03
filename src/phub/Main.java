@@ -5,14 +5,18 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import phub.Whiteboard.WhiteboardController;
 
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("LoginScreen.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Whiteboard.fxml"));
+        Parent root = (Parent)loader.load();
         primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setScene(new Scene(root));
+        WhiteboardController controller = loader.getController();
+        controller.setPictureStage(primaryStage);
         primaryStage.show();
     }
 
