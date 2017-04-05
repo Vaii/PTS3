@@ -1,7 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e56203ed-7ce8-4650-a80d-5daf53d63e7a" name="Default" comment="" />
+    <list default="true" id="e56203ed-7ce8-4650-a80d-5daf53d63e7a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/phub/Chat.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/phub/Main.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/phub/Message.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/phub/Planning.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/phub/PlanningItem.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/phub/PlanningSection.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/phub/Service.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/phub/Storage.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/phub/User.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/phub/UserType.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/phub/VersionControl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/phub/Whiteboard/JavaFXPaintable.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/phub/Whiteboard/Paintable.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/phub/Whiteboard/Picture.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/phub/Whiteboard/Point.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/phub/Whiteboard/Text.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/phub/Whiteboard/TextController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/phub/Whiteboard/Video.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/phub/Whiteboard/Whiteboard.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/phub/Whiteboard/WhiteboardController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/phub/Whiteboard/WhiteboardItem.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/phub/login/Auth.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/phub/login/Fontys.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/phub/login/Git.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/phub/login/Google.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/phub/login/LoginController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/excludeFromValidation.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/phub/Whiteboard.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/phub/Whiteboard/Text.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/phub/Chat.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/phub/Message.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/phub/Planning.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/phub/PlanningSection.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/phub/UserType.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/phub/Whiteboard.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/phub/Whiteboard/JavaFXPaintable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/phub/Whiteboard/Paintable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/phub/Whiteboard/Picture.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/phub/Whiteboard/Point.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/phub/Whiteboard/Text.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/phub/Whiteboard/Text.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/phub/Whiteboard/TextController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/phub/Whiteboard/Video.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/phub/Whiteboard/Whiteboard.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/phub/Whiteboard/WhiteboardController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/phub/Whiteboard/WhiteboardItem.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/phub/login/Auth.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/phub/login/Fontys.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/phub/login/Git.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/phub/login/Google.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/phub/login/LoginController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/phub/login/LoginScreen.fxml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/Auth.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/Chat.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/Controller.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/Fontys.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/Google.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/Message.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/Picture.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/Planning.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/PlanningSection.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/Project.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/Text.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/UserType.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/Video.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/Whiteboard.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/WhiteboardItem.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/sample.fxml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/sample/Main.java" afterPath="$PROJECT_DIR$/src/phub/Main.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/sample/PlanningItem.java" afterPath="$PROJECT_DIR$/src/phub/PlanningItem.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/sample/Service.java" afterPath="$PROJECT_DIR$/src/phub/Service.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/sample/Storage.java" afterPath="$PROJECT_DIR$/src/phub/Storage.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/sample/User.java" afterPath="$PROJECT_DIR$/src/phub/User.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/sample/VersionControl.java" afterPath="$PROJECT_DIR$/src/phub/VersionControl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/PTS3.iml" afterPath="$PROJECT_DIR$/.idea/PTS3.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +95,18 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Picture.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Picture.java">
+      <file leaf-file-name="Git.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Git.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Git.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/phub/login/Git.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
               <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
@@ -26,7 +116,7 @@
         </entry>
       </file>
       <file leaf-file-name="Auth.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Auth.java">
+        <entry file="file://$PROJECT_DIR$/src/phub/login/Auth.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
               <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
@@ -35,21 +125,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Chat.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Chat.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-              <folding />
-            </state>
+      <file leaf-file-name="LoginScreen.fxml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/phub/login/LoginScreen.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="208">
+              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -72,8 +155,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="7" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
@@ -92,8 +174,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -120,13 +200,51 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sample" />
+              <option name="myItemId" value="PTS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PTS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phub" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PTS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PTS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phub" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="login" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -139,7 +257,27 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="js.eslint.eslintPackage" value="" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
+    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="phub.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="phub.Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="PTS3" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -520,6 +658,14 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -533,14 +679,16 @@
       <updated>1490552705472</updated>
       <workItem from="1490552706809" duration="25000" />
       <workItem from="1491204136858" duration="2000" />
+      <workItem from="1491324415736" duration="706000" />
+      <workItem from="1491394208278" duration="1018000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27000" />
+    <option name="totallyTimeSpent" value="1751000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="7" y="0" width="1382" height="744" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -552,13 +700,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25340393" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26096824" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -570,6 +718,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -584,8 +733,12 @@
     <breakpoint-manager />
     <watches-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sample/Picture.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Git.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
@@ -593,7 +746,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Auth.java">
+    <entry file="file://$PROJECT_DIR$/src/phub/login/Git.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/phub/login/Auth.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
@@ -601,15 +762,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Chat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/src/phub/login/LoginScreen.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -617,7 +773,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Picture.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Picture.java" />
+    <entry file="file://$PROJECT_DIR$/src/sample/Auth.java" />
+    <entry file="file://$PROJECT_DIR$/src/sample/Chat.java" />
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java" />
+    <entry file="file://$PROJECT_DIR$/src/sample/Picture.java" />
+    <entry file="file://$PROJECT_DIR$/src/sample/Auth.java" />
+    <entry file="file://$PROJECT_DIR$/src/sample/Chat.java" />
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java" />
+    <entry file="file://$PROJECT_DIR$/src/sample/Git.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
@@ -625,7 +789,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Auth.java">
+    <entry file="file://$PROJECT_DIR$/src/phub/login/Git.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/phub/login/Auth.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
@@ -633,18 +805,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Chat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/src/phub/login/LoginScreen.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="208">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding />
         </state>
       </provider>
