@@ -1,0 +1,79 @@
+package git;
+
+import org.eclipse.egit.github.core.Repository;
+import org.eclipse.egit.github.core.RepositoryCommit;
+import org.eclipse.egit.github.core.client.GitHubClient;
+import org.eclipse.egit.github.core.service.*;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created by Ken on 1-4-2017.
+ * Source open desktop: http://stackoverflow.com/questions/5226212/how-to-open-the-default-webbrowser-using-java
+ */
+
+public class Git {
+    GitHubClient client;
+    List repositorys;
+    List commits;
+    CommitService commitService;
+    UserService userService;
+    boolean isLoggedIn;
+
+    public Git() {
+        client = new GitHubClient();
+        userService = new UserService(client);
+        repositorys = new ArrayList<GitRepository>();
+        commits = new ArrayList<RepositoryCommit>();
+        isLoggedIn = false;
+    }
+
+    public boolean login(String username, String pwd) throws IOException {
+        if (username != null && pwd != null) {
+            client.setCredentials(username, pwd);
+            isLoggedIn = true;
+            System.out.println("Owned private repo's: " + userService.getUser().getOwnedPrivateRepos());
+            return true;
+        }
+        return false;
+    }
+    public boolean login(OAuthService service)
+    {
+      //  service.
+        return true;
+    }
+
+    public void logout(){
+        client = new GitHubClient();
+        userService = new UserService(client);
+        isLoggedIn = false;
+    }
+
+    public void getAllRepos() throws IOException {
+        RepositoryService repos = new RepositoryService(client);
+        for (Repository repo : repos.getRepositories()){
+            GitRepository gitRepo = new GitRepository(repo);
+            this.repositorys.add(gitRepo);
+        }
+    }
+
+    public void getCommits(GitRepository GitRepository) throws IOException {
+        commits.clear();
+        commitService = new CommitService(client);
+        for (RepositoryCommit com : commitService.getCommits(GitRepository.repository)){
+            GitCommit commit = new GitCommit(com);
+            commits.add(commit);
+        }
+    }
+  /*  public void downloadApp(GitRepository repo) throws URISyntaxException, IOException {
+        DownloadService downloadService = new DownloadService();
+        Download download = new Download();
+        FileDialog fileDialog = new FileDialog();
+        downloadService.createDownload(repo,download)
+        if(Desktop.isDesktopSupported()){
+            Desktop.getDesktop().browse(new URI(download.getHtmlUrl().toString()));
+        }
+    }*/
+}

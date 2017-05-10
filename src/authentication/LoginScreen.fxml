@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<GridPane alignment="center" hgap="10" prefHeight="646.0" prefWidth="650.0" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="phub.login.LoginController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="646.0" prefWidth="665.0">
+         <children>
+            <TextField fx:id="userName" layoutX="286.0" layoutY="226.0" />
+            <TextField fx:id="password" layoutX="286.0" layoutY="260.0" />
+            <Button fx:id="login" layoutX="286.0" layoutY="296.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="167.0" text="Login" />
+            <Label layoutX="197.0" layoutY="231.0" text="PCN Nummer:" />
+            <Label layoutX="200.0" layoutY="265.0" text="Wachtwoord:" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
