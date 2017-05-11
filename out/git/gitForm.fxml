@@ -18,16 +18,16 @@
                 <Button fx:id="btnLogout" layoutX="740.0" layoutY="2.0" mnemonicParsing="false" onAction="#logout" text="Logout" />
             </children>
         </AnchorPane>
-        <AnchorPane fx:id="apLogin" layoutX="2.0" layoutY="2.0" prefHeight="145.0" prefWidth="549.0">
+        <AnchorPane fx:id="apLogin" prefHeight="118.0" prefWidth="438.0">
             <children>
-                <TextField fx:id="tbUsername" layoutX="133.0" layoutY="25.0" prefHeight="25.0" prefWidth="149.0" />
-                <Label fx:id="lblUsername" layoutX="57.0" layoutY="29.0" text=" Username:" />
-                <Label fx:id="lblPassword" layoutX="60.0" layoutY="58.0" text="Password:" />
-                <PasswordField fx:id="pwfPass" layoutX="133.0" layoutY="54.0" />
-                <CheckBox fx:id="chkUserPass" layoutX="291.0" layoutY="29.0" mnemonicParsing="false" selected="true" text="Username &amp; password" />
-                <TextField fx:id="tbToken" layoutX="343.0" layoutY="54.0" prefHeight="25.0" prefWidth="149.0" />
-                <Button fx:id="btnLogin" layoutX="245.0" layoutY="101.0" mnemonicParsing="false" onMouseClicked="#login" prefHeight="25.0" prefWidth="60.0" text="Login" />
-                <Label fx:id="lblPassword1" layoutX="291.0" layoutY="58.0" text="Token:" />
+                <TextField fx:id="tbUsername" layoutX="79.0" layoutY="25.0" prefHeight="25.0" prefWidth="149.0" />
+                <Label fx:id="lblUsername" layoutX="3.0" layoutY="29.0" text=" Username:" />
+                <Label fx:id="lblPassword" layoutX="6.0" layoutY="58.0" text="Password:" />
+                <PasswordField fx:id="pwfPass" layoutX="79.0" layoutY="54.0" />
+                <CheckBox fx:id="chkUserPass" layoutX="237.0" layoutY="29.0" mnemonicParsing="false" selected="true" text="Username &amp; password" />
+                <TextField fx:id="tbToken" layoutX="289.0" layoutY="54.0" prefHeight="25.0" prefWidth="149.0" />
+                <Button fx:id="btnLogin" layoutX="191.0" layoutY="101.0" mnemonicParsing="false" onMouseClicked="#login" prefHeight="25.0" prefWidth="60.0" text="Login" />
+                <Label fx:id="lblPassword1" layoutX="237.0" layoutY="58.0" text="Token:" />
             </children>
         </AnchorPane>
     </children>
