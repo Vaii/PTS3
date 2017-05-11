@@ -1,0 +1,26 @@
+<component name="libraryTable">
+  <library name="android-4.1.1.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/android-4.1.1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-codec-1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/dropbox-core-sdk-1.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/fontawesomefx-8.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/gson-2.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/httpclient-4.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/httpcore-4.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-core-2.3.0-rc1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-core-2.7.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/json-20080701.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/opengl-api-gl1.1-android-2.1_r1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org.eclipse.egit.github.core-2.1.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/sdk-1.6-beta-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/servlet-api-2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/servlet-api-2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/xmlParserAPIs-2.6.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/xpp3-1.1.4c.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
