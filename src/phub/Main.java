@@ -13,7 +13,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Whiteboard.fxml"));
         Parent root = (Parent)loader.load();
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("Whiteboard");
         primaryStage.setScene(new Scene(root));
         WhiteboardController controller = loader.getController();
         controller.setPictureStage(primaryStage);
