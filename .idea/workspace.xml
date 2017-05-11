@@ -2,208 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e56203ed-7ce8-4650-a80d-5daf53d63e7a" name="Default" comment="Merge branch 'master' of https://github.com/Vaii/PTS3&#10;&#10;# Conflicts:&#10;#&#9;out/phub/Main.class&#10;#&#9;src/phub/Main.java&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/android-4.1.1.4.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/commons-codec-1.3.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/commons-logging-1.1.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/dropbox-core-sdk-1.7.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/fontawesomefx-8.9.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gson-2.2.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/httpclient-4.0.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/httpcore-4.0.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jackson-core-2.3.0-rc1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jackson-core-2.7.4.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/json-20080701.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/opengl-api-gl1.1-android-2.1_r1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/org.eclipse.egit.github.core-2.1.5.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/sdk-1.6-beta-1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/servlet-api-2.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/servlet-api-2.5.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/xmlParserAPIs-2.6.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/xpp3-1.1.4c.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/authentication/Auth.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/authentication/Fontys.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/authentication/Git.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/authentication/Google.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/authentication/LoginController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/chat/chatPanelController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/domain/Color$ColorConstants.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/domain/Color.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/domain/InputValidator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/domain/User.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/domain/UserType.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/domain/Utility.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/git/Git.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/git/GitCommit.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/git/GitController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/git/GitRepository.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/git/Main.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/launcher/LauncherController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/launcher/Main.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/authentication/Auth.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/authentication/Fontys.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/authentication/Git.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/authentication/Google.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/authentication/LoginController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/chat/chatPanelController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/domain/Color$ColorConstants.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/domain/Color.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/domain/InputValidator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/domain/User.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/domain/UserType.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/domain/Utility.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/git/Git.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/git/GitCommit.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/git/GitController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/git/GitRepository.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/git/Main.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/launcher/LauncherController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/launcher/Main.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/scheduling/NewItemBoxController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/scheduling/Schedule.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/scheduling/ScheduleConfig.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/scheduling/ScheduleItem.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/scheduling/ScheduleItemStatus$ScheduleItemStatusConstants.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/scheduling/ScheduleItemStatus.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/scheduling/ScheduleListViewCell.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/scheduling/ScheduleSection.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/scheduling/SchedulingController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/storage/Folder.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/storage/StorageController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/storage/StorageDropbox.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/storage/Storageable.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/whiteboard/Delta.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/whiteboard/Picture.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/whiteboard/Text.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/whiteboard/TextController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/whiteboard/Video.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/whiteboard/VideoController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/whiteboard/Whiteboard.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/whiteboard/WhiteboardController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/whiteboard/WhiteboardItem.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/android_4_1_1_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_fasterxml_jackson_core_jackson_annotations_2_7_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/chat/chatPanel.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/git/gitForm.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/launcher/launcher.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/authentication/LoginScreen.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/chat/chatPanel.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/git/gitForm.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/launcher/launcher.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/scheduling/NewItemBox.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/scheduling/ScheduleListViewCell.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/scheduling/Scheduling.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/storage/Storage.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/whiteboard/Text.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/whiteboard/Video.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/whiteboard/Whiteboard.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/authentication/LoginScreen.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chat/chatPanel.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chat/chatPanelController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domain/Color.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domain/InputValidator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domain/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domain/UserType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domain/Utility.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/git/Git.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/git/GitCommit.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/git/GitController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/git/GitRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/git/Main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/git/gitForm.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/launcher/LauncherController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/launcher/Main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/launcher/launcher.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scheduling/NewItemBox.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scheduling/NewItemBoxController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scheduling/Schedule.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scheduling/ScheduleConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scheduling/ScheduleItem.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scheduling/ScheduleItemStatus.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scheduling/ScheduleListViewCell.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scheduling/ScheduleListViewCell.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scheduling/ScheduleSection.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scheduling/Scheduling.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scheduling/SchedulingController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/storage/Folder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/storage/Storage.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/storage/StorageController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/storage/StorageDropbox.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/storage/Storageable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/whiteboard/Delta.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/whiteboard/Picture.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/whiteboard/Text.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/whiteboard/Text.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/whiteboard/TextController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/whiteboard/Video.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/whiteboard/Video.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/whiteboard/VideoController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/whiteboard/Whiteboard.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/whiteboard/Whiteboard.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/whiteboard/WhiteboardController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/whiteboard/WhiteboardItem.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/phub/Chat.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/phub/Message.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/phub/Planning.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/phub/PlanningItem.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/phub/PlanningSection.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/phub/Service.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/phub/Storage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/phub/User.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/phub/UserType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/phub/VersionControl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/phub/Whiteboard.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/phub/Whiteboard/JavaFXPaintable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/phub/Whiteboard/Paintable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/phub/Whiteboard/Picture.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/phub/Whiteboard/Text.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/phub/Whiteboard/Text.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/phub/Whiteboard/TextController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/phub/Whiteboard/Video.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/phub/Whiteboard/Whiteboard.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/phub/Whiteboard/WhiteboardController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/phub/Whiteboard/WhiteboardItem.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/phub/login/Auth.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/phub/login/Fontys.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/phub/login/Git.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/phub/login/Google.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/phub/login/LoginController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/sample/Git.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/phub/Chat.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/phub/Main.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/phub/Message.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/phub/Planning.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/phub/PlanningItem.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/phub/PlanningSection.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/phub/Service.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/phub/Storage.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/phub/User.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/phub/UserType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/phub/VersionControl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/phub/Whiteboard.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/phub/Whiteboard/JavaFXPaintable.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/phub/Whiteboard/Paintable.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/phub/Whiteboard/Picture.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/phub/Whiteboard/Text.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/phub/Whiteboard/Text.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/phub/Whiteboard/TextController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/phub/Whiteboard/Video.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/phub/Whiteboard/Whiteboard.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/phub/Whiteboard/WhiteboardController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/phub/Whiteboard/WhiteboardItem.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/Git.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Phub.iml" afterPath="$PROJECT_DIR$/ProftaakHub.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/out/phub/Whiteboard/Point.class" afterPath="$PROJECT_DIR$/out/production/ProftaakHub/whiteboard/Point.class" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/phub/Whiteboard/Point.java" afterPath="$PROJECT_DIR$/src/whiteboard/Point.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/phub/login/Auth.java" afterPath="$PROJECT_DIR$/src/authentication/Auth.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/phub/login/Fontys.java" afterPath="$PROJECT_DIR$/src/authentication/Fontys.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/phub/login/Git.java" afterPath="$PROJECT_DIR$/src/authentication/Git.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/phub/login/Google.java" afterPath="$PROJECT_DIR$/src/authentication/Google.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/phub/login/LoginController.java" afterPath="$PROJECT_DIR$/src/authentication/LoginController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/phub/login/LoginScreen.fxml" afterPath="$PROJECT_DIR$/out/authentication/LoginScreen.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/phub/Main.class" afterPath="$PROJECT_DIR$/out/phub/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/PTS3.iml" afterPath="$PROJECT_DIR$/.idea/PTS3.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/git/gitForm.fxml" afterPath="$PROJECT_DIR$/out/git/gitForm.fxml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -222,7 +22,7 @@
         <entry file="file://$PROJECT_DIR$/src/storage/Folder.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -262,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GitController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GitController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/git/GitController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2006">
-              <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+            <state relative-caret-position="138">
+              <caret line="113" column="35" lean-forward="true" selection-start-line="113" selection-start-column="35" selection-end-line="113" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -280,7 +80,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="578">
               <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding />
+              <folding>
+                <marker date="1494519439046" expanded="true" signature="2430:2457" ph="..." />
+                <marker date="1494519439046" expanded="true" signature="2430:2479" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -295,7 +98,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/git/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
@@ -370,9 +173,9 @@
         <option value="$PROJECT_DIR$/src/phub/Main.java" />
         <option value="$PROJECT_DIR$/src/git/Git.java" />
         <option value="$PROJECT_DIR$/src/git/GitCommit.java" />
-        <option value="$PROJECT_DIR$/src/git/GitController.java" />
         <option value="$PROJECT_DIR$/src/git/gitForm.fxml" />
         <option value="$PROJECT_DIR$/src/git/GitRepository.java" />
+        <option value="$PROJECT_DIR$/src/git/GitController.java" />
       </list>
     </option>
   </component>
@@ -386,7 +189,7 @@
     <option name="x" value="1358" />
     <option name="y" value="-8" />
     <option name="width" value="1040" />
-    <option name="height" value="744" />
+    <option name="height" value="784" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -1026,34 +829,42 @@
       <workItem from="1491208341288" duration="13000" />
       <workItem from="1491397229218" duration="127000" />
       <workItem from="1491986382398" duration="516000" />
-      <workItem from="1494517192325" duration="850000" />
+      <workItem from="1494517192325" duration="2290000" />
     </task>
+    <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/Vaii/PTS3&#10;&#10;# Conflicts:&#10;#&#9;out/phub/Main.class&#10;#&#9;src/phub/Main.java&#10;">
+      <created>1494519620746</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1494519620746</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18750000" />
+    <option name="totallyTimeSpent" value="20190000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1040" height="744" extended-state="6" />
+    <frame x="1358" y="-8" width="1040" height="784" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.48108926" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.477551" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.5102041" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30568355" sideWeight="0.37448978" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.63061225" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.48979592" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30568355" sideWeight="0.6255102" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.48979592" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3877551" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3877551" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1074,6 +885,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Merge branch 'master' of https://github.com/Vaii/PTS3&#10;&#10;# Conflicts:&#10;#&#9;out/phub/Main.class&#10;#&#9;src/phub/Main.java&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/Vaii/PTS3&#10;&#10;# Conflicts:&#10;#&#9;out/phub/Main.class&#10;#&#9;src/phub/Main.java&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1146,7 +961,7 @@
     <entry file="file://$PROJECT_DIR$/src/storage/Folder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1179,14 +994,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/git/GitController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2006">
-          <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/git/gitForm.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -1194,7 +1001,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1494519439046" expanded="true" signature="2430:2457" ph="..." />
+            <marker date="1494519439046" expanded="true" signature="2430:2479" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1210,6 +1020,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/git/GitController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="113" column="35" lean-forward="true" selection-start-line="113" selection-start-column="35" selection-end-line="113" selection-end-column="35" />
           <folding />
         </state>
       </provider>
