@@ -825,7 +825,7 @@
       <workItem from="1491397229218" duration="127000" />
       <workItem from="1491986382398" duration="516000" />
       <workItem from="1494517192325" duration="2290000" />
-      <workItem from="1494521419460" duration="380000" />
+      <workItem from="1494521419460" duration="415000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/Vaii/PTS3&#10;&#10;# Conflicts:&#10;#&#9;out/phub/Main.class&#10;#&#9;src/phub/Main.java&#10;">
       <created>1494519620746</created>
@@ -838,7 +838,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20570000" />
+    <option name="totallyTimeSpent" value="20605000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1040" height="784" extended-state="6" />
