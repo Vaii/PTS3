@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e56203ed-7ce8-4650-a80d-5daf53d63e7a" name="Default" comment="Merge branch 'master' of https://github.com/Vaii/PTS3&#10;&#10;# Conflicts:&#10;#&#9;out/phub/Main.class&#10;#&#9;src/phub/Main.java&#10;" />
+    <list default="true" id="e56203ed-7ce8-4650-a80d-5daf53d63e7a" name="Default" comment="" />
     <list id="0791cb11-4dc5-49b6-a009-80a09a7aeee5" name="Failed commit: Default" comment="Bug fixes/Interface fixes" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -86,8 +86,8 @@
       <file leaf-file-name="GitRepository.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/git/GitRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="23" column="15" lean-forward="true" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+            <state relative-caret-position="17">
+              <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -168,9 +168,9 @@
         <option value="$PROJECT_DIR$/src/phub/Main.java" />
         <option value="$PROJECT_DIR$/src/git/Git.java" />
         <option value="$PROJECT_DIR$/src/git/GitCommit.java" />
-        <option value="$PROJECT_DIR$/src/git/GitRepository.java" />
         <option value="$PROJECT_DIR$/src/git/GitController.java" />
         <option value="$PROJECT_DIR$/src/git/gitForm.fxml" />
+        <option value="$PROJECT_DIR$/src/git/GitRepository.java" />
       </list>
     </option>
   </component>
@@ -825,7 +825,7 @@
       <workItem from="1491397229218" duration="127000" />
       <workItem from="1491986382398" duration="516000" />
       <workItem from="1494517192325" duration="2290000" />
-      <workItem from="1494521419460" duration="415000" />
+      <workItem from="1494521419460" duration="966000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/Vaii/PTS3&#10;&#10;# Conflicts:&#10;#&#9;out/phub/Main.class&#10;#&#9;src/phub/Main.java&#10;">
       <created>1494519620746</created>
@@ -834,11 +834,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494519620746</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Merge branch 'master' of https://github.com/Vaii/PTS3&#10;&#10;# Conflicts:&#10;#&#9;out/phub/Main.class&#10;#&#9;src/phub/Main.java&#10;">
+      <created>1494523036424</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1494523036424</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20605000" />
+    <option name="totallyTimeSpent" value="21156000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1040" height="784" extended-state="6" />
@@ -883,9 +890,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Merge branch 'master' of https://github.com/Vaii/PTS3&#10;&#10;# Conflicts:&#10;#&#9;out/phub/Main.class&#10;#&#9;src/phub/Main.java&#10;" />
     <MESSAGE value="Bug fixes/Interface fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug fixes/Interface fixes" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/Vaii/PTS3&#10;&#10;# Conflicts:&#10;#&#9;out/phub/Main.class&#10;#&#9;src/phub/Main.java&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/Vaii/PTS3&#10;&#10;# Conflicts:&#10;#&#9;out/phub/Main.class&#10;#&#9;src/phub/Main.java&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1006,8 +1013,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/git/GitRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="23" column="15" lean-forward="true" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+        <state relative-caret-position="17">
+          <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
           <folding />
         </state>
       </provider>
