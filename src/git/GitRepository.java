@@ -1,5 +1,5 @@
 package git;
-//test
+
 import org.eclipse.egit.github.core.Repository;
 
 public class GitRepository {
