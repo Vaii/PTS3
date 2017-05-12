@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane minWidth="566.0" prefHeight="521.0" prefWidth="832.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="git.GitController">
+    <children>
+        <AnchorPane fx:id="apLists" layoutX="18.0" layoutY="6.0" prefHeight="512.0" prefWidth="801.0">
+            <children>
+                <ListView fx:id="lvRepo" layoutX="12.0" layoutY="49.0" prefHeight="459.0" prefWidth="340.0" />
+                <Label fx:id="lblRepo" layoutX="14.0" layoutY="6.0" text="Repositorys:" />
+                <Label fx:id="lblCom" layoutX="461.0" layoutY="6.0" text="Commits:" />
+                <ListView fx:id="lvCommit" layoutX="461.0" layoutY="49.0" prefHeight="459.0" prefWidth="340.0" />
+                <Button fx:id="btnShowCommits" layoutX="359.0" layoutY="175.0" mnemonicParsing="false" onMouseClicked="#showCommits" text="Show Commits" />
+                <Label fx:id="lblRepoList" layoutX="14.0" layoutY="29.0" text="Private - Repository - Language" />
+                <Label fx:id="lblComList" layoutX="461.0" layoutY="29.0" text="Username - Message" />
+                <Button fx:id="btnLogout" layoutX="740.0" layoutY="2.0" mnemonicParsing="false" onAction="#logout" text="Logout" />
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="apLogin" prefHeight="118.0" prefWidth="438.0">
+            <children>
+                <TextField fx:id="tbUsername" layoutX="79.0" layoutY="25.0" prefHeight="25.0" prefWidth="149.0" />
+                <Label fx:id="lblUsername" layoutX="3.0" layoutY="29.0" text=" Username:" />
+                <Label fx:id="lblPassword" layoutX="6.0" layoutY="58.0" text="Password:" />
+                <PasswordField fx:id="pwfPass" layoutX="79.0" layoutY="54.0" />
+                <CheckBox fx:id="chkUserPass" layoutX="237.0" layoutY="29.0" mnemonicParsing="false" selected="true" text="Username &amp; password" />
+                <TextField fx:id="tbToken" layoutX="289.0" layoutY="54.0" prefHeight="25.0" prefWidth="149.0" />
+                <Button fx:id="btnLogin" layoutX="191.0" layoutY="101.0" mnemonicParsing="false" onMouseClicked="#login" prefHeight="25.0" prefWidth="60.0" text="Login" />
+                <Label fx:id="lblPassword1" layoutX="237.0" layoutY="58.0" text="Token:" />
+            </children>
+        </AnchorPane>
+    </children>
+<?import javafx.scene.layout.AnchorPane?>
+</AnchorPane>
+
