@@ -3,7 +3,6 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
-<<<<<<< HEAD
 
 <AnchorPane minWidth="566.0" prefHeight="521.0" prefWidth="832.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="git.GitController">
     <children>
@@ -32,35 +31,6 @@
             </children>
         </AnchorPane>
     </children>
-=======
 <?import javafx.scene.layout.AnchorPane?>
-
-<AnchorPane minWidth="566.0" prefHeight="521.0" prefWidth="832.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="git.GitController">
-  <children>
-      <AnchorPane fx:id="apLists" layoutX="1.0" layoutY="-7.0" prefHeight="552.0" prefWidth="809.0">
-         <children>
-            <ListView fx:id="lvRepo" layoutX="14.0" layoutY="56.0" prefHeight="477.0" prefWidth="340.0" />
-            <Label fx:id="lblRepo" layoutX="14.0" layoutY="14.0" text="Repositorys:" />
-            <Label fx:id="lblCom" layoutX="469.0" layoutY="14.0" text="Commits:" />
-            <ListView fx:id="lvCommit" layoutX="469.0" layoutY="56.0" prefHeight="477.0" prefWidth="340.0" />
-            <Button fx:id="btnShowCommits" layoutX="364.0" layoutY="136.0" mnemonicParsing="false" onMouseClicked="#showCommits" text="Show Commits" />
-            <Label fx:id="lblRepoList" layoutX="14.0" layoutY="32.0" text="Private - Repository - Language" />
-            <Label fx:id="lblComList" layoutX="469.0" layoutY="32.0" text="Username - Message" />
-            <Button fx:id="btnLogout" layoutX="754.0" layoutY="14.0" mnemonicParsing="false" onAction="#logout" text="Logout" />
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="apLogin" layoutX="14.0" layoutY="10.0" prefHeight="103.0" prefWidth="446.0">
-         <children>
-          <TextField fx:id="tbUsername" layoutX="89.0" layoutY="17.0" prefHeight="25.0" prefWidth="149.0" />
-          <Label fx:id="lblUsername" layoutX="13.0" layoutY="21.0" text=" Username:" />
-          <Label fx:id="lblPassword" layoutX="16.0" layoutY="50.0" text="Password:" />
-            <PasswordField fx:id="pwfPass" layoutX="89.0" layoutY="46.0" />
-            <CheckBox fx:id="chkUserPass" layoutX="247.0" layoutY="21.0" mnemonicParsing="false" selected="true" text="Username &amp; password" />
-            <TextField fx:id="tbToken" layoutX="299.0" layoutY="46.0" prefHeight="25.0" prefWidth="149.0" />
-            <Label fx:id="lblPassword1" layoutX="247.0" layoutY="50.0" text="Token:" />
-            <Button fx:id="btnLogin" layoutX="208.0" layoutY="83.0" mnemonicParsing="false" onMouseClicked="#login" prefHeight="25.0" prefWidth="60.0" text="Login" />
-         </children>
-      </AnchorPane>
-  </children>
->>>>>>> 18c5a44bf19bb1a9db1609d8e3ec25b04b93fb49
 </AnchorPane>
+
