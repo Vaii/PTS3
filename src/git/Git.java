@@ -1,10 +1,10 @@
 package git;
 
+
 import org.eclipse.egit.github.core.Repository;
 import org.eclipse.egit.github.core.RepositoryCommit;
 import org.eclipse.egit.github.core.client.GitHubClient;
 import org.eclipse.egit.github.core.service.*;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -39,19 +39,22 @@ public class Git {
         }
         return false;
     }
-    public boolean login(OAuthService service)
-    {
-      //  service.
-        return true;
+    public boolean login(String token) throws IOException {
+        if (token != null){
+            client.setOAuth2Token(token);
+            isLoggedIn = true;
+            System.out.println("Token is set.");
+            return true;
+        }
+        return false;
     }
-
     public void logout(){
         client = new GitHubClient();
         userService = new UserService(client);
         isLoggedIn = false;
     }
 
-    public void getAllRepos() throws IOException {
+    public void getAllRepos() throws IOException{
         RepositoryService repos = new RepositoryService(client);
         for (Repository repo : repos.getRepositories()){
             GitRepository gitRepo = new GitRepository(repo);

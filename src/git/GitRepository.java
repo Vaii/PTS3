@@ -2,9 +2,6 @@ package git;
 
 import org.eclipse.egit.github.core.Repository;
 
-/**
- * Created by Ken on 3-4-2017.
- */
 public class GitRepository {
 
     Repository repository;
