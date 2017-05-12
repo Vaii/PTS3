@@ -31,4 +31,6 @@
             </children>
         </AnchorPane>
     </children>
+<?import javafx.scene.layout.AnchorPane?>
 </AnchorPane>
+
