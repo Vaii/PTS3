@@ -77,7 +77,7 @@ public class StorageController {
         String accessToken = authFinish.accessToken;
         DbxClient client = new DbxClient(config, accessToken);
         storage = new StorageDropbox(client);
-        outputtxt.setText("Linked account: " + client.getAccountInfo().displayName);
+        //outputtxt.setText("Linked account: " + client.getAccountInfo().displayName);
         loadFiles(storage.currentDirectory);
     }
 
