@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="com.vdurmont:emoji-java:3.2.0" type="repository">
+    <properties maven-id="com.vdurmont:emoji-java:3.2.0" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/emoji-java-3.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/json-20140107.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

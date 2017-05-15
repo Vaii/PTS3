@@ -2,12 +2,12 @@
   <library name="org.jongo:jongo:1.3.0" type="repository">
     <properties maven-id="org.jongo:jongo:1.3.0" />
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/jongo/jongo/1.3.0/jongo-1.3.0.jar!/" />
-      <root url="jar://$MAVEN_REPOSITORY$/org/mongodb/mongo-java-driver/3.2.2/mongo-java-driver-3.2.2.jar!/" />
-      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.7.3/jackson-core-2.7.3.jar!/" />
-      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.7.3/jackson-databind-2.7.3.jar!/" />
-      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.7.3/jackson-annotations-2.7.3.jar!/" />
-      <root url="jar://$MAVEN_REPOSITORY$/de/undercouch/bson4jackson/2.7.0/bson4jackson-2.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jongo-1.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mongo-java-driver-3.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-core-2.7.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-databind-2.7.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-annotations-2.7.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/bson4jackson-2.7.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -2,8 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e56203ed-7ce8-4650-a80d-5daf53d63e7a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chat/OpenSansEmoji.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_jongo_jongo_1_3_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chat/ChatPanel.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chat/ChatPanelController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chat/EmojiPanel.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chat/EmojiPanelController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chat/Message.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chat/Message.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chat/MessageController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chat/repository/ChatMongoContext.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chat/repository/ChatRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chat/repository/IChatContext.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chat/styles.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domain/DataSource.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jackson-core-2.3.0-rc1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jackson-core-2.7.4.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/chat/chatPanel.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/chat/chatPanelController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/chat/chatPanel.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/chat/chatPanelController.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/scheduling/SchedulingMain.java" afterPath="$PROJECT_DIR$/src/scheduling/SchedulingMainController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/launcher/LauncherController.class" afterPath="$PROJECT_DIR$/out/launcher/LauncherController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/launcher/Main.class" afterPath="$PROJECT_DIR$/out/launcher/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/PTS3.iml" afterPath="$PROJECT_DIR$/.idea/PTS3.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/authentication/LoginScreen.fxml" afterPath="$PROJECT_DIR$/out/authentication/LoginScreen.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/git/gitForm.fxml" afterPath="$PROJECT_DIR$/out/git/gitForm.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/launcher/launcher.fxml" afterPath="$PROJECT_DIR$/out/launcher/launcher.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/scheduling/NewItemBox.fxml" afterPath="$PROJECT_DIR$/out/scheduling/NewItemBox.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/scheduling/ScheduleListViewCell.fxml" afterPath="$PROJECT_DIR$/out/scheduling/ScheduleListViewCell.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/scheduling/Scheduling.fxml" afterPath="$PROJECT_DIR$/out/scheduling/Scheduling.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/storage/Storage.fxml" afterPath="$PROJECT_DIR$/out/storage/Storage.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/whiteboard/Text.fxml" afterPath="$PROJECT_DIR$/out/whiteboard/Text.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/whiteboard/Video.fxml" afterPath="$PROJECT_DIR$/out/whiteboard/Video.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/whiteboard/Whiteboard.fxml" afterPath="$PROJECT_DIR$/out/whiteboard/Whiteboard.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/launcher/LauncherController.java" afterPath="$PROJECT_DIR$/src/launcher/LauncherController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/launcher/Main.java" afterPath="$PROJECT_DIR$/src/launcher/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/launcher/launcher.fxml" afterPath="$PROJECT_DIR$/src/launcher/launcher.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scheduling/Scheduling.fxml" afterPath="$PROJECT_DIR$/src/scheduling/Scheduling.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scheduling/SchedulingController.java" afterPath="$PROJECT_DIR$/src/scheduling/SchedulingController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scheduling/SchedulingMain.fxml" afterPath="$PROJECT_DIR$/src/scheduling/SchedulingMain.fxml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,24 +57,123 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Folder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/storage/Folder.java">
+      <file leaf-file-name="ChatPanelController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/chat/ChatPanelController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            <state relative-caret-position="1278">
+              <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/chat/styles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="730">
+              <caret line="53" column="1" lean-forward="true" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScheduleItem.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/scheduling/ScheduleItem.java">
+      <file leaf-file-name="LauncherController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/launcher/LauncherController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-335">
-              <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+            <state relative-caret-position="1638">
+              <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Message.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/chat/Message.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/chat/MessageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChatPanel.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/chat/ChatPanel.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="29" selection-end-column="18" />
+              <folding>
+                <marker date="1494791838288" expanded="true" signature="1837:2399" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmojiPanel.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/chat/EmojiPanel.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" column="222" lean-forward="false" selection-start-line="10" selection-start-column="222" selection-end-line="10" selection-end-column="222" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/launcher/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Message.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/chat/Message.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="882">
+              <caret line="49" column="8" lean-forward="false" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
+              <folding>
+                <marker date="1494794621465" expanded="true" signature="1314:1505" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SchedulingController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/scheduling/SchedulingController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="69" column="52" lean-forward="true" selection-start-line="69" selection-start-column="52" selection-end-line="69" selection-end-column="52" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -46,8 +184,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -62,18 +201,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/sample/PlanningItem.java" />
-        <option value="$PROJECT_DIR$/src/sample/Picture.java" />
-        <option value="$PROJECT_DIR$/src/sample/UserType.java" />
-        <option value="$PROJECT_DIR$/src/sample/Video.java" />
-        <option value="$PROJECT_DIR$/src/sample/WhiteboardItem.java" />
-        <option value="$PROJECT_DIR$/src/sample/Project.java" />
-        <option value="$PROJECT_DIR$/src/sample/Message.java" />
-        <option value="$PROJECT_DIR$/src/sample/LoginScreen.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/sample/login/Fontys.java" />
-        <option value="$PROJECT_DIR$/src/sample/login/Chat.java" />
-        <option value="$PROJECT_DIR$/src/sample/login/Git.java" />
         <option value="$PROJECT_DIR$/src/sample/login/Auth.java" />
         <option value="$PROJECT_DIR$/src/sample/Chat.java" />
         <option value="$PROJECT_DIR$/src/sample/login/Google.java" />
@@ -103,6 +230,28 @@
         <option value="$PROJECT_DIR$/src/phub/Whiteboard/Picture.java" />
         <option value="$PROJECT_DIR$/src/phub/Main.java" />
         <option value="$PROJECT_DIR$/src/phub/Whiteboard/WhiteboardController.java" />
+        <option value="$PROJECT_DIR$/src/scheduling/SchedulingMainController.java" />
+        <option value="$PROJECT_DIR$/src/scheduling/SchedulingMain.fxml" />
+        <option value="$PROJECT_DIR$/src/launcher/LauncherController.java" />
+        <option value="$PROJECT_DIR$/src/chat/repository/IChatContext.java" />
+        <option value="$PROJECT_DIR$/src/chat/repository/ChatRepository.java" />
+        <option value="$PROJECT_DIR$/src/domain/DataSource.java" />
+        <option value="$PROJECT_DIR$/src/chat/repository/ChatMongoContext.java" />
+        <option value="$PROJECT_DIR$/src/chat/chatPanelController.java" />
+        <option value="$PROJECT_DIR$/src/chat/repository/EmojiPanel.fxml" />
+        <option value="$PROJECT_DIR$/src/chat/repository/styles.css" />
+        <option value="$PROJECT_DIR$/src/resources/fontstyle.css" />
+        <option value="$PROJECT_DIR$/src/launcher/styles.css" />
+        <option value="$PROJECT_DIR$/src/chat/EmojiPanel.fxml" />
+        <option value="$PROJECT_DIR$/src/chat/EmojiPanelController.java" />
+        <option value="$PROJECT_DIR$/src/chat/repository/Message.fxml" />
+        <option value="$PROJECT_DIR$/src/chat/ChatPanel.fxml" />
+        <option value="$PROJECT_DIR$/src/chat/Message.java" />
+        <option value="$PROJECT_DIR$/src/chat/MessageController.java" />
+        <option value="$PROJECT_DIR$/src/launcher/Main.java" />
+        <option value="$PROJECT_DIR$/src/chat/ChatPanelController.java" />
+        <option value="$PROJECT_DIR$/src/chat/Message.fxml" />
+        <option value="$PROJECT_DIR$/src/chat/styles.css" />
       </list>
     </option>
   </component>
@@ -113,10 +262,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="15" />
-    <option name="y" value="39" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="-1" />
+    <option name="y" value="-11" />
+    <option name="width" value="1922" />
+    <option name="height" value="1092" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -134,7 +283,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -175,82 +324,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scheduling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PTS3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PTS3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="launcher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PTS3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PTS3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="git" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PTS3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PTS3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
+              <option name="myItemId" value="chat" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/chat" />
+      <recent name="$PROJECT_DIR$/src/launcher" />
       <recent name="$PROJECT_DIR$/src/phub" />
       <recent name="$PROJECT_DIR$/src/phub/login" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/chat" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -588,6 +693,13 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
       <config-file value="" />
       <node-interpreter value="project" />
@@ -718,45 +830,50 @@
       <workItem from="1490946303442" duration="13419000" />
       <workItem from="1491208341288" duration="13000" />
       <workItem from="1494579707226" duration="312000" />
-      <workItem from="1494697174436" duration="14000" />
+      <workItem from="1494697174436" duration="7906000" />
+      <workItem from="1494764761397" duration="6113000" />
+      <workItem from="1494770930861" duration="20431000" />
+      <workItem from="1494794339112" duration="695000" />
+      <workItem from="1494830454996" duration="2144000" />
+      <workItem from="1494834788039" duration="4394000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17583000" />
+    <option name="totallyTimeSpent" value="59252000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="15" y="39" width="1382" height="744" extended-state="0" />
+    <frame x="-1" y="-11" width="1922" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32517838" sideWeight="0.45729166" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32707354" sideWeight="0.36459908" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.362895" sideWeight="0.41145834" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32733223" sideWeight="0.6354009" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.362895" sideWeight="0.5885417" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27785817" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.49676898" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39959225" sideWeight="0.48645833" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.48108926" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -769,7 +886,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -778,43 +895,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/phub/Whiteboard/Picture.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/login/LoginController.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/Project.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/login/Google.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/Message.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/Storage.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/User.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/UserType.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/VersionControl.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/Whiteboard/Video.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/Whiteboard/Whiteboard.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/Whiteboard/WhiteboardItem.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/Whiteboard/Picture.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/login/Auth.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/Chat.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/login/LoginController.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/Message.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/Planning.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/login/Auth.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/login/Git.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/login/Google.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/Chat.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/UserType.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/Project.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/login/Fontys.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/PlanningItem.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/PlanningSection.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/Service.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/Storage.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/User.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/VersionControl.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/login/LoginScreen.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/phub/login/LoginController.java" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/javafx-src.zip!/javafx/scene/canvas/GraphicsContext.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/Whiteboard/Whiteboard.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/Whiteboard/Paintable.java" />
-    <entry file="file://$PROJECT_DIR$/src/phub/Whiteboard/JavaFXPaintable.java" />
     <entry file="file://$PROJECT_DIR$/src/phub/Whiteboard/Point.java" />
     <entry file="file://$PROJECT_DIR$/src/phub/Whiteboard.fxml" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/javafx-src.zip!/javafx/fxml/FXMLLoader.java" />
@@ -831,17 +911,291 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/com/sun/javafx/application/LauncherImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6084">
+          <caret line="388" column="0" lean-forward="false" selection-start-line="388" selection-start-column="0" selection-end-line="388" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/launcher/launcher.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12456">
+          <caret line="747" column="0" lean-forward="false" selection-start-line="747" selection-start-column="0" selection-end-line="747" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scheduling/Scheduling.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="169" lean-forward="false" selection-start-line="7" selection-start-column="169" selection-end-line="7" selection-end-column="216" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scheduling/SchedulingMain.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scheduling/SchedulingMainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="24" column="68" lean-forward="false" selection-start-line="24" selection-start-column="68" selection-end-line="24" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scheduling/ScheduleConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scheduling/ScheduleItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-335">
-          <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+        <state relative-caret-position="414">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="34" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/domain/DataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chat/repository/ChatRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chat/repository/IChatContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chat/repository/ChatMongoContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chat/resources.properties" />
+    <entry file="file://$PROJECT_DIR$/src/chat/README.md" />
+    <entry file="file://$PROJECT_DIR$/src/resources/fontstyle.css" />
+    <entry file="file://$PROJECT_DIR$/src/resources.properties" />
+    <entry file="file://$PROJECT_DIR$/src/launcher/styles.css" />
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="2547" column="0" lean-forward="false" selection-start-line="2547" selection-start-column="0" selection-end-line="2547" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scheduling/ScheduleListViewCell.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="32" column="26" lean-forward="true" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chat/Message.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <marker date="1494794621465" expanded="true" signature="1314:1505" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scheduling/ScheduleListViewCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-414">
+          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/whiteboard/Whiteboard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/whiteboard/WhiteboardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="40" column="13" lean-forward="false" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/whiteboard/WhiteboardItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/whiteboard/TextController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/whiteboard/VideoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-26">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chat/EmojiPanelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scheduling/NewItemBoxController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="62" column="37" lean-forward="true" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/launcher/LauncherController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1638">
+          <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chat/MessageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/launcher/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chat/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chat/ChatPanelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1278">
+          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chat/EmojiPanel.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="222" lean-forward="false" selection-start-line="10" selection-start-column="222" selection-end-line="10" selection-end-column="222" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chat/Message.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="882">
+          <caret line="49" column="8" lean-forward="false" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
+          <folding>
+            <marker date="1494794621465" expanded="true" signature="1314:1505" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chat/ChatPanel.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="29" selection-end-column="18" />
+          <folding>
+            <marker date="1494791838288" expanded="true" signature="1837:2399" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chat/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="730">
+          <caret line="53" column="1" lean-forward="true" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scheduling/SchedulingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="69" column="52" lean-forward="true" selection-start-line="69" selection-start-column="52" selection-end-line="69" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -910,7 +1264,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>com.fasterxml.jackson.core:jackson-annotations:2.7.3</last-edited>
+          <last-edited>com.vdurmont:emoji-java:3.2.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
