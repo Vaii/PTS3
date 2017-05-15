@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<ScrollPane fitToHeight="true" minHeight="500.0" minWidth="600.0" style="-fx-background-color: #e6e6e8;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scheduling.SchedulingMainController">
+  <content>
+    <AnchorPane fx:id="mainAnchorPane" minHeight="480.0" minWidth="600.0" style="-fx-background-color: #e6e6e8;">
+         <children>
+            <VBox fx:id="vboxWeekOne" layoutX="14.0" layoutY="39.0" minWidth="250.0" prefHeight="433.0" prefWidth="200.0" style="-fx-background-color: #ff0;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="40.0" />
+            <Text layoutX="23.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Schedule" wrappingWidth="80.7294921875" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0" />
+            <VBox fx:id="vboxWeekOne1" layoutX="241.0" layoutY="41.0" minWidth="250.0" prefHeight="433.0" prefWidth="250.0" style="-fx-background-color: #ff0;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="290.0" AnchorPane.topAnchor="40.0" />
+            <VBox fx:id="vboxWeekOne11" layoutX="439.0" layoutY="49.0" minWidth="250.0" prefHeight="433.0" prefWidth="250.0" style="-fx-background-color: #ff0;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="560.0" AnchorPane.topAnchor="40.0" />
+            <VBox fx:id="vboxWeekOne111" layoutX="449.0" layoutY="59.0" minWidth="250.0" prefHeight="433.0" prefWidth="250.0" style="-fx-background-color: #ff0;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="830.0" AnchorPane.topAnchor="40.0" />
+            <VBox fx:id="vboxWeekOne2" layoutX="24.0" layoutY="49.0" minWidth="250.0" prefHeight="433.0" prefWidth="200.0" style="-fx-background-color: #ff0;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="1100.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="40.0" />
+         </children></AnchorPane>
+  </content>
+</ScrollPane>
