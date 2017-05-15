@@ -1,8 +1,12 @@
 package git;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.*;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
 import javax.swing.*;
@@ -17,14 +21,18 @@ public class GitController implements Initializable {
     @FXML private TextField pwfPass;
     @FXML private TextField tbUsername;
     @FXML private TextField tbToken;
-    @FXML private ListView lvRepo;
+    @FXML private ListView<GitRepository> lvRepo;
     @FXML private ListView lvCommit;
     @FXML private CheckBox chkUserPass;
 
-
+    private ObservableList<GitRepository> gitRepoObservableList;
     private Git git = new Git();
 
-    public void login() throws IOException {
+    public GitController(){
+        gitRepoObservableList = FXCollections.observableArrayList();
+    }
+
+       public void login() throws IOException {
         if (chkUserPass.isSelected()){
             String username = tbUsername.getText().toString();
             String pwd = pwfPass.getText().toString();
@@ -105,6 +113,9 @@ public class GitController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         hideLogin();
+        this.lvRepo.setItems(gitRepoObservableList);
+       // this.lvRepo.setCellFactory(gitRepoListView) -> {return new GitRepoListViewCellController();};
+
     }
 
     private void hideLogin(){
@@ -123,6 +134,11 @@ public class GitController implements Initializable {
             visible = true;
         }
         apLogin.setVisible(visible);
+
+
+
     }
+
+
 
 }

@@ -1,8 +1,11 @@
 package storage;
 
 import com.dropbox.core.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.*;
@@ -18,12 +21,14 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.Locale;
+import java.util.ResourceBundle;
 
 /**
  * Created by wei-qiang on 29-Apr-17.
  */
-public class StorageController {
+public class StorageController implements Initializable {
 
     @FXML
     private Label label;
@@ -49,6 +54,8 @@ public class StorageController {
     @FXML
     private ListView<Folder> fileList;
 
+    private ObservableList<Folder> fileObservableList;
+
     private StorageDropbox storage;
 
     private DbxWebAuthNoRedirect webAuth;
@@ -56,6 +63,10 @@ public class StorageController {
 
     private String selectedFolder;
     private Stage stage;
+
+    public StorageController(){
+        fileObservableList = FXCollections.observableArrayList();
+    }
 
     @FXML
     private void handleButtonActionAuthenticate(ActionEvent event) throws URISyntaxException, IOException {
@@ -77,7 +88,7 @@ public class StorageController {
         String accessToken = authFinish.accessToken;
         DbxClient client = new DbxClient(config, accessToken);
         storage = new StorageDropbox(client);
-        outputtxt.setText("Linked account: " + client.getAccountInfo().displayName);
+        //outputtxt.setText("Linked account: " + client.getAccountInfo().displayName);
         loadFiles(storage.currentDirectory);
     }
 
@@ -116,12 +127,15 @@ public class StorageController {
     }
 
     public void loadFiles(String path) throws DbxException {
-        fileList.getItems().clear();
-        fileList.getItems().addAll(storage.getFiles(path));
+        fileObservableList.clear();
+        fileObservableList.addAll(storage.getFiles(path));
     }
 
-    public void setStage(Stage stage) {
-        this.stage = stage;
+    public void initialize(URL url, ResourceBundle rb) {
+        this.fileList.setItems(fileObservableList);
+        this.fileList.setCellFactory((FolderListView) -> {
+            return new FolderListViewCellController();
+        });
     }
 
 }

@@ -131,7 +131,7 @@ public class LauncherController implements Initializable {
 
     @FXML
     private void loadGit() throws IOException {
-        AnchorPane schedule = (AnchorPane)FXMLLoader.load(this.getClass().getResource("/git/gitForm.fxml"));
+        AnchorPane schedule = (AnchorPane)FXMLLoader.load(this.getClass().getResource("/git/GitForm.fxml"));
         this.contentBorderPane.setLeft(schedule);
     }
 
