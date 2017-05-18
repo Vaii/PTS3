@@ -4,3 +4,7 @@
 .idea/PTS3.iml
 
 .idea/workspace.xml
+
+.scannerwork/report-task.txt
+
+.scannerwork/.sonar_lock
