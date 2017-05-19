@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="270.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane fx:id="imagePane" layoutX="4.0" layoutY="5.0" prefHeight="25.0" prefWidth="25.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <VBox layoutX="36.0" layoutY="3.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <VBox prefHeight="35.0" prefWidth="224.0" style="-fx-background-color: #562f58; -fx-background-radius: 3;">
+               <children>
+                  <Text fx:id="txtUsername" fill="#0fff16" strokeType="OUTSIDE" strokeWidth="0.0" text="Bob">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txtMessage" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="emoji" text="Dit is een test bericht." wrappingWidth="220.0">
+                     <font>
+                        <Font size="12.0" />
+                     </font></Text>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+            <Text fx:id="txtMessageDate" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="19:08">
+               <font>
+                  <Font size="9.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="2.0" top="4.0" />
+               </VBox.margin>
+            </Text>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" />
+   </padding>
+   <stylesheets>
+      <URL value="@styles.css" />
+   </stylesheets>
+</AnchorPane>

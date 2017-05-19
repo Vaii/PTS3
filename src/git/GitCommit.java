@@ -7,6 +7,8 @@ public class GitCommit {
 
     public GitCommit(RepositoryCommit commit) {
         this.commit = commit;
+
+
     }
 
     @Override

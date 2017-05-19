@@ -7,15 +7,12 @@ package launcher;
 
 import de.jensd.fx.glyphs.GlyphsDude;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
-import java.io.IOException;
-import java.net.URL;
-import java.util.Iterator;
-import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -23,24 +20,36 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 
+import java.io.IOException;
+import java.net.URL;
+import java.util.Iterator;
+import java.util.ResourceBundle;
+
 public class LauncherController implements Initializable {
     @FXML
     private BorderPane mainBorderPane;
     @FXML
     private VBox menuBox;
     @FXML
+    private VBox vboxWhiteboard;
+    @FXML
     private Label lblWhiteboard;
     @FXML
     private Label lblWhiteboardText;
+    @FXML
+    private VBox vboxSchedule;
     @FXML
     private Label lblPlanning;
     @FXML
     private Label lblPlanningText;
     @FXML
+    private VBox vboxGit;
+    @FXML
     private Label lblGit;
     @FXML
     private Label lblGitText;
     @FXML
+
     private VBox vBoxFiles;
     @FXML
     private Label lblFile;
@@ -50,10 +59,7 @@ public class LauncherController implements Initializable {
     private AnchorPane anchorPaneSubMenu;
     @FXML
     private Label lblExpandIcon;
-    @FXML
-    private AnchorPane mainAnchorPane;
-    @FXML
-    private BorderPane contentBorderPane;
+
 
     public LauncherController() {
     }
@@ -74,65 +80,68 @@ public class LauncherController implements Initializable {
                 }
             }
         }
-
     }
 
     @FXML
     private void changeBackgroundColorOff(MouseEvent event) {
-        VBox c = (VBox)event.getSource();
-        Iterator var3 = c.getChildren().iterator();
-
-        while(var3.hasNext()) {
-            Node node = (Node)var3.next();
-            if(node instanceof Label) {
-                ((Label)node).setTextFill(Color.web("#ffffff"));
-                if(((Label)node).getGraphic() != null) {
-                    Text file = (Text)((Label)node).getGraphic();
-                    file.setFill(Color.web("#ffffff"));
-                    ((Label)node).setGraphic(file);
+            VBox c = (VBox)event.getSource();
+            Iterator var3 = c.getChildren().iterator();
+            while(var3.hasNext()) {
+                Node node = (Node)var3.next();
+                if(node instanceof Label) {
+                    ((Label)node).setTextFill(Color.web("#ffffff"));
+                    if(((Label)node).getGraphic() != null) {
+                        Text file = (Text)((Label)node).getGraphic();
+                        file.setFill(Color.web("#ffffff"));
+                        ((Label)node).setGraphic(file);
+                    }
                 }
             }
-        }
-
     }
 
     @FXML
+    private void setActiveModule(){
+
+    }
+
+
+    @FXML
     private void openChat() throws IOException {
-        if(this.contentBorderPane.getChildren().contains(this.contentBorderPane.lookup("#chatPanel"))) {
-            this.contentBorderPane.getChildren().remove(this.contentBorderPane.lookup("#chatPanel"));
+        if(this.mainBorderPane.getChildren().contains(this.mainBorderPane.lookup("#chatPanel"))) {
+            this.mainBorderPane.getChildren().remove(this.mainBorderPane.lookup("#chatPanel"));
         } else {
-            AnchorPane chat = (AnchorPane)FXMLLoader.load(this.getClass().getResource("/chat/chatPanel.fxml"));
+            AnchorPane chat = (AnchorPane)FXMLLoader.load(this.getClass().getResource("/chat/ChatPanel.fxml"));
             AnchorPane.setRightAnchor(chat, Double.valueOf(0.0D));
             AnchorPane.setBottomAnchor(chat, Double.valueOf(0.0D));
             chat.setId("chatPanel");
             chat.setPrefWidth(295.0D);
-            this.contentBorderPane.setRight(chat);
+            this.mainBorderPane.setRight(chat);
         }
 
     }
 
     @FXML
     private void loadScheduling() throws IOException {
-        AnchorPane schedule = (AnchorPane)FXMLLoader.load(this.getClass().getResource("/scheduling/Scheduling.fxml"));
-        this.contentBorderPane.setLeft(schedule);
+        ScrollPane schedule = (ScrollPane)FXMLLoader.load(this.getClass().getResource("/scheduling/SchedulingMain.fxml"));
+        this.mainBorderPane.setCenter(schedule);
     }
 
     @FXML
     private void loadStorage() throws IOException {
-        AnchorPane schedule = (AnchorPane)FXMLLoader.load(this.getClass().getResource("/storage/Storage.fxml"));
-        this.contentBorderPane.setLeft(schedule);
+        AnchorPane storage = (AnchorPane)FXMLLoader.load(this.getClass().getResource("/storage/Storage.fxml"));
+        this.mainBorderPane.setCenter(storage);
     }
 
     @FXML
     private void loadWhiteboard() throws IOException {
-        AnchorPane schedule = (AnchorPane)FXMLLoader.load(this.getClass().getResource("/whiteboard/Whiteboard.fxml"));
-        this.contentBorderPane.setLeft(schedule);
+        AnchorPane whiteboard = (AnchorPane)FXMLLoader.load(this.getClass().getResource("/whiteboard/Whiteboard.fxml"));
+        this.mainBorderPane.setCenter(whiteboard);
     }
 
     @FXML
     private void loadGit() throws IOException {
-        AnchorPane schedule = (AnchorPane)FXMLLoader.load(this.getClass().getResource("/git/GitForm.fxml"));
-        this.contentBorderPane.setLeft(schedule);
+        AnchorPane git = (AnchorPane)FXMLLoader.load(this.getClass().getResource("/git/gitForm.fxml"));
+        this.mainBorderPane.setCenter(git);
     }
 
     public void initialize(URL url, ResourceBundle rb) {
@@ -154,12 +163,12 @@ public class LauncherController implements Initializable {
         this.lblExpandIcon.setGraphic(chat);
 
         // load whiteboard
-        AnchorPane schedule = null;
+        AnchorPane whiteboardPane = null;
         try {
-            schedule = (AnchorPane) FXMLLoader.load(this.getClass().getResource("/whiteboard/Whiteboard.fxml"));
+            whiteboardPane = (AnchorPane) FXMLLoader.load(this.getClass().getResource("/whiteboard/Whiteboard.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
-        this.contentBorderPane.setLeft(schedule);
+        this.mainBorderPane.setCenter(whiteboardPane);
     }
 }

@@ -30,13 +30,14 @@ public class GitController implements Initializable {
 
     public GitController(){
         gitRepoObservableList = FXCollections.observableArrayList();
+
     }
 
        public void login() throws IOException {
         if (chkUserPass.isSelected()){
             String username = tbUsername.getText().toString();
             String pwd = pwfPass.getText().toString();
-            if (!tbUsername.getText().toString().isEmpty()  && !tbUsername.getText().toString().isEmpty())
+            if (!tbUsername.getText().toString().isEmpty()  && !pwfPass.getText().toString().isEmpty())
             {
                 try{
                     git.login(username,pwd);
@@ -87,11 +88,16 @@ public class GitController implements Initializable {
         catch (Exception ex){
             JOptionPane.showMessageDialog(null, ex.getMessage()," Error",JOptionPane.ERROR_MESSAGE);
         }
-        lvRepo.getItems().removeAll(lvRepo.getItems());
-        lvRepo.getItems().setAll(git.repositorys);
+       // lvRepo.getItems().removeAll(lvRepo.getItems());
+      //  lvRepo.getItems().setAll(git.repositorys);
+        loadRepos(git);
 
     }
 
+    public void loadRepos(Git git) throws IOException {
+        gitRepoObservableList.clear();
+        gitRepoObservableList.addAll(git.repositorys);
+    }
     public void showCommits() throws IOException {
 
         lvCommit.getItems().removeAll(lvCommit.getItems());
@@ -114,8 +120,9 @@ public class GitController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         hideLogin();
         this.lvRepo.setItems(gitRepoObservableList);
-       // this.lvRepo.setCellFactory(gitRepoListView) -> {return new GitRepoListViewCellController();};
-
+        this.lvRepo.setCellFactory((GitRepoListView) -> {
+            return new GitRepoListViewCellController();
+        });
     }
 
     private void hideLogin(){

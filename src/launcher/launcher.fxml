@@ -16,7 +16,7 @@
     <left>
         <VBox fx:id="menuBox" alignment="TOP_CENTER" prefHeight="352.0" prefWidth="75.0" style="-fx-background-color: #06000a;" BorderPane.alignment="CENTER">
             <children>
-                <VBox alignment="TOP_CENTER" onMouseClicked="#loadWhiteboard" onMouseEntered="#changeBackgroundColorOn" onMouseExited="#changeBackgroundColorOff" prefHeight="35.0" prefWidth="75.0">
+                <VBox fx:id="vboxWhiteboard" alignment="TOP_CENTER" onMouseClicked="#loadWhiteboard" onMouseEntered="#changeBackgroundColorOn" onMouseExited="#changeBackgroundColorOff" prefHeight="35.0" prefWidth="75.0">
                     <children>
                         <Label fx:id="lblWhiteboard" prefHeight="17.0" prefWidth="19.0" textAlignment="CENTER">
                             <VBox.margin>
@@ -33,7 +33,7 @@
                         </Label>
                     </children>
                 </VBox>
-                <VBox alignment="TOP_CENTER" onMouseClicked="#loadScheduling" onMouseEntered="#changeBackgroundColorOn" onMouseExited="#changeBackgroundColorOff" prefHeight="35.0" prefWidth="75.0">
+                <VBox fx:id="vboxSchedule" alignment="TOP_CENTER" onMouseClicked="#loadScheduling" onMouseEntered="#changeBackgroundColorOn" onMouseExited="#changeBackgroundColorOff" prefHeight="35.0" prefWidth="75.0">
                     <children>
                         <Label fx:id="lblPlanning">
                             <VBox.margin>
@@ -50,7 +50,7 @@
                         </Label>
                     </children>
                 </VBox>
-                <VBox alignment="CENTER" onMouseClicked="#loadGit" onMouseEntered="#changeBackgroundColorOn" onMouseExited="#changeBackgroundColorOff" prefHeight="35.0" prefWidth="75.0">
+                <VBox fx:id="vbGit" alignment="CENTER" onMouseClicked="#loadGit" onMouseEntered="#changeBackgroundColorOn" onMouseExited="#changeBackgroundColorOff" prefHeight="35.0" prefWidth="75.0">
                     <children>
                         <Label fx:id="lblGit">
                             <VBox.margin>
@@ -105,11 +105,4 @@
             </children>
         </AnchorPane>
     </bottom>
-    <center>
-        <BorderPane fx:id="contentBorderPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-            <center>
-                <AnchorPane fx:id="mainAnchorPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
-            </center>
-        </BorderPane>
-    </center>
 </BorderPane>
