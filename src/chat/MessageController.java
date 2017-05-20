@@ -2,6 +2,9 @@ package chat;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.ImageView;
@@ -46,5 +49,7 @@ public class MessageController implements Initializable{
         txtMessageDate.setText(messageDate.get());
         imageView.setClip(clip);
         imagePane.getChildren().add(imageView);
+
+
     }
 }

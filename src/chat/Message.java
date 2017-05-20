@@ -12,13 +12,13 @@ import java.util.Date;
  * Created by bob on 14-5-17.
  */
 
-public class Message {
+public class Message implements java.io.Serializable {
 
     public static final String MESSAGE = "message";
     public static final String USER = "user";
     public static final String DATE = "date";
     private String message;
-    private User user;
+    // private User user;
     private Date date;
 
     // auto

@@ -5,12 +5,18 @@
 
 package launcher;
 
+import chat.Message;
 import de.jensd.fx.glyphs.GlyphsDude;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Iterator;
+import java.util.Observable;
 import java.util.ResourceBundle;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -169,5 +175,6 @@ public class LauncherController implements Initializable {
             e.printStackTrace();
         }
         this.mainBorderPane.setCenter(whiteboardPane);
+
     }
 }
