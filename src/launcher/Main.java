@@ -3,6 +3,7 @@ package launcher;
 import chat.Message;
 import chat.repository.ChatMongoContext;
 import chat.repository.ChatRepository;
+import chat.repository.ChatWebSocketClient;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -26,6 +27,9 @@ public class Main extends Application {
         primaryStage.show();
         ChatRepository repo = new ChatRepository(new ChatMongoContext());
         repo.Insert(new Message("Hallo - Dit is een Test.", new Date()));
+
+
+
     }
 
 
