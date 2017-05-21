@@ -5,8 +5,5 @@ package domain;
  */
 public enum UserType {
     student,
-    teacher;
-
-    private UserType() {
-    }
+    teacher
 }
