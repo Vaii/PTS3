@@ -27,9 +27,6 @@ public class Main extends Application {
         primaryStage.show();
         ChatRepository repo = new ChatRepository(new ChatMongoContext());
         repo.Insert(new Message("Hallo - Dit is een Test.", new Date()));
-
-
-
     }
 
 
