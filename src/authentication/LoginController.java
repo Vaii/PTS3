@@ -17,17 +17,15 @@ public class LoginController implements Initializable {
     @FXML
     TextField passwordField;
 
-    private Fontys fontysAuth;
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         login.setOnAction(this::tryAuthentication);
-        fontysAuth = new Fontys();
     }
 
     private void tryAuthentication(ActionEvent actionEvent) {
-        String pcn = userName.getText();
+        String username = userName.getText();
         String password = passwordField.getText();
     }
 }

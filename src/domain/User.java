@@ -1,9 +1,15 @@
 package domain;
 
+import org.jongo.marshall.jackson.oid.MongoObjectId;
+
 /**
  * Created by bob on 10-5-17.
  */
 public class User {
+
+    @MongoObjectId
+    private String _id;
+
     private String name;
     private String className;
     private UserType userType;
