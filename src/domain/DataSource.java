@@ -14,7 +14,7 @@ public class DataSource {
     }
 
     public static Jongo connect(){
-        DB db = new MongoClient("37.139.13.186", 27017).getDB("pts-3");
+        DB db = new MongoClient("95.85.22.21", 27017).getDB("pts-3");
         return new Jongo(db);
     }
 }
