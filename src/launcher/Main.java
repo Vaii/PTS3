@@ -19,8 +19,8 @@ public class Main extends Application {
         primaryStage.setMinWidth(1280.0D);
         primaryStage.setScene(scene);
         primaryStage.show();
-       // ChatRepository repo = new ChatRepository(new ChatMongoContext());
-      //  repo.Insert(new Message("Hallo - Dit is een Test.", new Date()));
+        ChatRepository repo = new ChatRepository(new ChatMongoContext());
+        repo.Insert(new Message("Hallo - Dit is een Test.", new Date()));
     }
 
 
