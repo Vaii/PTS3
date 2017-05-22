@@ -68,6 +68,7 @@ public class LoginController implements Initializable {
 
         if(user != null){
             System.out.println("it worked");
+            System.out.println(user.toString());
         }
         else{
             System.out.println("it didnt");
