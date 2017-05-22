@@ -37,7 +37,7 @@ public class GitController implements Initializable {
         git = new Git();
     }
 
-       public void login() throws IOException {
+    public void login() throws IOException {
         if (chkUserPass.isSelected()){
             String username = tbUsername.getText().toString();
             String pwd = pwfPass.getText().toString();
