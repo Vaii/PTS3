@@ -2,6 +2,7 @@ package authentication;
 
 import authentication.repository.LoginMongoContext;
 import authentication.repository.LoginRepository;
+import domain.Config;
 import domain.Crypt;
 import domain.User;
 import javafx.event.ActionEvent;
@@ -10,12 +11,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
@@ -34,7 +33,6 @@ public class LoginController implements Initializable {
     RegisterController rc;
 
     LoginRepository loginRepo;
-
 
 
     @Override
@@ -67,11 +65,32 @@ public class LoginController implements Initializable {
         User user = loginRepo.loginuser(userName.getText(), encrypted);
 
         if(user != null){
-            System.out.println("it worked");
-            System.out.println(user.toString());
+
+            Config.setUser(user);
+
+            try {
+                Stage stage = (Stage)login.getScene().getWindow();
+                stage.close();
+                Stage primaryStage = new Stage();
+                Parent root = (Parent) FXMLLoader.load(this.getClass().getResource("/launcher/launcher.fxml"));
+                primaryStage.setTitle("ProftaakHub");
+                primaryStage.initStyle(StageStyle.DECORATED);
+                Scene scene = new Scene(root, 1280.0D, 720.0D);
+                primaryStage.setMinHeight(720.0D);
+                primaryStage.setMinWidth(1280.0D);
+                primaryStage.setScene(scene);
+                primaryStage.show();
+            }
+            catch(IOException e){
+                e.printStackTrace();
+            }
         }
         else{
-            System.out.println("it didnt");
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Inlog gegevens onjuist");
+            alert.setHeaderText("Het ingevoerde wachtwoord of username is onjuist");
+            alert.setContentText("Vul de gegevens opnieuw en en probeer opnieuw");
+            alert.showAndWait();
         }
     }
 
