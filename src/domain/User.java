@@ -4,10 +4,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.jongo.marshall.jackson.oid.MongoObjectId;
 
+import java.io.Serializable;
+
 /**
  * Created by bob on 10-5-17.
  */
-public class User {
+public class User implements Serializable {
 
 
     public static final String NAME = "name";
