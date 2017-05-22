@@ -2,8 +2,7 @@ package chat.repository;
 
 import chat.Message;
 import domain.DataSource;
-import org.bson.types.ObjectId;
-import org.jongo.*;
+import org.jongo.MongoCollection;
 
 import java.util.ArrayList;
 

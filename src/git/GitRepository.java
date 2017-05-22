@@ -3,7 +3,6 @@ package git;
 import org.eclipse.egit.github.core.Repository;
 
 public class GitRepository {
-
     Repository repository;
 
     public GitRepository(Repository repository) {
@@ -28,7 +27,7 @@ public class GitRepository {
             return repoStatus + " - " + this.repository.getName() + " - " + repository.getLanguage();
         }
         else   {
-            return this.repository.getName();
+            return repoStatus + " - " + this.repository.getName() + " - " + "Unknown";
         }
     }
 }

@@ -3,6 +3,7 @@ package git;
 
 import org.eclipse.egit.github.core.Repository;
 import org.eclipse.egit.github.core.RepositoryCommit;
+import org.eclipse.egit.github.core.RepositoryContents;
 import org.eclipse.egit.github.core.client.GitHubClient;
 import org.eclipse.egit.github.core.service.*;
 import java.io.IOException;
@@ -16,9 +17,11 @@ import java.util.List;
 
 public class Git {
     GitHubClient client;
+    List contents;
     List repositorys;
     List commits;
     CommitService commitService;
+    ContentsService contentsService;
     UserService userService;
     boolean isLoggedIn;
 
@@ -27,6 +30,7 @@ public class Git {
         userService = new UserService(client);
         repositorys = new ArrayList<GitRepository>();
         commits = new ArrayList<RepositoryCommit>();
+        contents = new ArrayList<RepositoryContents>();
         isLoggedIn = false;
     }
 
@@ -39,6 +43,7 @@ public class Git {
         }
         return false;
     }
+
     public boolean login(String token) throws IOException {
         if (token != null){
             client.setOAuth2Token(token);
@@ -48,6 +53,7 @@ public class Git {
         }
         return false;
     }
+
     public void logout(){
         client = new GitHubClient();
         userService = new UserService(client);
@@ -70,13 +76,23 @@ public class Git {
             commits.add(commit);
         }
     }
-  /*  public void downloadApp(GitRepository repo) throws URISyntaxException, IOException {
-        DownloadService downloadService = new DownloadService();
-        Download download = new Download();
-        FileDialog fileDialog = new FileDialog();
-        downloadService.createDownload(repo,download)
-        if(Desktop.isDesktopSupported()){
-            Desktop.getDesktop().browse(new URI(download.getHtmlUrl().toString()));
+
+    public void getContents(git.GitRepository GitRepository) throws IOException {
+        contents.clear();
+        contentsService = new ContentsService(client);
+        for (RepositoryContents con : contentsService.getContents(GitRepository.repository)){
+            GitContents content = new GitContents(con);
+            contents.add(content);
         }
-    }*/
+    }
+
+    public void getContents(git.GitRepository gitRepository, String path) throws IOException {
+        contents.clear();
+        contentsService = new ContentsService(client);
+        for (RepositoryContents con : contentsService.getContents(gitRepository.repository,path)){
+            GitContents content = new GitContents(con);
+            contents.add(content);
+        }
+    }
+
 }
