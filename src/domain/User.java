@@ -16,15 +16,17 @@ import java.util.Random;
 public class User implements Serializable {
 
 
-    public static final String NAME = "name";
-    public static final String PASSWORD = "password";
-    public static final String USERTYPE = "userType";
-    public static final String GITHUB = "Github";
-    public static final String DROPBOX = "Dropbox";
-    public static final String COLOR = "Color";
+    private static final String NAME = "name";
+    private static final String PASSWORD = "password";
+    private static final String USERTYPE = "userType";
+    private static final String GITHUB = "Github";
+    private static final String DROPBOX = "Dropbox";
+    private static final String COLOR = "Color";
+
 
     @MongoObjectId
     private String _id;
+
     private String name;
     private String password;
     private String githubAuthToken;
@@ -116,5 +118,9 @@ public class User implements Serializable {
 
     public void setDropboxAuthToken(String dropboxAuthToken) {
         this.dropboxAuthToken = dropboxAuthToken;
+    }
+
+    public String get_id() {
+        return _id;
     }
 }

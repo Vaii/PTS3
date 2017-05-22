@@ -8,6 +8,7 @@ import org.jongo.MongoCollection;
  * Created by Vai on 5/21/17.
  */
 public class LoginMongoContext implements ILoginContext {
+
     @Override
     public boolean deleteUser(User user) {
         return false;
