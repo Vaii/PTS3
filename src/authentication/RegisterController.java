@@ -10,6 +10,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -50,7 +51,14 @@ public class RegisterController implements Initializable {
 
             String encrypted = Crypt.hashPassword(password.getText());
             User newUser = new User(username.getText(), encrypted , UserType.valueOf(userType.getSelectionModel().getSelectedItem().toString()));
-            loginRepo.registerUser(newUser);
+
+            if(loginRepo.registerUser(newUser)){
+                Stage stage = (Stage) registerButton.getScene().getWindow();
+                stage.close();
+            }
+            else{
+
+            }
 
         }
         else{

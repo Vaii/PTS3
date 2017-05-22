@@ -115,13 +115,16 @@ public class WhiteboardController implements Initializable {
 
         wRepo = new WhiteboardRepository(new WhiteboardMongoContext());
         whiteboards = new ArrayList<>();
+
         whiteboarditemList.add("Select Item");
         whiteboarditemList.add("Text");
         whiteboarditemList.add("Picture");
         whiteboarditemList.add("Video");
         whiteboardItems.setItems(whiteboarditemList);
+
         whiteboard = new Whiteboard(Integer.toString(whiteboardPane.getTabs().size()), Config.getUser().get_id());
         whiteboards.add(whiteboard);
+
         newButton.setOnAction(this::addPane);
         whiteboardItems.getSelectionModel().selectFirst();
         saveButton.setOnAction(this::saveWhiteboard);
