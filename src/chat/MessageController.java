@@ -26,13 +26,14 @@ public class MessageController implements Initializable{
 
     private StringProperty message = new SimpleStringProperty();
     private StringProperty messageDate = new SimpleStringProperty();
+    private StringProperty username = new SimpleStringProperty();
 
     @FXML
     private Text txtMessage;
     @FXML
     private Text txtMessageDate;
     @FXML
-    private Text txtUsername;
+    private Text txtUserName;
 
     @FXML
     private Pane imagePane;
@@ -40,6 +41,8 @@ public class MessageController implements Initializable{
     public MessageController(Message message){
         this.message.set(message.getMessage());
         this.messageDate.set(message.getDate().toString());
+        username.set(message.getUser().getName());
+
     }
 
 
@@ -47,6 +50,7 @@ public class MessageController implements Initializable{
     public void initialize(URL location, ResourceBundle resources) {
         txtMessage.setText(message.get());
         txtMessageDate.setText(messageDate.get());
+        txtUserName.setText(username.get());
         imageView.setClip(clip);
         imagePane.getChildren().add(imageView);
 
