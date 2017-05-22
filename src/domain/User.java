@@ -18,9 +18,9 @@ public class User {
     private String _id;
     private String name;
     private String password;
-    private String className;
+    private String githubAuthToken;
+    private String dropboxAuthToken;
     private UserType userType;
-    private int attribute;
     public Color color;
 
     public User(String name) {
@@ -54,8 +54,15 @@ public class User {
         this.color = color;
     }
 
+    @Override
     public String toString() {
-        return this.name;
+        return "User{" +
+                "_id='" + _id + '\'' +
+                ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", userType=" + userType +
+                ", color=" + color +
+                '}';
     }
 
     @JsonProperty(USERTYPE)
@@ -68,6 +75,19 @@ public class User {
         return password;
     }
 
+    public String getGithubAuthToken() {
+        return githubAuthToken;
+    }
 
+    public void setGithubAuthToken(String githubAuthToken) {
+        this.githubAuthToken = githubAuthToken;
+    }
 
+    public String getDropboxAuthToken() {
+        return dropboxAuthToken;
+    }
+
+    public void setDropboxAuthToken(String dropboxAuthToken) {
+        this.dropboxAuthToken = dropboxAuthToken;
+    }
 }
