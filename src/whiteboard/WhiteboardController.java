@@ -3,9 +3,11 @@ package whiteboard;
 /**
  * Created by bob on 10-5-17.
  */
+import domain.Config;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.embed.swing.SwingFXUtils;
+import javafx.collections.ObservableList;;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,21 +20,20 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
-import javafx.scene.media.MediaView;
 import javafx.scene.text.Font;
 import javafx.scene.web.WebView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import whiteboard.repository.WhiteboardMongoContext;
+import whiteboard.repository.WhiteboardRepository;
 
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 /**
@@ -43,6 +44,8 @@ public class WhiteboardController implements Initializable {
     public String getVideoUrl() {
         return videoUrl;
     }
+
+    public WhiteboardRepository wRepo;
 
     public void setVideoUrl(String videoUrl) {
         this.videoUrl = videoUrl;
@@ -73,6 +76,16 @@ public class WhiteboardController implements Initializable {
 
     private String videoUrl;
 
+    private String whiteboardName;
+
+    private SaveController sc;
+
+    private int selectedTab = 1;
+
+    public void setWhiteboardName(String whiteboardName) {
+        this.whiteboardName = whiteboardName;
+    }
+
     public Whiteboard getWhiteboard() {
         return whiteboard;
     }
@@ -80,6 +93,8 @@ public class WhiteboardController implements Initializable {
     public void setWhiteboard(Whiteboard whiteboard) {
         this.whiteboard = whiteboard;
     }
+
+    private ArrayList<Whiteboard> whiteboards;
 
     private ObservableList<String> whiteboarditemList = FXCollections.observableArrayList();
     @FXML
@@ -98,20 +113,55 @@ public class WhiteboardController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+        wRepo = new WhiteboardRepository(new WhiteboardMongoContext());
+        whiteboards = new ArrayList<>();
         whiteboarditemList.add("Select Item");
         whiteboarditemList.add("Text");
         whiteboarditemList.add("Picture");
         whiteboarditemList.add("Video");
         whiteboardItems.setItems(whiteboarditemList);
-        whiteboard = new Whiteboard();
+        whiteboard = new Whiteboard(Integer.toString(whiteboardPane.getTabs().size()), Config.getUser().get_id());
+        whiteboards.add(whiteboard);
         newButton.setOnAction(this::addPane);
         whiteboardItems.getSelectionModel().selectFirst();
+        saveButton.setOnAction(this::saveWhiteboard);
 
+        whiteboardPane.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue)
+                -> selectedTab = newValue.getTabPane().getSelectionModel().getSelectedIndex());
+    }
+
+    private void saveWhiteboard(ActionEvent actionEvent) {
+
+        Whiteboard wToSave;
+        for(Whiteboard w : whiteboards) {
+            if (w.getId().equals(Integer.toString(selectedTab))){
+
+                wToSave = w;
+                try{
+                    Stage nameStage = new Stage();
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("save.fxml"));
+                    Parent root = loader.load();
+                    sc = loader.getController();
+                    sc.setWc(this);
+                    nameStage.setTitle("Enter name");
+                    nameStage.setScene(new Scene(root));
+                    nameStage.showAndWait();
+                    wToSave.setName(whiteboardName);
+                    wRepo.saveWhiteboard(wToSave);
+
+                }
+                catch(Exception e){
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 
     private void addPane(ActionEvent actionEvent) {
         Tab tab = new Tab((Integer.toString(whiteboardPane.getTabs().size() +1)));
         whiteboardPane.getTabs().add(tab);
+        Whiteboard board = new Whiteboard(Integer.toString(whiteboardPane.getTabs().size() + 1), Config.getUser().get_id());
+        whiteboards.add(board);
     }
 
     @FXML
@@ -194,6 +244,11 @@ public class WhiteboardController implements Initializable {
             pane.getChildren().addAll(whiteboardPane.getSelectionModel().getSelectedItem().getContent());
         }
         pane.getChildren().add(n);
+        for(Whiteboard b : whiteboards){
+            if(b.getId().equals(Integer.toString(whiteboardPane.getTabs().size()))){
+                b.addItem(n);
+            }
+        }
         whiteboardPane.getSelectionModel().getSelectedItem().setContent(pane);
     }
 

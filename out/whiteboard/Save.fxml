@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="255.0" prefWidth="321.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="whiteboard.SaveController">
+   <children>
+      <TextField fx:id="wbName" layoutX="77.0" layoutY="101.0" promptText="Voer de naam in" />
+      <Button fx:id="setName" layoutX="77.0" layoutY="136.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="167.0" text="Save" />
+   </children>
+</AnchorPane>
