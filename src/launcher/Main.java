@@ -1,16 +1,11 @@
 package launcher;
 
-import chat.Message;
-import chat.repository.ChatMongoContext;
-import chat.repository.ChatRepository;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-
-import java.util.Date;
 
 public class Main extends Application {
 
@@ -24,8 +19,8 @@ public class Main extends Application {
         primaryStage.setMinWidth(1280.0D);
         primaryStage.setScene(scene);
         primaryStage.show();
-        ChatRepository repo = new ChatRepository(new ChatMongoContext());
-        repo.Insert(new Message("Hallo - Dit is een Test.", new Date()));
+       // ChatRepository repo = new ChatRepository(new ChatMongoContext());
+      //  repo.Insert(new Message("Hallo - Dit is een Test.", new Date()));
     }
 
 

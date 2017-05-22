@@ -1,82 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e56203ed-7ce8-4650-a80d-5daf53d63e7a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/bson4jackson-2.7.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/emoji-java-3.2.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jackson-annotations-2.7.3.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jackson-core-2.7.3.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jackson-databind-2.7.3.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jongo-1.3.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/json-20140107.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/mongo-java-driver-3.2.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/chat/ChatPanelController$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/chat/ChatPanelController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/chat/EmojiPanelController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/chat/Message.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/chat/MessageController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/chat/OpenSansEmoji.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/chat/repository/ChatMongoContext.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/chat/repository/ChatRepository.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/chat/repository/IChatContext.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/domain/DataSource.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/scheduling/SchedulingMainController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chat/OpenSansEmoji.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_vdurmont_emoji_java_3_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_jongo_jongo_1_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/chat/ChatPanel.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/chat/EmojiPanel.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/chat/Message.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/chat/styles.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/scheduling/SchedulingMain.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chat/ChatPanel.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chat/ChatPanelController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chat/EmojiPanel.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chat/EmojiPanelController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chat/Message.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chat/Message.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chat/MessageController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chat/repository/ChatMongoContext.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chat/repository/ChatRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chat/repository/IChatContext.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/chat/styles.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domain/DataSource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/git/GitHubListViewCell.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scheduling/SchedulingMain.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scheduling/SchedulingMainController.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jackson-core-2.3.0-rc1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jackson-core-2.7.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/chat/chatPanel.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/chat/chatPanelController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/chat/chatPanel.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/chat/chatPanelController.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/git/GitCommit.class" afterPath="$PROJECT_DIR$/out/git/GitCommit.class" />
+    <list default="true" id="e56203ed-7ce8-4650-a80d-5daf53d63e7a" name="Default" comment="Commit">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/git/GitHubListViewCell.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/git/GitRepoListViewCellController.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/git/Git.class" afterPath="$PROJECT_DIR$/out/git/Git.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/git/GitController.class" afterPath="$PROJECT_DIR$/out/git/GitController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/launcher/LauncherController.class" afterPath="$PROJECT_DIR$/out/launcher/LauncherController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/git/GitRepository.class" afterPath="$PROJECT_DIR$/out/git/GitRepository.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/launcher/Main.class" afterPath="$PROJECT_DIR$/out/launcher/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/PTS3.iml" afterPath="$PROJECT_DIR$/.idea/PTS3.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/authentication/LoginScreen.fxml" afterPath="$PROJECT_DIR$/out/authentication/LoginScreen.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/git/gitForm.fxml" afterPath="$PROJECT_DIR$/out/git/gitForm.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/launcher/launcher.fxml" afterPath="$PROJECT_DIR$/out/launcher/launcher.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/scheduling/NewItemBox.fxml" afterPath="$PROJECT_DIR$/out/scheduling/NewItemBox.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/scheduling/ScheduleListViewCell.fxml" afterPath="$PROJECT_DIR$/out/scheduling/ScheduleListViewCell.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/scheduling/Scheduling.fxml" afterPath="$PROJECT_DIR$/out/scheduling/Scheduling.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/storage/FolderListViewCell.fxml" afterPath="$PROJECT_DIR$/out/storage/FolderListViewCell.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/storage/Storage.fxml" afterPath="$PROJECT_DIR$/out/storage/Storage.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/whiteboard/Text.fxml" afterPath="$PROJECT_DIR$/out/whiteboard/Text.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/whiteboard/Video.fxml" afterPath="$PROJECT_DIR$/out/whiteboard/Video.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/whiteboard/Whiteboard.fxml" afterPath="$PROJECT_DIR$/out/whiteboard/Whiteboard.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/git/GitCommit.java" afterPath="$PROJECT_DIR$/src/git/GitCommit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/git/GitController.java" afterPath="$PROJECT_DIR$/src/git/GitController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/git/GitRepoListViewCellController.java" afterPath="$PROJECT_DIR$/src/git/GitRepoListViewCellController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/launcher/LauncherController.java" afterPath="$PROJECT_DIR$/src/launcher/LauncherController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/chat/chatPanel.fxml" afterPath="$PROJECT_DIR$/src/chat/chatPanel.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/chat/chatPanelController.java" afterPath="$PROJECT_DIR$/src/chat/chatPanelController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/launcher/Main.java" afterPath="$PROJECT_DIR$/src/launcher/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/launcher/launcher.fxml" afterPath="$PROJECT_DIR$/src/launcher/launcher.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scheduling/Scheduling.fxml" afterPath="$PROJECT_DIR$/src/scheduling/Scheduling.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scheduling/SchedulingController.java" afterPath="$PROJECT_DIR$/src/scheduling/SchedulingController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/storage/FolderListViewCell.fxml" afterPath="$PROJECT_DIR$/src/storage/FolderListViewCell.fxml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -90,137 +26,149 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="GitController.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/git/GitController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="GitHubListViewCell.fxml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/git/GitHubListViewCell.fxml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-                  <folding />
-                </state>
-              </provider>
-              <provider editor-type-id="JavaFX-Scene-Builder">
-                <state />
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="GitForm.fxml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/git/GitForm.fxml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="15" column="42" lean-forward="false" selection-start-line="15" selection-start-column="42" selection-end-line="17" selection-end-column="87" />
-                  <folding />
-                </state>
-              </provider>
-              <provider editor-type-id="JavaFX-Scene-Builder">
-                <state />
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="FolderListViewCell.fxml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/storage/FolderListViewCell.fxml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="425">
-                  <caret line="25" column="33" lean-forward="false" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-                  <folding />
-                </state>
-              </provider>
-              <provider editor-type-id="JavaFX-Scene-Builder">
-                <state />
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="StorageDropbox.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/storage/StorageDropbox.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="GitRepoListViewCellController.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/git/GitRepoListViewCellController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="24" column="47" lean-forward="false" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Cell.java" pinned="false" current-in-tab="false">
-            <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/scene/control/Cell.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="10302">
-                  <caret line="666" column="0" lean-forward="false" selection-start-line="666" selection-start-column="0" selection-end-line="666" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="StorageController.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/storage/StorageController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1173">
-                  <caret line="94" column="9" lean-forward="false" selection-start-line="94" selection-start-column="9" selection-end-line="94" selection-end-column="9" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="GitRepository.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/git/GitRepository.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="FolderListViewCellController.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/storage/FolderListViewCellController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="544">
-                  <caret line="45" column="26" lean-forward="false" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="FolderListViewCellController.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/storage/FolderListViewCellController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-748">
-                  <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="GitController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/git/GitController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="39" column="4" lean-forward="false" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#login#0;class#GitController#0" expanded="false" />
+                <element signature="method#logout#0;class#GitController#0" expanded="false" />
+                <element signature="method#showRepos#0;class#GitController#0" expanded="false" />
+                <element signature="method#showCommits#0;class#GitController#0" expanded="false" />
+                <element signature="method#showContents#0;class#GitController#0" expanded="false" />
+                <element signature="method#showContents#1;class#GitController#0" expanded="false" />
+                <element signature="method#showInfo#0;class#GitController#0" expanded="false" />
+                <element signature="method#returnDirectory#0;class#GitController#0" expanded="false" />
+                <element signature="method#enterDirectory#0;class#GitController#0" expanded="false" />
+                <element signature="method#initialize#0;class#GitController#0" expanded="false" />
+                <element signature="method#hideLogin#0;class#GitController#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/git/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="10" column="11" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+              <folding>
+                <element signature="e#11#81#0" expanded="false" />
+                <element signature="e#95#99#0" expanded="false" />
+                <element signature="e#120#184#0" expanded="false" />
+                <element signature="e#199#352#0" expanded="false" />
+                <element signature="e#362#386#0" expanded="false" />
+                <element signature="e#401#451#0" expanded="false" />
+                <element signature="e#464#528#0" expanded="false" />
+                <element signature="e#543#624#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GitForm.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/git/GitForm.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="353">
+              <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Message.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/chat/Message.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="816">
+              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="50" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmojiPanel.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/chat/EmojiPanel.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChatPanel.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/chat/ChatPanel.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GitRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/git/GitRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="29" column="86" lean-forward="false" selection-start-line="29" selection-start-column="86" selection-end-line="29" selection-end-column="86" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Git.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/git/Git.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="833">
+              <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+              <folding>
+                <element signature="method#Git#0;class#Git#0" expanded="false" />
+                <element signature="method#login#0;class#Git#0" expanded="false" />
+                <element signature="method#login#1;class#Git#0" expanded="false" />
+                <element signature="method#logout#0;class#Git#0" expanded="false" />
+                <element signature="method#getAllRepos#0;class#Git#0" expanded="false" />
+                <element signature="method#getCommits#0;class#Git#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GitContents.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/git/GitContents.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GitCommit.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/git/GitCommit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -236,6 +184,7 @@
     <findStrings>
       <find>setCel</find>
       <find>folderlistview</find>
+      <find>select</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -249,11 +198,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/phub/Whiteboard.java" />
-        <option value="$PROJECT_DIR$/src/phub/Chat.java" />
-        <option value="$PROJECT_DIR$/src/phub/login/Auth.java" />
-        <option value="$PROJECT_DIR$/src/phub/login/Git.java" />
-        <option value="$PROJECT_DIR$/src/phub/login/Google.java" />
         <option value="$PROJECT_DIR$/src/phub/User.java" />
         <option value="$PROJECT_DIR$/src/phub/Text.java" />
         <option value="$PROJECT_DIR$/src/phub/LoginController.java" />
@@ -290,16 +234,21 @@
         <option value="$PROJECT_DIR$/src/chat/ChatPanel.fxml" />
         <option value="$PROJECT_DIR$/src/chat/Message.java" />
         <option value="$PROJECT_DIR$/src/chat/MessageController.java" />
-        <option value="$PROJECT_DIR$/src/launcher/Main.java" />
         <option value="$PROJECT_DIR$/src/chat/ChatPanelController.java" />
         <option value="$PROJECT_DIR$/src/chat/Message.fxml" />
         <option value="$PROJECT_DIR$/src/chat/styles.css" />
         <option value="$PROJECT_DIR$/src/git/GitCommit.java" />
         <option value="$PROJECT_DIR$/src/storage/FolderListViewCell.fxml" />
         <option value="$PROJECT_DIR$/src/storage/StorageController.java" />
-        <option value="$PROJECT_DIR$/src/git/GitHubListViewCell.fxml" />
-        <option value="$PROJECT_DIR$/src/git/GitController.java" />
+        <option value="$PROJECT_DIR$/src/launcher/Main.java" />
         <option value="$PROJECT_DIR$/src/git/GitRepoListViewCellController.java" />
+        <option value="$PROJECT_DIR$/src/git/GitRepository.java" />
+        <option value="$PROJECT_DIR$/src/git/GitHubListViewCell.fxml" />
+        <option value="$PROJECT_DIR$/src/git/GitContents.java" />
+        <option value="$PROJECT_DIR$/src/git/Git.java" />
+        <option value="$PROJECT_DIR$/src/git/GitController.java" />
+        <option value="$PROJECT_DIR$/src/git/GitForm.fxml" />
+        <option value="$PROJECT_DIR$/src/git/style.css" />
       </list>
     </option>
   </component>
@@ -310,10 +259,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1360" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1036" />
-    <option name="height" value="780" />
+    <option name="width" value="1382" />
+    <option name="height" value="784" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -331,8 +280,60 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PTS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.fasterxml.jackson.core:jackson-annotations:2.7.3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jackson-annotations-2.7.3.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PTS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.fasterxml.jackson.core:jackson-annotations:2.7.3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jackson-annotations-2.7.3.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PTS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="PTS3" />
@@ -356,11 +357,185 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="whiteboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PTS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PTS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PTS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PTS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scheduling" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PTS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PTS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="launcher" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PTS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PTS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PTS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PTS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PTS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PTS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PTS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PTS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PTS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PTS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PTS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PTS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org.eclipse.egit.github.core-2.1.5.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PTS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PTS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org.eclipse.egit.github.core-2.1.5.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -370,7 +545,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/JSF_Kochfractal_Streamer" />
+    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/GithubTest" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.JavaDocs" value="false" />
@@ -379,14 +554,18 @@
     <property name="SearchEverywhereHistoryKey" value="updateitems&#9;PSI&#9;JAVA://com.sun.javafx.scene.control.skin.ContextMenuContent#updateItems&#10;setCellFactory&#9;PSI&#9;JAVA://javafx.scene.control.ComboBox#setCellFactory" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ken\Documents\GitHub\PTS3\src\git" />
+      <recent name="$PROJECT_DIR$/src/chat" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="git" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/chat" />
       <recent name="$PROJECT_DIR$/src/launcher" />
       <recent name="$PROJECT_DIR$/src/phub" />
       <recent name="$PROJECT_DIR$/src/phub/login" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/chat" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -863,41 +1042,57 @@
       <workItem from="1494840332324" duration="11122000" />
       <workItem from="1494931848835" duration="70000" />
       <workItem from="1495008360129" duration="1428000" />
-      <workItem from="1495216306494" duration="326000" />
+      <workItem from="1495216306494" duration="24559000" />
+      <workItem from="1495437892600" duration="712000" />
     </task>
+    <task id="LOCAL-00001" summary="Added css">
+      <created>1495402964747</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1495402964747</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added CSS &amp; File/Dir navigation">
+      <created>1495438513493</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1495438513493</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72198000" />
+    <option name="totallyTimeSpent" value="97143000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1360" y="-8" width="1036" height="780" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32411674" sideWeight="0.44856277" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32411674" sideWeight="0.44489795" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35857806" sideWeight="0.45184427" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3563748" sideWeight="0.4773071" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35857806" sideWeight="0.5481557" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3563748" sideWeight="0.5226929" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.4969743" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28688523" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.290469" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39631337" sideWeight="0.5680787" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39784947" sideWeight="0.5930408" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -912,32 +1107,17 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added css" />
+    <MESSAGE value="Added CSS &amp; File/Dir navigation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added CSS &amp; File/Dir navigation" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/git/GitController.java</url>
-          <line>92</line>
-          <properties />
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/storage/StorageController.java</url>
-          <line>134</line>
-          <properties />
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/storage/FolderListViewCellController.java</url>
-          <line>42</line>
-          <properties />
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="18" />
+      <option name="time" value="24" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -946,172 +1126,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/chat/Message.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scheduling/ScheduleListViewCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-414">
-          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/whiteboard/Whiteboard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/whiteboard/WhiteboardItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/whiteboard/TextController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/whiteboard/VideoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-26">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/chat/EmojiPanelController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scheduling/NewItemBoxController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="62" column="37" lean-forward="true" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/chat/MessageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/launcher/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/chat/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/chat/ChatPanelController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/chat/EmojiPanel.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="222" lean-forward="false" selection-start-line="10" selection-start-column="222" selection-end-line="10" selection-end-column="222" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/chat/Message.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="8" lean-forward="false" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/chat/ChatPanel.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="29" selection-end-column="18" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/chat/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="53" column="1" lean-forward="false" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scheduling/SchedulingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="69" column="52" lean-forward="false" selection-start-line="69" selection-start-column="52" selection-end-line="69" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/chat/repository/ChatMongoContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/whiteboard/WhiteboardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="106" column="38" lean-forward="false" selection-start-line="106" selection-start-column="38" selection-end-line="106" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.egit.github.core-2.1.5.jar!/org/eclipse/egit/github/core/Repository.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.egit.github.core-2.1.5.jar!/org/eclipse/egit/github/core/RepositoryContents.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.egit.github.core-2.1.5.jar!/org/eclipse/egit/github/core/RepositoryCommitCompare.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-306">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.egit.github.core-2.1.5.jar!/org/eclipse/egit/github/core/Commit.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-958">
@@ -1123,14 +1137,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/git/GitCommit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1162,24 +1168,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/storage/Storageable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/storage/Storage.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/scene/input/InputEvent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -1208,31 +1196,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/storage/Folder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/fxml/Initializable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="51" column="23" lean-forward="true" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/launcher/LauncherController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="132" column="0" lean-forward="false" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="1657" column="0" lean-forward="false" selection-start-line="1657" selection-start-column="0" selection-end-line="1657" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1250,34 +1217,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/storage/StorageDropbox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/scene/control/Cell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10302">
           <caret line="666" column="0" lean-forward="false" selection-start-line="666" selection-start-column="0" selection-end-line="666" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/git/GitController.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/scene/control/ListCell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="-1122">
+          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/git/GitForm.fxml">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/collections/ListChangeBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="42" lean-forward="false" selection-start-line="15" selection-start-column="42" selection-end-line="17" selection-end-column="87" />
+        <state relative-caret-position="46">
+          <caret line="541" column="0" lean-forward="false" selection-start-line="541" selection-start-column="0" selection-end-line="541" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/collections/ObservableListBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="205" column="0" lean-forward="false" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/collections/ModifiableObservableListBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/jre/lib/rt.jar!/sun/misc/Unsafe.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-237">
+          <caret line="354" column="23" lean-forward="false" selection-start-line="354" selection-start-column="23" selection-end-line="354" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="970" column="0" lean-forward="false" selection-start-line="970" selection-start-column="0" selection-end-line="970" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/git/GitRepoListViewCellController.java" />
+    <entry file="file://$PROJECT_DIR$/src/git/GitHubListViewCell.fxml" />
+    <entry file="file://$PROJECT_DIR$/src/scheduling/ScheduleListViewCell.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1285,37 +1279,26 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/storage/StorageController.java">
+    <entry file="file://$PROJECT_DIR$/src/scheduling/ScheduleListViewCell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="94" column="9" lean-forward="false" selection-start-line="94" selection-start-column="9" selection-end-line="94" selection-end-column="9" />
+        <state relative-caret-position="-901">
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/git/GitHubListViewCell.fxml">
+    <entry file="file://$PROJECT_DIR$/src/storage/FolderListViewCellController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/git/GitRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="17">
+          <caret line="44" column="17" lean-forward="false" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/storage/FolderListViewCell.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="33" lean-forward="false" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+        <state relative-caret-position="102">
+          <caret line="26" column="31" lean-forward="false" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -1323,20 +1306,249 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/storage/FolderListViewCellController.java">
+    <entry file="file://$PROJECT_DIR$/src/storage/Storage.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-748">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="-30">
+          <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/storage/Storageable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/git/GitRepoListViewCellController.java">
+    <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.egit.github.core-2.1.5.jar!/org/eclipse/egit/github/core/RepositoryContents.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.egit.github.core-2.1.5.jar!/org/eclipse/egit/github/core/service/ContentsService.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/storage/Folder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/storage/StorageDropbox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-32">
+          <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/storage/StorageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="130" column="46" lean-forward="false" selection-start-line="130" selection-start-column="46" selection-end-line="130" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/launcher/launcher.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/launcher/LauncherController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57">
+          <caret line="156" column="19" lean-forward="false" selection-start-line="156" selection-start-column="13" selection-end-line="156" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/launcher/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="70" lean-forward="true" selection-start-line="13" selection-start-column="70" selection-end-line="13" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chat/MessageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chat/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-94">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chat/EmojiPanelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chat/ChatPanelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-601">
+          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chat/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="11" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chat/Message.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="50" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chat/EmojiPanel.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="24" column="47" lean-forward="false" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chat/ChatPanel.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/git/Git.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+          <folding>
+            <element signature="method#Git#0;class#Git#0" expanded="false" />
+            <element signature="method#login#0;class#Git#0" expanded="false" />
+            <element signature="method#login#1;class#Git#0" expanded="false" />
+            <element signature="method#logout#0;class#Git#0" expanded="false" />
+            <element signature="method#getAllRepos#0;class#Git#0" expanded="false" />
+            <element signature="method#getCommits#0;class#Git#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/git/GitContents.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/git/GitCommit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/git/GitRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="29" column="86" lean-forward="false" selection-start-line="29" selection-start-column="86" selection-end-line="29" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/git/GitController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="39" column="4" lean-forward="false" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#login#0;class#GitController#0" expanded="false" />
+            <element signature="method#logout#0;class#GitController#0" expanded="false" />
+            <element signature="method#showRepos#0;class#GitController#0" expanded="false" />
+            <element signature="method#showCommits#0;class#GitController#0" expanded="false" />
+            <element signature="method#showContents#0;class#GitController#0" expanded="false" />
+            <element signature="method#showContents#1;class#GitController#0" expanded="false" />
+            <element signature="method#showInfo#0;class#GitController#0" expanded="false" />
+            <element signature="method#returnDirectory#0;class#GitController#0" expanded="false" />
+            <element signature="method#enterDirectory#0;class#GitController#0" expanded="false" />
+            <element signature="method#initialize#0;class#GitController#0" expanded="false" />
+            <element signature="method#hideLogin#0;class#GitController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/git/GitForm.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/git/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="11" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding>
+            <element signature="e#11#81#0" expanded="false" />
+            <element signature="e#95#99#0" expanded="false" />
+            <element signature="e#120#184#0" expanded="false" />
+            <element signature="e#199#352#0" expanded="false" />
+            <element signature="e#362#386#0" expanded="false" />
+            <element signature="e#401#451#0" expanded="false" />
+            <element signature="e#464#528#0" expanded="false" />
+            <element signature="e#543#624#0" expanded="false" />
           </folding>
         </state>
       </provider>
