@@ -15,7 +15,7 @@
 
 .myRootPane  {
     -fx-background-color: gray;
-    -fx-background-image: url(http://balland.ddns.net/Wallpapers/GitWallpaper.png);
+    -fx-background-image: url("/git/GitWallpaper.png");
     -fx-background-size: contain;
 }
 
