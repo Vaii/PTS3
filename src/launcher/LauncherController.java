@@ -170,5 +170,6 @@ public class LauncherController implements Initializable {
             e.printStackTrace();
         }
         this.mainBorderPane.setCenter(whiteboardPane);
+
     }
 }
