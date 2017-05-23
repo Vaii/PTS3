@@ -4,6 +4,8 @@ import domain.DataSource;
 import org.jongo.MongoCollection;
 import whiteboard.Whiteboard;
 
+import java.util.ArrayList;
+
 /**
  * Created by Vai on 5/22/17.
  */
@@ -24,7 +26,12 @@ public class WhiteboardMongoContext implements IWhiteboardContext {
     }
 
     @Override
-    public Whiteboard loadWhiteboard(int userId) {
+    public Whiteboard loadSingleWhiteboard(int userId) {
+        return null;
+    }
+
+    @Override
+    public ArrayList<Whiteboard> loadAllWhiteboards(int userId) {
         return null;
     }
 }

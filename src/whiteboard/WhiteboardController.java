@@ -3,6 +3,7 @@ package whiteboard;
 /**
  * Created by bob on 10-5-17.
  */
+import android.util.Base64;
 import domain.Config;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -20,6 +21,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -31,6 +33,10 @@ import whiteboard.repository.WhiteboardMongoContext;
 import whiteboard.repository.WhiteboardRepository;
 
 
+import javax.imageio.ImageIO;
+import javax.imageio.stream.ImageInputStream;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -194,6 +200,7 @@ public class WhiteboardController implements Initializable {
 
                         makeItemDraggable(userText);
 
+                        addItemToList(userText);
                         addItemToPane(userText);
                     }
                 } catch (IOException e) {
@@ -212,6 +219,8 @@ public class WhiteboardController implements Initializable {
                 if(p.getFile() != null){
                     ImageView pictureView = new ImageView(p.getSelectedImage());
                     makeItemDraggable(pictureView);
+
+                    addItemToList(pictureView);
                     addItemToPane(pictureView);
                 }
 
@@ -229,10 +238,12 @@ public class WhiteboardController implements Initializable {
                 videoStage.showAndWait();
 
                 if(videoUrl != null){
+
                     WebView view  = new WebView();
                     view.getEngine().load(videoUrl);
-                    view.setMaxWidth(400);
-                    view.setMaxHeight(250);
+                    view.setPrefWidth(400);
+                    view.setPrefHeight(250);
+
                     makeItemDraggable(view);
                     addItemToList(view);
                     addItemToPane(view);
@@ -257,10 +268,30 @@ public class WhiteboardController implements Initializable {
 
     private void addItemToList(Label l){
 
+        for (Whiteboard board : whiteboards){
+            if(board.getId().equals(Integer.toString(selectedTab))){
+
+                String id  = Config.getUser().getName() + board.getId() +
+                        Integer.toString(board.getItems().size() + 1) ;
+                Text text = new Text(l.getText(), l.getFont().toString(), id, l.getLayoutX(), l.getLayoutY(),
+                        l.getWidth(), l.getHeight());
+                board.addItem(text);
+            }
+        }
     }
 
     private void addItemToList(ImageView I){
 
+        for (Whiteboard board : whiteboards){
+            if(board.getId().equals(Integer.toString(selectedTab))){
+
+                String id  = Config.getUser().getName() + board.getId() +
+                        Integer.toString(board.getItems().size() + 1) ;
+//                Picture picture = new Picture(I.getImage(), id, I.getLayoutX(), I.getLayoutY(),
+//                        I.getImage().getWidth(), I.getImage().getHeight());
+//                board.addItem(picture);
+            }
+        }
     }
 
     private void addItemToPane(Node n){
