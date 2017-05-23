@@ -33,7 +33,6 @@ public class Picture extends WhiteboardItem {
 
     private Image selectedImage;
 
-
     private File File;
 
 }

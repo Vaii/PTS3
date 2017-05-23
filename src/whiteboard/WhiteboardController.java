@@ -234,28 +234,47 @@ public class WhiteboardController implements Initializable {
                     view.setMaxWidth(400);
                     view.setMaxHeight(250);
                     makeItemDraggable(view);
+                    addItemToList(view);
                     addItemToPane(view);
                 }
             }
         }
     }
 
-    public void addItemToPane(Node n){
+    private void addItemToList(WebView w) {
+
+        for (Whiteboard board : whiteboards){
+            if(board.getId().equals(Integer.toString(selectedTab))){
+
+                String id  = Config.getUser().getName() + board.getId() +
+                        Integer.toString(board.getItems().size() + 1) ;
+                Video video = new Video(w.getEngine().getLocation(), w.getLayoutX(), w.getLayoutY(),
+                        id, w.getWidth(), w.getHeight());
+                board.addItem(video);
+            }
+        }
+    }
+
+    private void addItemToList(Label l){
+
+    }
+
+    private void addItemToList(ImageView I){
+
+    }
+
+    private void addItemToPane(Node n){
         Pane pane = new Pane();
 
         if(whiteboardPane.getSelectionModel().getSelectedItem().getContent() != null){
             pane.getChildren().addAll(whiteboardPane.getSelectionModel().getSelectedItem().getContent());
         }
+
         pane.getChildren().add(n);
-        for(Whiteboard b : whiteboards){
-            if(b.getId().equals(Integer.toString(whiteboardPane.getTabs().size()))){
-                b.addItem(n);
-            }
-        }
         whiteboardPane.getSelectionModel().getSelectedItem().setContent(pane);
     }
 
-    public void makeItemDraggable(Node n){
+    private  void makeItemDraggable(Node n){
 
         n.setOnMousePressed(event -> {
             dragDelta.setX(n.getLayoutX() - event.getSceneX());
