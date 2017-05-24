@@ -116,7 +116,7 @@ public class ChatPanelController implements Initializable {
                     String text = inputMessage.getText();
 
                     // do your thing...
-                    ChatConfig.getInstance().addMessageToOutbox(new Message(inputMessage.getText(), new Date()));
+                    ChatConfig.getInstance().addMessageToOutbox(new Message(inputMessage.getText(), new Date(), domain.Config.getUser()));
                     // clear text
                     inputMessage.setText("");
                     keyEvent.consume();

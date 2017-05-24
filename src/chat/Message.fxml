@@ -18,7 +18,7 @@
          <children>
             <VBox prefHeight="35.0" prefWidth="224.0" style="-fx-background-color: #562f58; -fx-background-radius: 3;">
                <children>
-                  <Text fx:id="txtUsername" fill="#0fff16" strokeType="OUTSIDE" strokeWidth="0.0" text="Bob">
+                  <Text fx:id="txtUserName" fill="#0fff16" strokeType="OUTSIDE" strokeWidth="0.0" text="Bob">
                      <font>
                         <Font size="10.0" />
                      </font>

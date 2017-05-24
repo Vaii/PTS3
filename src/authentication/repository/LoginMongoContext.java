@@ -2,12 +2,14 @@ package authentication.repository;
 
 import domain.DataSource;
 import domain.User;
+import javafx.scene.control.Alert;
 import org.jongo.MongoCollection;
 
 /**
  * Created by Vai on 5/21/17.
  */
 public class LoginMongoContext implements ILoginContext {
+
     @Override
     public boolean deleteUser(User user) {
         return false;
@@ -17,8 +19,22 @@ public class LoginMongoContext implements ILoginContext {
     public boolean registerUser(User user) {
         try{
             MongoCollection users = DataSource.connect().getCollection("Users");
-            users.save(user);
-            return true;
+
+            User exists = users.findOne("{name:#}", user.getName()).as(User.class);
+
+            if(exists == null){
+                users.save(user);
+                return true;
+            }
+            else{
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Account bestaat al");
+                alert.setHeaderText("Er bestaat al een account met deze accountnaam");
+                alert.setContentText("Vul alstublieft een ander accountnaam in");
+                alert.showAndWait();
+                return false;
+            }
+
         }
         catch(Exception e){
             return false;
