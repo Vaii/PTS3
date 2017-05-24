@@ -37,8 +37,10 @@ import javax.imageio.ImageIO;
 import javax.imageio.stream.ImageInputStream;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
@@ -220,7 +222,7 @@ public class WhiteboardController implements Initializable {
                     ImageView pictureView = new ImageView(p.getSelectedImage());
                     makeItemDraggable(pictureView);
 
-                    addItemToList(pictureView);
+                    addItemToList(pictureView, p.getFile());
                     addItemToPane(pictureView);
                 }
 
@@ -280,16 +282,23 @@ public class WhiteboardController implements Initializable {
         }
     }
 
-    private void addItemToList(ImageView I){
+    private void addItemToList(ImageView I, File F){
 
         for (Whiteboard board : whiteboards){
             if(board.getId().equals(Integer.toString(selectedTab))){
 
                 String id  = Config.getUser().getName() + board.getId() +
                         Integer.toString(board.getItems().size() + 1) ;
-//                Picture picture = new Picture(I.getImage(), id, I.getLayoutX(), I.getLayoutY(),
-//                        I.getImage().getWidth(), I.getImage().getHeight());
-//                board.addItem(picture);
+
+                try{
+                    byte[] imageToByte = Files.readAllBytes(F.toPath());
+                    Picture picture = new Picture(imageToByte, id, I.getLayoutX(), I.getLayoutY(),
+                            I.getImage().getWidth(), I.getImage().getHeight());
+                    board.addItem(picture);
+                }
+                catch(IOException e){
+                    e.printStackTrace();
+                }
             }
         }
     }

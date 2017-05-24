@@ -95,5 +95,8 @@ public class Picture extends WhiteboardItem {
         return id;
     }
 
-
+    @JsonProperty
+    public byte[] getImage() {
+        return Image;
+    }
 }
