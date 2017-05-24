@@ -18,6 +18,7 @@ public class Whiteboard implements Serializable {
     private static final String ID = "ID";
     private static final String USERID = "UserID";
     private static final String NAME = "Name";
+    private static final String ITEMS = "Items";
 
     @MongoObjectId
     private String _wId;
@@ -25,7 +26,7 @@ public class Whiteboard implements Serializable {
     private String id;
     private String userID;
     private String Name;
-    private ArrayList<Node> items;
+    private ArrayList<WhiteboardItem> items;
 
     public Whiteboard(String id, String userID){
         this.id = id;
@@ -36,14 +37,16 @@ public class Whiteboard implements Serializable {
     @JsonCreator
     public Whiteboard(@JsonProperty(ID) String id,
                       @JsonProperty(USERID) String userID,
-                      @JsonProperty(NAME) String Name){
+                      @JsonProperty(NAME) String Name,
+                      @JsonProperty(ITEMS) ArrayList<WhiteboardItem> items){
         this.id = id;
         this.userID = userID;
         this.Name = Name;
+        this.items = items;
     }
 
-    public void addItem(Node n){
-        items.add(n);
+    public void addItem(WhiteboardItem Item){
+        items.add(Item);
     }
 
     @JsonProperty(ID)
@@ -65,7 +68,8 @@ public class Whiteboard implements Serializable {
         Name = name;
     }
 
-    public ArrayList<Node> getItems() {
+    @JsonProperty
+    public ArrayList<WhiteboardItem> getItems() {
         return items;
     }
 }
