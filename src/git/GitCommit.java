@@ -2,13 +2,13 @@ package git;
 
 import org.eclipse.egit.github.core.RepositoryCommit;
 
-public class GitCommit {
+import java.io.Serializable;
+
+public class GitCommit implements Serializable {
     RepositoryCommit commit;
 
     public GitCommit(RepositoryCommit commit) {
         this.commit = commit;
-
-
     }
 
     @Override

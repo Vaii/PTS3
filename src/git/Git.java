@@ -17,9 +17,10 @@ import java.util.List;
 
 public class Git {
     GitHubClient client;
-    List contents;
-    List repositorys;
-    List commits;
+    private List contents;
+    private List<GitRepository> repositorys;
+    private List commits;
+    String mainRepository;
     CommitService commitService;
     ContentsService contentsService;
     UserService userService;
@@ -32,6 +33,38 @@ public class Git {
         commits = new ArrayList<RepositoryCommit>();
         contents = new ArrayList<RepositoryContents>();
         isLoggedIn = false;
+    }
+
+    public List getContents() {
+        return contents;
+    }
+
+    public void setContents(List contents) {
+        this.contents = contents;
+    }
+
+    public List<GitRepository> getRepositorys() {
+        return repositorys;
+    }
+
+    public void setRepositorys(List<GitRepository> repositorys) {
+        this.repositorys = repositorys;
+    }
+
+    public List getCommits() {
+        return commits;
+    }
+
+    public void setCommits(List commits) {
+        this.commits = commits;
+    }
+
+    public String getMainRepository() {
+        return mainRepository;
+    }
+
+    public void setMainRepository(String mainRepository) {
+        this.mainRepository = mainRepository;
     }
 
     public boolean login(String username, String pwd) throws IOException {
