@@ -3,11 +3,10 @@ package git;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
 import org.eclipse.egit.github.core.RepositoryContents;
 
 import javax.swing.*;
@@ -23,12 +22,17 @@ public class GitController implements Initializable {
     @FXML private TextField pwfPass;
     @FXML private TextField tbUsername;
     @FXML private TextField tbToken;
-    @FXML private ListView<GitRepository> lvRepo;
-    @FXML private ListView<GitCommit> lvCommit;
+    @FXML private ListView<GitContents> lvContent;
     @FXML private CheckBox chkUserPass;
-    @FXML private ListView<GitContents> lvContents;
-    @FXML private AnchorPane apContent;
+//    @FXML private ListView<GitContents> lvContents;
+    @FXML private ComboBox<GitRepository> cbRepos;
+    @FXML private GridPane gpCommits;
+    @FXML private GridPane gpContents;
+    @FXML private Label lblTitle;
+    @FXML private Label lblInfo;
 
+
+    private String selectedPage;
     private String selectedDir;
     private String currentDirectory;
     private Git git;
@@ -47,6 +51,8 @@ public class GitController implements Initializable {
                     git.login(username,pwd);
                     showRepos();
                     hideLogin();
+                    setPrimaryRepo("PTS3");
+                    showInfo();
                     JOptionPane.showMessageDialog(null,  "Logged in succesfully with Username & Password", " Login", JOptionPane.NO_OPTION);
                 }
                 catch (Exception ex){
@@ -85,23 +91,22 @@ public class GitController implements Initializable {
     }
 
     private void showRepos() throws IOException {
-        git.repositorys.clear();
+        git.getRepositorys().clear();
         try {
             git.getAllRepos();
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, ex.getMessage(), " Error", JOptionPane.ERROR_MESSAGE);
         }
-        lvRepo.getItems().removeAll(lvRepo.getItems());
-        lvRepo.getItems().setAll(git.repositorys);
+        cbRepos.getItems().removeAll(cbRepos.getItems());
+        cbRepos.getItems().setAll(git.getRepositorys());
 
     }
 
     public void showCommits() {
-
-        lvCommit.getItems().removeAll(lvCommit.getItems());
+        lvContent.getItems().removeAll(lvContent.getItems());
         try{
-            git.getCommits(lvRepo.getSelectionModel().getSelectedItem());
-            lvCommit.getItems().setAll(git.commits);
+            git.getCommits(cbRepos.getSelectionModel().getSelectedItem());
+            lvContent.getItems().setAll(git.getCommits());
         }
         catch (Exception ex){
             if (ex instanceof NullPointerException){
@@ -111,41 +116,41 @@ public class GitController implements Initializable {
                 JOptionPane.showMessageDialog(null, ex.getMessage()," Error",JOptionPane.ERROR_MESSAGE);
             }
         }
-
-
+        setLabels("Commit");
     }
 
     public void showContents()
     {
-        this.lvContents.getItems().removeAll(lvContents.getItems());
+        this.lvContent.getItems().removeAll(lvContent.getItems());
         try{
-            git.getContents(lvRepo.getSelectionModel().getSelectedItem());
+            git.getContents(cbRepos.getSelectionModel().getSelectedItem());
         }
         catch (Exception ex){
             JOptionPane.showMessageDialog(null,ex.getMessage(), " Error",JOptionPane.ERROR_MESSAGE);
         }
-        this.lvContents.getItems().removeAll(lvContents.getItems());
-        this.lvContents.getItems().setAll(git.contents);
+        this.lvContent.getItems().removeAll(lvContent.getItems());
+        this.lvContent.getItems().setAll(git.getContents());
+        setLabels("Files");
     }
 
     public void showContents(String path){
-
-        this.lvContents.getItems().removeAll(lvContents.getItems());
+        this.lvContent.getItems().removeAll(lvContent.getItems());
         try{
-            git.getContents(lvRepo.getSelectionModel().getSelectedItem(),path);
+            git.getContents(cbRepos.getSelectionModel().getSelectedItem(),path);
             System.out.println("Entering: " + path);
         }
         catch (Exception ex){
             JOptionPane.showMessageDialog(null,ex.getMessage(), " Error",JOptionPane.ERROR_MESSAGE);
         }
-        this.lvContents.getItems().removeAll(lvContents.getItems());
-        this.lvContents.getItems().setAll(git.contents);
+        this.lvContent.getItems().removeAll(lvContent.getItems());
+        this.lvContent.getItems().setAll(git.getContents());
     }
 
     public void showInfo(){
-        showCommits();
+        //showCommits();
         showContents();
         showContentPane();
+        setLabels("");
     }
 
     public void returnDirectory(){
@@ -156,12 +161,9 @@ public class GitController implements Initializable {
                     System.out.println("Nope");
                 }
                 else {
-                    //System.out.println("Ervoor: " + selectedDir);
                     showContents((currentDirectory.substring(0,currentDirectory.lastIndexOf('/'))));
                     currentDirectory = selectedDir.substring(0,selectedDir.lastIndexOf('/'));
                     selectedDir = currentDirectory;
-                    // System.out.printf("Erna: " + selectedDir);
-
                 }
             } else {
                 showContents();
@@ -171,30 +173,40 @@ public class GitController implements Initializable {
         else {
             System.out.println("Nope");
         }
-
-
     }
 
     public void enterDirectory(){
-        if (lvContents.getSelectionModel().getSelectedItem().contents.getType().equals(RepositoryContents.TYPE_DIR)) {
-            showContents(lvContents.getSelectionModel().getSelectedItem().contents.getPath());
-            currentDirectory = lvContents.getItems().get(0).contents.getPath();
+        if (lvContent.getSelectionModel().getSelectedItem().contents.getType().equals(RepositoryContents.TYPE_DIR)) {
+            showContents(lvContent.getSelectionModel().getSelectedItem().contents.getPath());
+            currentDirectory = lvContent.getItems().get(0).contents.getPath();
         }
-        selectedDir = lvContents.getItems().get(0).contents.getPath();
+        selectedDir = lvContent.getItems().get(0).contents.getPath();
+    }
+
+    public boolean setPrimaryRepo(String primaryRepository)
+    {
+        for (GitRepository repo : git.getRepositorys()){
+            if (repo.repository.getName().equals(primaryRepository)){
+                cbRepos.getSelectionModel().select(repo);
+                System.out.println("Proftaak repository:" + repo.repository.getName());
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         hideLogin();
-        lvContents.setOnMouseClicked(new EventHandler<MouseEvent>() {
+        lvContent.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
                 if (event.getClickCount() == 2){
-                    if (lvContents.getSelectionModel().getSelectedItem().contents.getType().equals(RepositoryContents.TYPE_DIR)) {
-                        showContents(lvContents.getSelectionModel().getSelectedItem().contents.getPath());
-                        currentDirectory = lvContents.getItems().get(0).contents.getPath();
+                    if (lvContent.getSelectionModel().getSelectedItem().contents.getType().equals(RepositoryContents.TYPE_DIR)) {
+                        showContents(lvContent.getSelectionModel().getSelectedItem().contents.getPath());
+                        currentDirectory = lvContent.getItems().get(0).contents.getPath();
                     }
-                    selectedDir = lvContents.getItems().get(0).contents.getPath();
+                    selectedDir = lvContent.getItems().get(0).contents.getPath();
                 }
             }
         });
@@ -207,26 +219,34 @@ public class GitController implements Initializable {
             tbUsername.setText("");
             pwfPass.setText("");
             apLists.setVisible(true);
-            apContent.setVisible(false);
             visible = false;
         }
         else {
             apLists.setVisible(false);
-            lvRepo.getItems().clear();
-            lvCommit.getItems().clear();
-            lvContents.getItems().clear();
+            cbRepos.getItems().clear();
+            lvContent.getItems().clear();
             visible = true;
         }
         apLogin.setVisible(visible);
+    }
 
-
+    private void setLabels(String selectedContent){
+        switch (selectedContent){
+            case "Commit":
+                lblTitle.setText("Commits:");
+                lblInfo.setText("Username - Message");
+                gpContents.setVisible(false);
+                break;
+            default:
+                lblTitle.setText("Content:");
+                lblInfo.setText("Type - Name");
+                gpContents.setVisible(true);
+        }
 
     }
 
     private void showContentPane(){
-        apContent.setVisible(true);
+       // apContent.setVisible(true);
     }
-
-
 
 }

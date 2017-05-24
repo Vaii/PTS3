@@ -4,9 +4,15 @@ import org.eclipse.egit.github.core.Repository;
 
 public class GitRepository {
     Repository repository;
-
+    String repoStatus;
     public GitRepository(Repository repository) {
         this.repository = repository;
+        if (repository.isPrivate()){
+            repoStatus = "Private";
+        }
+        else  {
+            repoStatus = "Public";
+        }
     }
 
     public Repository getRepository() {
@@ -15,19 +21,11 @@ public class GitRepository {
 
     @Override
     public String toString() {
-        boolean isPrivate = this.repository.isPrivate();
-        String repoStatus;
-        if (isPrivate){
-            repoStatus = "Private";
-        }
-        else  {
-            repoStatus = "Public";
-        }
         if (repository.getLanguage() != null){
-            return repoStatus + " - " + this.repository.getName() + " - " + repository.getLanguage();
+            return this.repository.getName();
         }
         else   {
-            return repoStatus + " - " + this.repository.getName() + " - " + "Unknown";
+            return this.repository.getName();
         }
     }
 }
