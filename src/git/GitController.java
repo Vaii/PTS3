@@ -24,15 +24,11 @@ public class GitController implements Initializable {
     @FXML private TextField tbToken;
     @FXML private ListView<GitContents> lvContent;
     @FXML private CheckBox chkUserPass;
-//    @FXML private ListView<GitContents> lvContents;
     @FXML private ComboBox<GitRepository> cbRepos;
-    @FXML private GridPane gpCommits;
     @FXML private GridPane gpContents;
     @FXML private Label lblTitle;
     @FXML private Label lblInfo;
 
-
-    private String selectedPage;
     private String selectedDir;
     private String currentDirectory;
     private Git git;
@@ -49,10 +45,10 @@ public class GitController implements Initializable {
             {
                 try{
                     git.login(username,pwd);
-                    showRepos();
+                    showRepositorys();
                     hideLogin();
                     setPrimaryRepo("PTS3");
-                    showInfo();
+                    showListViewInfo();
                     JOptionPane.showMessageDialog(null,  "Logged in succesfully with Username & Password", " Login", JOptionPane.NO_OPTION);
                 }
                 catch (Exception ex){
@@ -69,8 +65,10 @@ public class GitController implements Initializable {
             {
                 try {
                     git.login(token);
-                    showRepos();
+                    showRepositorys();
                     hideLogin();
+                    setPrimaryRepo("PTS3");
+                    showListViewInfo();
                     JOptionPane.showMessageDialog(null,  "Logged in succesfully with Token", " Login", JOptionPane.INFORMATION_MESSAGE);
                 }
                 catch (Exception ex){
@@ -90,7 +88,7 @@ public class GitController implements Initializable {
         JOptionPane.showMessageDialog(null,  "Logged out succesfully", " Logout", JOptionPane.NO_OPTION);
     }
 
-    private void showRepos() throws IOException {
+    private void showRepositorys() throws IOException {
         git.getRepositorys().clear();
         try {
             git.getAllRepos();
@@ -119,8 +117,7 @@ public class GitController implements Initializable {
         setLabels("Commit");
     }
 
-    public void showContents()
-    {
+    public void showContents() {
         this.lvContent.getItems().removeAll(lvContent.getItems());
         try{
             git.getContents(cbRepos.getSelectionModel().getSelectedItem());
@@ -146,10 +143,8 @@ public class GitController implements Initializable {
         this.lvContent.getItems().setAll(git.getContents());
     }
 
-    public void showInfo(){
-        //showCommits();
+    public void showListViewInfo(){
         showContents();
-        showContentPane();
         setLabels("");
     }
 
@@ -176,19 +171,18 @@ public class GitController implements Initializable {
     }
 
     public void enterDirectory(){
-        if (lvContent.getSelectionModel().getSelectedItem().contents.getType().equals(RepositoryContents.TYPE_DIR)) {
-            showContents(lvContent.getSelectionModel().getSelectedItem().contents.getPath());
-            currentDirectory = lvContent.getItems().get(0).contents.getPath();
+        if (lvContent.getSelectionModel().getSelectedItem().getContents().getType().equals(RepositoryContents.TYPE_DIR)) {
+            showContents(lvContent.getSelectionModel().getSelectedItem().getContents().getPath());
+            currentDirectory = lvContent.getItems().get(0).getContents().getPath();
         }
-        selectedDir = lvContent.getItems().get(0).contents.getPath();
+        selectedDir = lvContent.getItems().get(0).getContents().getPath();
     }
 
-    public boolean setPrimaryRepo(String primaryRepository)
-    {
+    public boolean setPrimaryRepo(String primaryRepository) {
         for (GitRepository repo : git.getRepositorys()){
-            if (repo.repository.getName().equals(primaryRepository)){
+            if (repo.getRepository().getName().equals(primaryRepository)){
                 cbRepos.getSelectionModel().select(repo);
-                System.out.println("Proftaak repository:" + repo.repository.getName());
+                System.out.println("Proftaak repository:" + repo.getRepository().getName());
                 return true;
             }
         }
@@ -202,11 +196,11 @@ public class GitController implements Initializable {
             @Override
             public void handle(MouseEvent event) {
                 if (event.getClickCount() == 2){
-                    if (lvContent.getSelectionModel().getSelectedItem().contents.getType().equals(RepositoryContents.TYPE_DIR)) {
-                        showContents(lvContent.getSelectionModel().getSelectedItem().contents.getPath());
-                        currentDirectory = lvContent.getItems().get(0).contents.getPath();
+                    if (lvContent.getSelectionModel().getSelectedItem().getContents().getType().equals(RepositoryContents.TYPE_DIR)) {
+                        showContents(lvContent.getSelectionModel().getSelectedItem().getContents().getPath());
+                        currentDirectory = lvContent.getItems().get(0).getContents().getPath();
                     }
-                    selectedDir = lvContent.getItems().get(0).contents.getPath();
+                    selectedDir = lvContent.getItems().get(0).getContents().getPath();
                 }
             }
         });
@@ -243,10 +237,6 @@ public class GitController implements Initializable {
                 gpContents.setVisible(true);
         }
 
-    }
-
-    private void showContentPane(){
-       // apContent.setVisible(true);
     }
 
 }
