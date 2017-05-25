@@ -1,13 +1,12 @@
 package authentication.repository;
 
 import domain.User;
+import org.json.JSONObject;
 
 /**
  * Created by Vai on 5/21/17.
  */
 public interface ILoginContext {
 
-    boolean deleteUser(User user);
-    boolean registerUser(User user);
-    User loginUser(String username, String password);
+    User loginUser(User user);
 }

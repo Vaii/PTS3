@@ -4,6 +4,8 @@ import domain.DataSource;
 import domain.User;
 import javafx.scene.control.Alert;
 import org.jongo.MongoCollection;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  * Created by Vai on 5/21/17.
@@ -11,45 +13,28 @@ import org.jongo.MongoCollection;
 public class LoginMongoContext implements ILoginContext {
 
     @Override
-    public boolean deleteUser(User user) {
-        return false;
-    }
-
-    @Override
-    public boolean registerUser(User user) {
+    public User loginUser(User user) {
         try{
+
             MongoCollection users = DataSource.connect().getCollection("Users");
 
-            User exists = users.findOne("{name:#}", user.getName()).as(User.class);
+            User isMember = users.findOne("{ StudentID:#}", user.getStudentid()).as(User.class);
 
-            if(exists == null){
+
+            if(isMember == null){
                 users.save(user);
-                return true;
+                User newMember = users.findOne("{ StudentID:#}", user.getStudentid()).as(User.class);
+                return newMember;
+
             }
             else{
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Account bestaat al");
-                alert.setHeaderText("Er bestaat al een account met deze accountnaam");
-                alert.setContentText("Vul alstublieft een ander accountnaam in");
-                alert.showAndWait();
-                return false;
+                return isMember;
             }
-
         }
         catch(Exception e){
-            return false;
+            e.printStackTrace();
         }
-    }
 
-    @Override
-    public User loginUser(String username, String password) {
-        try{
-            MongoCollection users = DataSource.connect().getCollection("Users");
-            User currentUser = users.findOne("{name:#, password:#}", username, password).as(User.class);
-            return currentUser;
-        }
-        catch(Exception e){
-            return null;
-        }
+        return null;
     }
 }

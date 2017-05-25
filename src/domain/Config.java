@@ -15,4 +15,13 @@ public class Config {
 
     private static User User;
 
+    private static String accesToken;
+
+    public static String getAccesToken() {
+        return accesToken;
+    }
+
+    public static void setAccesToken(String accesToken) {
+        Config.accesToken = accesToken;
+    }
 }
