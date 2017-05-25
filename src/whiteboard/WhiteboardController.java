@@ -3,6 +3,7 @@ package whiteboard;
 /**
  * Created by bob on 10-5-17.
  */
+import android.util.Base64;
 import domain.Config;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -20,6 +21,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -31,8 +33,14 @@ import whiteboard.repository.WhiteboardMongoContext;
 import whiteboard.repository.WhiteboardRepository;
 
 
+import javax.imageio.ImageIO;
+import javax.imageio.stream.ImageInputStream;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
@@ -194,6 +202,7 @@ public class WhiteboardController implements Initializable {
 
                         makeItemDraggable(userText);
 
+                        addItemToList(userText);
                         addItemToPane(userText);
                     }
                 } catch (IOException e) {
@@ -212,6 +221,8 @@ public class WhiteboardController implements Initializable {
                 if(p.getFile() != null){
                     ImageView pictureView = new ImageView(p.getSelectedImage());
                     makeItemDraggable(pictureView);
+
+                    addItemToList(pictureView, p.getFile());
                     addItemToPane(pictureView);
                 }
 
@@ -229,33 +240,81 @@ public class WhiteboardController implements Initializable {
                 videoStage.showAndWait();
 
                 if(videoUrl != null){
+
                     WebView view  = new WebView();
                     view.getEngine().load(videoUrl);
-                    view.setMaxWidth(400);
-                    view.setMaxHeight(250);
+                    view.setPrefWidth(400);
+                    view.setPrefHeight(250);
+
                     makeItemDraggable(view);
+                    addItemToList(view);
                     addItemToPane(view);
                 }
             }
         }
     }
 
-    public void addItemToPane(Node n){
+    private void addItemToList(WebView w) {
+
+        for (Whiteboard board : whiteboards){
+            if(board.getId().equals(Integer.toString(selectedTab))){
+
+                String id  = Config.getUser().getName() + board.getId() +
+                        Integer.toString(board.getItems().size() + 1) ;
+                Video video = new Video(w.getEngine().getLocation(), w.getLayoutX(), w.getLayoutY(),
+                        id, w.getWidth(), w.getHeight());
+                board.addItem(video);
+            }
+        }
+    }
+
+    private void addItemToList(Label l){
+
+        for (Whiteboard board : whiteboards){
+            if(board.getId().equals(Integer.toString(selectedTab))){
+
+                String id  = Config.getUser().getName() + board.getId() +
+                        Integer.toString(board.getItems().size() + 1) ;
+                Text text = new Text(l.getText(), l.getFont().toString(), id, l.getLayoutX(), l.getLayoutY(),
+                        l.getWidth(), l.getHeight());
+                board.addItem(text);
+            }
+        }
+    }
+
+    private void addItemToList(ImageView I, File F){
+
+        for (Whiteboard board : whiteboards){
+            if(board.getId().equals(Integer.toString(selectedTab))){
+
+                String id  = Config.getUser().getName() + board.getId() +
+                        Integer.toString(board.getItems().size() + 1) ;
+
+                try{
+                    byte[] imageToByte = Files.readAllBytes(F.toPath());
+                    Picture picture = new Picture(imageToByte, id, I.getLayoutX(), I.getLayoutY(),
+                            I.getImage().getWidth(), I.getImage().getHeight());
+                    board.addItem(picture);
+                }
+                catch(IOException e){
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    private void addItemToPane(Node n){
         Pane pane = new Pane();
 
         if(whiteboardPane.getSelectionModel().getSelectedItem().getContent() != null){
             pane.getChildren().addAll(whiteboardPane.getSelectionModel().getSelectedItem().getContent());
         }
+
         pane.getChildren().add(n);
-        for(Whiteboard b : whiteboards){
-            if(b.getId().equals(Integer.toString(whiteboardPane.getTabs().size()))){
-                b.addItem(n);
-            }
-        }
         whiteboardPane.getSelectionModel().getSelectedItem().setContent(pane);
     }
 
-    public void makeItemDraggable(Node n){
+    private  void makeItemDraggable(Node n){
 
         n.setOnMousePressed(event -> {
             dragDelta.setX(n.getLayoutX() - event.getSceneX());
