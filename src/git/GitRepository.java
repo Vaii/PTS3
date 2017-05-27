@@ -3,8 +3,13 @@ package git;
 import org.eclipse.egit.github.core.Repository;
 
 public class GitRepository {
-    Repository repository;
-    String repoStatus;
+    private Repository repository;
+    private String repoStatus;
+
+    public void setRepository(Repository repository) {
+        this.repository = repository;
+    }
+
     public GitRepository(Repository repository) {
         this.repository = repository;
         if (repository.isPrivate()){

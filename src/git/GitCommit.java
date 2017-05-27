@@ -5,7 +5,7 @@ import org.eclipse.egit.github.core.RepositoryCommit;
 import java.io.Serializable;
 
 public class GitCommit implements Serializable {
-    RepositoryCommit commit;
+    private RepositoryCommit commit;
 
     public GitCommit(RepositoryCommit commit) {
         this.commit = commit;

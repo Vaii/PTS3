@@ -1,11 +1,16 @@
 package git;
 
 
+import domain.Config;
 import org.eclipse.egit.github.core.Repository;
 import org.eclipse.egit.github.core.RepositoryCommit;
 import org.eclipse.egit.github.core.RepositoryContents;
 import org.eclipse.egit.github.core.client.GitHubClient;
-import org.eclipse.egit.github.core.service.*;
+import org.eclipse.egit.github.core.service.CommitService;
+import org.eclipse.egit.github.core.service.ContentsService;
+import org.eclipse.egit.github.core.service.RepositoryService;
+import org.eclipse.egit.github.core.service.UserService;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,15 +21,15 @@ import java.util.List;
  */
 
 public class Git {
-    GitHubClient client;
+    private GitHubClient client;
     private List contents;
     private List<GitRepository> repositorys;
     private List commits;
-    String mainRepository;
-    CommitService commitService;
-    ContentsService contentsService;
-    UserService userService;
-    boolean isLoggedIn;
+    private String mainRepository;
+    private CommitService commitService;
+    private ContentsService contentsService;
+    private UserService userService;
+    public boolean isLoggedIn;
 
     public Git() {
         client = new GitHubClient();
@@ -35,43 +40,26 @@ public class Git {
         isLoggedIn = false;
     }
 
-    public List getContents() {
-        return contents;
+    public GitHubClient getClient() {
+        return client;
     }
 
-    public void setContents(List contents) {
-        this.contents = contents;
+    public List getContents() {
+        return contents;
     }
 
     public List<GitRepository> getRepositorys() {
         return repositorys;
     }
 
-    public void setRepositorys(List<GitRepository> repositorys) {
-        this.repositorys = repositorys;
-    }
-
     public List getCommits() {
         return commits;
     }
 
-    public void setCommits(List commits) {
-        this.commits = commits;
-    }
-
-    public String getMainRepository() {
-        return mainRepository;
-    }
-
-    public void setMainRepository(String mainRepository) {
-        this.mainRepository = mainRepository;
-    }
-
-    public boolean login(String username, String pwd) throws IOException {
-        if (username != null && pwd != null) {
-            client.setCredentials(username, pwd);
+    public boolean login() throws IOException {
+        if (Config.getUser().getGithubAuthToken() != null) {
+            client.setOAuth2Token(Config.getUser().getGithubAuthToken());
             isLoggedIn = true;
-            System.out.println("Owned private repo's: " + userService.getUser().getOwnedPrivateRepos());
             return true;
         }
         return false;
@@ -104,7 +92,7 @@ public class Git {
     public void getCommits(GitRepository GitRepository) throws IOException {
         commits.clear();
         commitService = new CommitService(client);
-        for (RepositoryCommit com : commitService.getCommits(GitRepository.repository)){
+        for (RepositoryCommit com : commitService.getCommits(GitRepository.getRepository())){
             GitCommit commit = new GitCommit(com);
             commits.add(commit);
         }
@@ -113,7 +101,7 @@ public class Git {
     public void getContents(git.GitRepository GitRepository) throws IOException {
         contents.clear();
         contentsService = new ContentsService(client);
-        for (RepositoryContents con : contentsService.getContents(GitRepository.repository)){
+        for (RepositoryContents con : contentsService.getContents(GitRepository.getRepository())){
             GitContents content = new GitContents(con);
             contents.add(content);
         }
@@ -122,10 +110,14 @@ public class Git {
     public void getContents(git.GitRepository gitRepository, String path) throws IOException {
         contents.clear();
         contentsService = new ContentsService(client);
-        for (RepositoryContents con : contentsService.getContents(gitRepository.repository,path)){
+        for (RepositoryContents con : contentsService.getContents(gitRepository.getRepository(),path)){
             GitContents content = new GitContents(con);
             contents.add(content);
         }
+    }
+
+    public void setAuthToken(String token){
+        Config.getUser().setGithubAuthToken(token);
     }
 
 }

@@ -6,7 +6,11 @@ import org.eclipse.egit.github.core.RepositoryContents;
  * Created by Ken on 20-5-2017.
  */
 public class GitContents {
-    RepositoryContents contents;
+    private RepositoryContents contents;
+
+    public RepositoryContents getContents() {
+        return contents;
+    }
 
     public GitContents(RepositoryContents contents) {
         this.contents = contents;
