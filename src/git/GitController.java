@@ -1,5 +1,6 @@
 package git;
 
+import domain.Config;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -19,67 +20,41 @@ public class GitController implements Initializable {
 
     @FXML private AnchorPane apLists;
     @FXML private AnchorPane apLogin;
-    @FXML private TextField pwfPass;
-    @FXML private TextField tbUsername;
-    @FXML private TextField tbToken;
     @FXML private ListView<GitContents> lvContent;
-    @FXML private CheckBox chkUserPass;
     @FXML private ComboBox<GitRepository> cbRepos;
     @FXML private GridPane gpContents;
     @FXML private Label lblTitle;
     @FXML private Label lblInfo;
+    @FXML private TextField tbToken;
+    @FXML private Button btnLogout;
 
     private String selectedDir;
     private String currentDirectory;
     private Git git;
 
-    public GitController(){
+    public GitController()
+    {
         git = new Git();
     }
 
-    public void login() throws IOException {
-        if (chkUserPass.isSelected()){
-            String username = tbUsername.getText().toString();
-            String pwd = pwfPass.getText().toString();
-            if (!tbUsername.getText().toString().isEmpty()  && !pwfPass.getText().toString().isEmpty())
-            {
-                try{
-                    git.login(username,pwd);
-                    showRepositorys();
-                    hideLogin();
-                    setPrimaryRepo("PTS3");
-                    showListViewInfo();
-                    JOptionPane.showMessageDialog(null,  "Logged in succesfully with Username & Password", " Login", JOptionPane.NO_OPTION);
-                }
-                catch (Exception ex){
-                    JOptionPane.showMessageDialog(null, ex.getMessage(), " Error",JOptionPane.ERROR_MESSAGE);
-                }
+    public void login() {
+        try {
+            if (Config.getUser().getGithubAuthToken() == null){
+               Config.getUser().setGithubAuthToken(tbToken.getText());
             }
-            else {
-                JOptionPane.showMessageDialog(null, "No username or password.", " Error",JOptionPane.CANCEL_OPTION);
-            }
+            git.login();
+            showRepositorys();
         }
-        else{
-            String token = tbToken.getText().toString();
-            if (!token.isEmpty())
-            {
-                try {
-                    git.login(token);
-                    showRepositorys();
-                    hideLogin();
-                    setPrimaryRepo("PTS3");
-                    showListViewInfo();
-                    JOptionPane.showMessageDialog(null,  "Logged in succesfully with Token", " Login", JOptionPane.INFORMATION_MESSAGE);
-                }
-                catch (Exception ex){
-                    JOptionPane.showMessageDialog(null, ex.getMessage(), " Error",JOptionPane.ERROR_MESSAGE);
-                }
-            }
-            else
-            {
-                JOptionPane.showMessageDialog(null, "No Token.", " Error",JOptionPane.CANCEL_OPTION);
-            }
+        catch (IOException ex){
+            JOptionPane.showMessageDialog(null,"Login failed, check settings","Login",JOptionPane.ERROR_MESSAGE);
+
         }
+        hideLogin();
+
+        setPrimaryRepo("PTS3");
+        showListViewInfo();
+        JOptionPane.showMessageDialog(null, "Logged in" , "Login", JOptionPane.NO_OPTION);
+
     }
 
     public void logout() {
@@ -192,6 +167,7 @@ public class GitController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         hideLogin();
+
         lvContent.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -207,21 +183,17 @@ public class GitController implements Initializable {
     }
 
     private void hideLogin(){
-        boolean visible;
-        boolean isLoggedIn = git.isLoggedIn;
-        if (isLoggedIn){
-            tbUsername.setText("");
-            pwfPass.setText("");
+        btnLogout.setVisible(false);
+        if (git.isLoggedIn){
             apLists.setVisible(true);
-            visible = false;
+            apLogin.setVisible(false);
         }
         else {
             apLists.setVisible(false);
             cbRepos.getItems().clear();
             lvContent.getItems().clear();
-            visible = true;
+            apLogin.setVisible(true);
         }
-        apLogin.setVisible(visible);
     }
 
     private void setLabels(String selectedContent){
