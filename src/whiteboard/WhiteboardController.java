@@ -136,9 +136,14 @@ public class WhiteboardController implements Initializable {
         newButton.setOnAction(this::addPane);
         whiteboardItems.getSelectionModel().selectFirst();
         saveButton.setOnAction(this::saveWhiteboard);
+        browseButton.setOnAction(this::loadWhiteboard);
 
         whiteboardPane.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue)
                 -> selectedTab = newValue.getTabPane().getSelectionModel().getSelectedIndex());
+    }
+
+    private void loadWhiteboard(ActionEvent actionEvent) {
+
     }
 
     private void saveWhiteboard(ActionEvent actionEvent) {
@@ -263,6 +268,7 @@ public class WhiteboardController implements Initializable {
                         Integer.toString(board.getItems().size() + 1) ;
                 Video video = new Video(w.getEngine().getLocation(), w.getLayoutX(), w.getLayoutY(),
                         id, w.getWidth(), w.getHeight());
+                w.setId(id);
                 board.addItem(video);
             }
         }
@@ -277,6 +283,7 @@ public class WhiteboardController implements Initializable {
                         Integer.toString(board.getItems().size() + 1) ;
                 Text text = new Text(l.getText(), l.getFont().toString(), id, l.getLayoutX(), l.getLayoutY(),
                         l.getWidth(), l.getHeight());
+                l.setId(id);
                 board.addItem(text);
             }
         }
@@ -294,6 +301,7 @@ public class WhiteboardController implements Initializable {
                     byte[] imageToByte = Files.readAllBytes(F.toPath());
                     Picture picture = new Picture(imageToByte, id, I.getLayoutX(), I.getLayoutY(),
                             I.getImage().getWidth(), I.getImage().getHeight());
+                    I.setId(id);
                     board.addItem(picture);
                 }
                 catch(IOException e){
@@ -325,8 +333,18 @@ public class WhiteboardController implements Initializable {
         n.setOnMouseDragged(e ->{
             n.setLayoutY(e.getSceneY() + dragDelta.getY());
             n.setLayoutX(e.getSceneX() + dragDelta.getX());
+
+            for (Whiteboard w : whiteboards){
+                for(WhiteboardItem wi : w.getItems()){
+                    if(wi.getId().equals(n.getId())){
+                        wi.setyPos(n.getLayoutY());
+                        wi.setxPos(n.getLayoutX());
+                    }
+                }
+            }
         });
         n.setOnMouseEntered(e -> n.setCursor(Cursor.HAND));
+
     }
 
 }

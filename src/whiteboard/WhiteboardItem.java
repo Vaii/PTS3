@@ -5,12 +5,23 @@ package whiteboard;
  */
 public abstract class WhiteboardItem {
 
-    private Point point;
+
     private double Width;
+    private String id;
     private double Height;
+    private double xPos;
+    private double yPos;
 
     @Override
     public String toString() {
         return this.getClass().getSimpleName();
     }
+
+    public String getId() {
+        return id;
+    }
+
+    public abstract void setxPos(double xPos);
+
+    public abstract void setyPos(double yPos);
 }
