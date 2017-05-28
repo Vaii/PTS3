@@ -1,0 +1,10 @@
+#BUTTON:hover{
+    -fx-background-color:limegreen!important;
+    -fx-text-fill:white;
+    -fx-font-weight:bold;
+}
+
+#BUTTON{
+    -fx-text-fill:white;
+    -fx-font-weight:bold;
+}

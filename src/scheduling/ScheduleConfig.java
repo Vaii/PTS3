@@ -65,7 +65,7 @@ public class ScheduleConfig {
         cal.set(2, 7);
         cal.set(5, 1);
         Date dateRepresentation = cal.getTime();
-        this.scheduleItemObservableList.addAll(new ScheduleItem[]{new ScheduleItem("Klassendiagram", "Eerste versie, voor controle door tutor.", dateRepresentation, users, ScheduleItemStatus.TODO, 0), new ScheduleItem("AcceptatieTestplan", "Eerste versie, voor controle door tutor.", dateRepresentation, users, ScheduleItemStatus.INPROGRESS, 0)});
+        // this.scheduleItemObservableList.addAll(new ScheduleItem[]{new ScheduleItem("Klassendiagram", "Eerste versie, voor controle door tutor.", dateRepresentation, users, ScheduleItemStatus.TODO, 0), new ScheduleItem("AcceptatieTestplan", "Eerste versie, voor controle door tutor.", dateRepresentation, users, ScheduleItemStatus.INPROGRESS, 0)});
     }
 }
 
