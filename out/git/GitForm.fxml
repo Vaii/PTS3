@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
@@ -14,17 +19,12 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane minWidth="700.0" prefHeight="656.0" prefWidth="990.0" styleClass="myRootPane" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="git.GitController">
+<AnchorPane minWidth="700.0" prefHeight="656.0" prefWidth="990.0" styleClass="myRootPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="git.GitController">
     <children>
         <AnchorPane fx:id="apLogin" layoutX="402.0" prefHeight="118.0" prefWidth="438.0" styleClass="myAnchorPane">
             <children>
-                <TextField fx:id="tbUsername" layoutX="79.0" layoutY="25.0" prefHeight="25.0" prefWidth="149.0" />
-                <Label fx:id="lblUsername" layoutX="3.0" layoutY="29.0" styleClass="myLabel" text=" Username:" />
-                <Label fx:id="lblPassword" layoutX="6.0" layoutY="58.0" styleClass="myLabel" text="Password:" />
-                <PasswordField fx:id="pwfPass" layoutX="79.0" layoutY="54.0" />
-                <CheckBox fx:id="chkUserPass" layoutX="237.0" layoutY="29.0" mnemonicParsing="false" selected="true" styleClass="myLabel" text="Username &amp; password" />
                 <TextField fx:id="tbToken" layoutX="289.0" layoutY="54.0" prefHeight="25.0" prefWidth="149.0" />
-                <Button fx:id="btnLogin" layoutX="168.0" layoutY="88.0" mnemonicParsing="false" onMouseClicked="#login" prefHeight="25.0" prefWidth="60.0" styleClass="myButton" text="Login" />
+                <Button fx:id="btnLogin" layoutX="168.0" layoutY="88.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="60.0" styleClass="myButton" text="Login" />
                 <Label fx:id="lblPassword1" layoutX="237.0" layoutY="58.0" styleClass="myLabel" text="Token:" />
             </children>
         </AnchorPane>
@@ -56,7 +56,7 @@
                </rowConstraints>
                <children>
                       <Label fx:id="lblRepo" layoutX="14.0" layoutY="6.0" styleClass="myLabelTitle" text="Repositorys:" />
-                      <Button fx:id="btnShowRepoInfo" layoutX="275.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#showInfo" styleClass="myButton" text="Show repository" GridPane.columnIndex="2" />
+                      <Button fx:id="btnShowRepoInfo" layoutX="275.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#showListViewInfo" styleClass="myButton" text="Show repository" GridPane.columnIndex="2" />
                       <Button fx:id="btnLogout" layoutX="903.0" layoutY="2.0" mnemonicParsing="false" onAction="#logout" styleClass="myLogoutBtn" text="Logout" GridPane.columnIndex="3" />
                   <ComboBox fx:id="cbRepos" layoutX="98.0" layoutY="2.0" prefHeight="25.0" prefWidth="151.0" GridPane.columnIndex="1" />
                </children>
