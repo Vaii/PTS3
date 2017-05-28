@@ -43,6 +43,7 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.logging.Logger;
 
 /**
  * Created by Vai on 4/2/17.
@@ -105,6 +106,8 @@ public class WhiteboardController implements Initializable {
     private ArrayList<Whiteboard> whiteboards;
 
     private ObservableList<String> whiteboarditemList = FXCollections.observableArrayList();
+
+    private Whiteboard loadedWhiteboard;
     @FXML
     Button saveButton;
     @FXML
@@ -142,7 +145,21 @@ public class WhiteboardController implements Initializable {
                 -> selectedTab = newValue.getTabPane().getSelectionModel().getSelectedIndex());
     }
 
-    private void loadWhiteboard(ActionEvent actionEvent) {
+    private void loadWhiteboard(ActionEvent actionEvent){
+
+        try{
+            Stage loadStage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("load.fxml"));
+            Parent root = loader.load();
+            LoadController lc = loader.getController();
+            lc.setWc(this);
+            loadStage.setTitle("Selecteer een whiteboard om te laden");
+            loadStage.setScene(new Scene(root));
+            loadStage.showAndWait();
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
 
     }
 
@@ -322,7 +339,7 @@ public class WhiteboardController implements Initializable {
         whiteboardPane.getSelectionModel().getSelectedItem().setContent(pane);
     }
 
-    private  void makeItemDraggable(Node n){
+    private void makeItemDraggable(Node n){
 
         n.setOnMousePressed(event -> {
             dragDelta.setX(n.getLayoutX() - event.getSceneX());
@@ -347,4 +364,7 @@ public class WhiteboardController implements Initializable {
 
     }
 
+    public void setLoadedWhiteboard(Whiteboard loadedWhiteboard) {
+        this.loadedWhiteboard = loadedWhiteboard;
+    }
 }

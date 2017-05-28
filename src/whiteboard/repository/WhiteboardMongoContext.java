@@ -1,8 +1,11 @@
 package whiteboard.repository;
 
+import com.mongodb.Mongo;
 import domain.DataSource;
 import org.jongo.MongoCollection;
+import org.jongo.MongoCursor;
 import whiteboard.Whiteboard;
+import whiteboard.WhiteboardItem;
 
 import java.util.ArrayList;
 
@@ -31,7 +34,17 @@ public class WhiteboardMongoContext implements IWhiteboardContext {
     }
 
     @Override
-    public ArrayList<Whiteboard> loadAllWhiteboards(int userId) {
-        return null;
+    public ArrayList<Whiteboard> loadAllWhiteboards(String userId) {
+        ArrayList<Whiteboard> whiteboards = new ArrayList<>();
+
+        MongoCollection whiteboardCollection = DataSource.connect().getCollection("Whiteboard");
+        MongoCursor<Whiteboard> userWhiteboards = whiteboardCollection.find("{UserID:#}", userId).as(Whiteboard.class);
+
+        while(userWhiteboards.hasNext()){
+            whiteboards.add(userWhiteboards.next());
+        }
+
+        return whiteboards;
+
     }
 }
