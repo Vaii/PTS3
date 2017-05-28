@@ -7,6 +7,9 @@ import domain.*;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.SimpleBooleanProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -15,6 +18,7 @@ public class ScheduleConfig {
     private ObservableList<ScheduleItem> scheduleItemObservableList;
     private ObservableList<User> usersObservableList;
     private ScheduleItem selectedScheduleItem;
+    public BooleanProperty updateSchedule = new SimpleBooleanProperty();
 
     public ScheduleConfig() {
     }
@@ -66,6 +70,7 @@ public class ScheduleConfig {
         cal.set(5, 1);
         Date dateRepresentation = cal.getTime();
         // this.scheduleItemObservableList.addAll(new ScheduleItem[]{new ScheduleItem("Klassendiagram", "Eerste versie, voor controle door tutor.", dateRepresentation, users, ScheduleItemStatus.TODO, 0), new ScheduleItem("AcceptatieTestplan", "Eerste versie, voor controle door tutor.", dateRepresentation, users, ScheduleItemStatus.INPROGRESS, 0)});
+         this.updateSchedule.setValue(false);
     }
 }
 

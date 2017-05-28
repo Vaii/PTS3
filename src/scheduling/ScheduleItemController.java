@@ -8,16 +8,24 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+import scheduling.repository.IScheduleMongoContext;
+import scheduling.repository.ScheduleRepository;
 
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 
@@ -26,6 +34,7 @@ import java.util.ResourceBundle;
  */
 public class ScheduleItemController implements Initializable {
 
+    private ScheduleItem scheduleItem;
     private StringProperty title = new SimpleStringProperty();
     private StringProperty description = new SimpleStringProperty();
     private StringProperty date = new SimpleStringProperty();
@@ -47,6 +56,10 @@ public class ScheduleItemController implements Initializable {
     private AnchorPane anchorPaneMain;
     @FXML
     private Label lblCategory;
+    @FXML
+    private Label lblDeleteIcon;
+    @FXML
+    private Label lblEditIcon;
 
     @FXML
     private void setTeamMemberLabels(ArrayList<User> users) {
@@ -105,6 +118,7 @@ public class ScheduleItemController implements Initializable {
     }
 
     public ScheduleItemController(ScheduleItem scheduleItem){
+        this.scheduleItem = scheduleItem;
         this.title.set(scheduleItem.getTitle());
         this.description.set(scheduleItem.getDescription());
         this.date.set(Utility.getDDMMYYDate(scheduleItem.getDeadline()));
@@ -114,6 +128,58 @@ public class ScheduleItemController implements Initializable {
 
 
     }
+
+    @FXML
+    public void showConfigButtons(){
+        Text delete =  GlyphsDude.createIcon(FontAwesomeIcon.TRASH, "1.2em");
+        delete.setFill(Color.web("#222"));
+        this.lblDeleteIcon.setGraphic(delete);
+        Text edit =  GlyphsDude.createIcon(FontAwesomeIcon.PENCIL_SQUARE, "1.2em");
+        edit.setFill(Color.web("#222"));
+        this.lblEditIcon.setGraphic(edit);
+    }
+
+    @FXML
+    public void hideConfigButtons(){
+        this.lblEditIcon.setGraphic(null);
+        this.lblDeleteIcon.setGraphic(null);
+    }
+    @FXML
+    private void changeBackgroundColorOn(MouseEvent event) {
+        Label c = (Label)event.getSource();
+        Text x =  (Text)c.getGraphic();
+        x.setFill(Color.web("#f00"));
+        c.setGraphic(x);
+    }
+
+    @FXML
+    private void changeBackgroundColorOff(MouseEvent event) {
+        Label c = (Label)event.getSource();
+        Text x =  (Text)c.getGraphic();
+        x.setFill((Color.web("#333")));
+        c.setGraphic(x);
+    }
+
+    @FXML
+    private void deleteScheduleItem(){
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Delete Schedule Item");
+        alert.setHeaderText("Are you sure about this?");
+        Optional<ButtonType> result = alert.showAndWait();
+        if (ButtonType.OK == result.get()){
+            System.out.println("deleting item");
+            ScheduleRepository repo = new ScheduleRepository(new IScheduleMongoContext());
+            repo.DeleteById(this.scheduleItem.get_id());
+            ScheduleConfig.getInstance().updateSchedule.setValue(true);
+
+        } else {
+            // ... user chose CANCEL or closed the dialog
+        }
+
+
+    }
+    @FXML
+    private void editScheduleItem(){}
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

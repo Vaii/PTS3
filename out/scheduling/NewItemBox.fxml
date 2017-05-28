@@ -26,6 +26,6 @@
         <DatePicker fx:id="dpDeadline" layoutX="174.0" layoutY="325.0" prefHeight="34.0" prefWidth="180.0" promptText="Date" AnchorPane.bottomAnchor="75.0" />
       <ComboBox fx:id="cbWeek" layoutX="18.0" layoutY="327.0" onAction="#setStatusPercentage" prefHeight="34.0" prefWidth="151.0" promptText="Week" style="-fx-background-color: #fff; -fx-border-color: #ccc;" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="15.0" />
       <Label fx:id="lblStatus1" layoutX="16.0" layoutY="299.0" prefHeight="17.0" prefWidth="99.0" text="Deadline" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="15.0" />
-      <ComboBox fx:id="cbCategory" layoutX="367.0" layoutY="64.0" onAction="#setStatusPercentage" prefHeight="34.0" prefWidth="180.0" promptText="Category" style="-fx-background-color: #fff; -fx-border-color: #ccc;" AnchorPane.leftAnchor="370.0" AnchorPane.rightAnchor="15.0" />
+      <ComboBox fx:id="cbCategory" layoutX="367.0" layoutY="64.0" onAction="#setStatusPercentage" prefHeight="34.0" prefWidth="180.0" style="-fx-background-color: #fff; -fx-border-color: #ccc;" AnchorPane.leftAnchor="370.0" AnchorPane.rightAnchor="15.0" />
     </children>
 </AnchorPane>

@@ -75,6 +75,7 @@ public class NewItemBoxController implements Initializable {
                     Utility.parseIntOrZero(this.txtScheduleItemStatusPercentage.getText()),
                     cbWeek.getSelectionModel().getSelectedItem(),
                     (ScheduleItemCategory) this.cbCategory.getSelectionModel().getSelectedItem()));
+            ScheduleConfig.getInstance().updateSchedule.setValue(true);
             this.closeAction();
         }
 
@@ -127,6 +128,7 @@ public class NewItemBoxController implements Initializable {
         this.cbCategory.getItems().setAll(ScheduleItemCategory.values());
         this.dpDeadline.setValue(LocalDate.now());
         this.cbtxtScheduleItemStatus.setValue(ScheduleItemStatus.TODO);
+        this.cbCategory.setValue(ScheduleItemCategory.DOCUMENTATION);
         this.cbWeek.getItems().addAll(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20);
 
 

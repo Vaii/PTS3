@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="anchorPaneMain" minHeight="100.0" minWidth="270.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="anchorPaneMain" minHeight="100.0" minWidth="270.0" onMouseEntered="#showConfigButtons" onMouseExited="#hideConfigButtons" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Text fx:id="txtTitle" layoutX="14.0" layoutY="22.9951171875" strokeType="OUTSIDE" strokeWidth="0.0" text="Text - Title Test Test Title" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
          <font>
@@ -36,5 +36,7 @@
       </Text>
       <HBox fx:id="hboxTeam" layoutX="5.0" layoutY="39.0" prefHeight="23.0" prefWidth="251.0" />
       <Label fx:id="lblCategory" layoutX="224.0" layoutY="6.0" prefHeight="16.0" prefWidth="18.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="5.0" />
+      <Label fx:id="lblDeleteIcon" layoutX="254.0" layoutY="6.0" onMouseClicked="#deleteScheduleItem" onMouseEntered="#changeBackgroundColorOn" onMouseExited="#changeBackgroundColorOff" prefHeight="15.0" prefWidth="11.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <Label fx:id="lblEditIcon" layoutX="241.0" layoutY="10.0" onMouseClicked="#editScheduleItem" onMouseEntered="#changeBackgroundColorOn" onMouseExited="#changeBackgroundColorOff" prefHeight="15.0" prefWidth="11.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="5.0" />
    </children>
 </AnchorPane>
