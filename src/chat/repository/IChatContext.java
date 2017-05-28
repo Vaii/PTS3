@@ -8,7 +8,6 @@ import java.util.ArrayList;
  */
 
 public interface IChatContext {
-
     boolean DeleteById(int id);
     boolean DeleteAll(ArrayList<Message> messages);
     void Insert(Message message);

@@ -1,22 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import java.net.URL?>
 
-<ScrollPane fitToHeight="true" minHeight="500.0" minWidth="600.0" style="-fx-background-color: #e6e6e8;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scheduling.SchedulingMainController">
+<ScrollPane fitToHeight="true" minHeight="500.0" minWidth="600.0" pannable="true" prefHeight="500.0" prefWidth="820.0" style="-fx-background-color: #e7e7e7; -fx-focus-traversable: false; -fx-background-insets: 2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scheduling.SchedulingMainController">
   <content>
-    <AnchorPane fx:id="mainAnchorPane" minHeight="480.0" minWidth="600.0" style="-fx-background-color: #e6e6e8;">
+    <AnchorPane fx:id="mainAnchorPane" minHeight="480.0" minWidth="600.0" style="-fx-background-color: #efefef;">
          <children>
-            <VBox fx:id="vboxWeekOne" layoutX="14.0" layoutY="39.0" minWidth="250.0" prefHeight="433.0" prefWidth="200.0" style="-fx-background-color: #ff0;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="40.0" />
-            <Text layoutX="23.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Schedule" wrappingWidth="80.7294921875" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0" />
-            <VBox fx:id="vboxWeekOne1" layoutX="241.0" layoutY="41.0" minWidth="250.0" prefHeight="433.0" prefWidth="250.0" style="-fx-background-color: #ff0;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="290.0" AnchorPane.topAnchor="40.0" />
-            <VBox fx:id="vboxWeekOne11" layoutX="439.0" layoutY="49.0" minWidth="250.0" prefHeight="433.0" prefWidth="250.0" style="-fx-background-color: #ff0;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="560.0" AnchorPane.topAnchor="40.0" />
-            <VBox fx:id="vboxWeekOne111" layoutX="449.0" layoutY="59.0" minWidth="250.0" prefHeight="433.0" prefWidth="250.0" style="-fx-background-color: #ff0;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="830.0" AnchorPane.topAnchor="40.0" />
-            <VBox fx:id="vboxWeekOne2" layoutX="24.0" layoutY="49.0" minWidth="250.0" prefHeight="433.0" prefWidth="200.0" style="-fx-background-color: #ff0;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="1100.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="40.0" />
+            <VBox fx:id="vboxWeekA" layoutX="14.0" layoutY="39.0" minWidth="270.0" prefHeight="433.0" prefWidth="270.0" style="-fx-background-color: #DDD;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="100.0" />
+            <Text fill="#06000a" layoutX="20.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Schedule" wrappingWidth="173.7294921875" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="17.0">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font></Text>
+            <VBox fx:id="vboxWeekB" layoutX="241.0" layoutY="41.0" minWidth="270.0" prefHeight="433.0" prefWidth="270.0" style="-fx-background-color: #ddd;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="100.0" />
+            <VBox fx:id="vboxWeekC" layoutX="439.0" layoutY="49.0" minWidth="270.0" prefHeight="433.0" prefWidth="270.0" style="-fx-background-color: #ddd;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="580.0" AnchorPane.topAnchor="100.0" />
+            <VBox fx:id="vboxWeekD" layoutX="449.0" layoutY="59.0" minWidth="270.0" prefHeight="433.0" prefWidth="270.0" style="-fx-background-color: #ddd;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="860.0" AnchorPane.topAnchor="100.0" />
+            <VBox fx:id="vboxWeekE" layoutX="24.0" layoutY="49.0" minWidth="270.0" prefHeight="433.0" prefWidth="270.0" style="-fx-background-color: #ddd;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="1140.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="100.0" />
+            <Button fx:id="btnWeek1" layoutX="95.0" layoutY="51.0" mnemonicParsing="false" onAction="#loadWeek1" prefWidth="75.0" style="-fx-background-color: #ccc; -fx-background-radius: 0;" text="1 - 5" AnchorPane.leftAnchor="97.0" AnchorPane.topAnchor="50.0">
+               <padding>
+                  <Insets bottom="9.0" left="12.0" right="12.0" top="9.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnWeek2" layoutX="172.0" layoutY="50.0" mnemonicParsing="false" onAction="#loadWeek6" prefWidth="75.0" style="-fx-background-color: #ccc; -fx-background-radius: 0;" text="6 - 10" AnchorPane.leftAnchor="174.0" AnchorPane.topAnchor="50.0">
+               <padding>
+                  <Insets bottom="9.0" left="12.0" right="12.0" top="9.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnWeek3" layoutX="250.0" layoutY="50.0" mnemonicParsing="false" onAction="#loadWeek11" prefWidth="75.0" style="-fx-background-color: #ccc; -fx-background-radius: 0;" text="11 - 15" AnchorPane.leftAnchor="251.0" AnchorPane.topAnchor="50.0">
+               <padding>
+                  <Insets bottom="9.0" left="12.0" right="12.0" top="9.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnWeek4" layoutX="301.0" layoutY="50.0" mnemonicParsing="false" onAction="#loadWeek16" prefWidth="75.0" style="-fx-background-color: #ccc; -fx-background-radius: 0;" text="16 - 20" AnchorPane.leftAnchor="328.0" AnchorPane.topAnchor="50.0">
+               <padding>
+                  <Insets bottom="9.0" left="12.0" right="12.0" top="9.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="18.0" layoutY="50.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="75.0" style="-fx-background-color: #ddd; -fx-background-radius: 0;" text="WEEK" textFill="#a8a8a8" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="50.0">
+               <padding>
+                  <Insets bottom="9.0" left="12.0" right="12.0" top="9.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnAddNewItem" layoutX="373.0" layoutY="49.0" mnemonicParsing="false" onAction="#openFormWindow" prefHeight="29.0" prefWidth="155.0" style="-fx-background-color: c43235; -fx-background-radius: 0;" text="Add new Item" textFill="WHITE" AnchorPane.leftAnchor="584.0" AnchorPane.topAnchor="50.0">
+               <padding>
+                  <Insets bottom="9.0" left="25.0" right="12.0" top="9.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Label fx:id="lblAddItemIcon" layoutX="415.0" layoutY="58.0" prefHeight="15.0" prefWidth="2.0" textFill="WHITE" />
+            <ComboBox fx:id="cbTeam" layoutX="564.0" layoutY="50.0" prefHeight="34.0" prefWidth="177.0" promptText="All Teammembers" style="-fx-background-color: #ccc; -fx-background-radius: 0;" AnchorPane.leftAnchor="405.0" />
          </children></AnchorPane>
   </content>
+   <stylesheets>
+      <URL value="@styles.css" />
+   </stylesheets>
 </ScrollPane>
