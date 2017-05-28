@@ -2,6 +2,8 @@ package scheduling;
 
 import de.jensd.fx.glyphs.GlyphsDude;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -34,7 +36,7 @@ import static javafx.scene.text.FontWeight.*;
 public class SchedulingMainController implements Initializable {
 
     private ScheduleRepository repo;
-
+    private int currentWeek;
     @FXML
     AnchorPane mainAnchorPane;
     @FXML
@@ -88,6 +90,7 @@ public class SchedulingMainController implements Initializable {
     }
     @FXML
     private void loadWeek1(ActionEvent event){
+        currentWeek = 1;
         setActiveButton((Button)event.getSource());
         setVBoxesHeaders(1);
         loadAllScheduleItems(1);
@@ -95,6 +98,7 @@ public class SchedulingMainController implements Initializable {
 
     @FXML
     private void loadWeek6(ActionEvent event){
+        currentWeek = 6;
         setActiveButton((Button)event.getSource());
         setVBoxesHeaders(6);
         loadAllScheduleItems(6);
@@ -102,6 +106,7 @@ public class SchedulingMainController implements Initializable {
 
     @FXML
     private void loadWeek11(ActionEvent event){
+        currentWeek = 11;
         setActiveButton((Button)event.getSource());
         setVBoxesHeaders(11);
         loadAllScheduleItems(11);
@@ -109,6 +114,7 @@ public class SchedulingMainController implements Initializable {
 
     @FXML
     private void loadWeek16(ActionEvent event){
+        currentWeek = 16;
         setActiveButton((Button)event.getSource());
         setVBoxesHeaders(16);
         loadAllScheduleItems(16);
@@ -240,5 +246,19 @@ public class SchedulingMainController implements Initializable {
         btnWeek1.setStyle("-fx-background-color: limegreen; -fx-background-radius: 0;");
         btnWeek1.setTextFill(Color.web("#fff"));
         loadAllScheduleItems(1);
+
+
+        ScheduleConfig.getInstance().updateSchedule.addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                // Only if completed
+                if (newValue) {
+                    clearVBoxes();
+                    setVBoxesHeaders(currentWeek);
+                    loadAllScheduleItems(currentWeek);
+                    ScheduleConfig.getInstance().updateSchedule.setValue(false);
+                }
+            }
+        });
     }
 }

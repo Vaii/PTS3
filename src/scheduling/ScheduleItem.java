@@ -6,6 +6,8 @@ package scheduling;
 import domain.*;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.jongo.marshall.jackson.oid.MongoObjectId;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -28,6 +30,9 @@ public class ScheduleItem {
     private int percentComplete;
     private ArrayList<User> assignedUsers;
     private User user;
+
+    @MongoObjectId
+    private String _id;
 
     @JsonProperty(TITLE)
     public String getTitle() {
@@ -83,6 +88,10 @@ public class ScheduleItem {
     public void setpercentComplete(int percentComplete) {
         this.percentComplete = percentComplete;
     }
+
+    public String get_id(){ return _id;}
+
+    public int getWeek(){ return week; }
 
     public String getFormattedStatus() {
         return this.status.equals(ScheduleItemStatus.INPROGRESS)?this.status.toString() + " " + this.percentComplete + "%":this.status.toString();

@@ -1,6 +1,7 @@
 package scheduling.repository;
 
 import domain.DataSource;
+import org.bson.types.ObjectId;
 import org.jongo.MongoCollection;
 import org.jongo.MongoCursor;
 import scheduling.ScheduleItem;
@@ -20,8 +21,14 @@ public class IScheduleMongoContext implements IScheduleContext {
     }
 
     @Override
-    public boolean DeleteById(int id) {
-        return false;
+    public boolean DeleteById(String id) {
+        try{
+            schedule.remove(new ObjectId(id));
+                    return true;
+        }
+        catch(Exception e){
+            return false;
+        }
     }
 
     @Override

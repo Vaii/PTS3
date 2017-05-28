@@ -23,6 +23,7 @@ public class ScheduleRepository {
         return context.GetAllScheduleItemsByWeek(week, userID);
     }
 
+    public boolean DeleteById(String id){return context.DeleteById(id);}
 
     public void Insert(ScheduleItem scheduleItem){
         context.Insert(scheduleItem);
