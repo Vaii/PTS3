@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPaneMain" minHeight="100.0" minWidth="270.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fx:id="txtTitle" layoutX="14.0" layoutY="22.9951171875" strokeType="OUTSIDE" strokeWidth="0.0" text="Text - Title Test Test Title" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtDescription" layoutX="6.0" layoutY="32.82275390625" strokeType="OUTSIDE" strokeWidth="0.0" text="Description - Test" wrappingWidth="251.4228515625" AnchorPane.leftAnchor="6.0" AnchorPane.topAnchor="22.0">
+         <font>
+            <Font name="Courier New Italic" size="13.0" />
+         </font></Text>
+      <Pane layoutY="94.0" prefHeight="2.0" prefWidth="270.0" style="-fx-background-color: #ccc;" AnchorPane.bottomAnchor="4.0" />
+      <Text fx:id="txtDate" layoutX="6.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="19-07-2017" wrappingWidth="251.4228515625">
+         <font>
+            <Font name="Courier New Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="6.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STATUS:" wrappingWidth="60.94580078125" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="5.0">
+         <font>
+            <Font name="Courier New" size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtStatus" layoutX="59.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: LIMEGREEN;" text="IN PROGRESS (10%)" wrappingWidth="136.94580078125" AnchorPane.bottomAnchor="25.0">
+         <font>
+            <Font name="Courier New Bold" size="12.0" />
+         </font>
+      </Text>
+      <HBox fx:id="hboxTeam" layoutX="5.0" layoutY="39.0" prefHeight="23.0" prefWidth="251.0" />
+      <Label fx:id="lblCategory" layoutX="224.0" layoutY="6.0" prefHeight="16.0" prefWidth="18.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="5.0" />
+   </children>
+</AnchorPane>

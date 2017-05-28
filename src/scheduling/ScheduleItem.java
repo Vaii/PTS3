@@ -17,15 +17,19 @@ public class ScheduleItem {
     public static final String ASSIGNEDUSERS = "assignedUsers";
     public static final String USER = "user";
     public static final String PERCENTCOMPLETE = "percentComplete";
+    public static final String WEEK = "week";
+    public static final String CATEGORY = "category";
     private String title;
     private String description;
+    private ScheduleItemCategory category;
     private Date deadline;
+    private int week;
     private ScheduleItemStatus status;
     private int percentComplete;
     private ArrayList<User> assignedUsers;
     private User user;
 
-    @JsonProperty("title")
+    @JsonProperty(TITLE)
     public String getTitle() {
         return this.title;
     }
@@ -34,7 +38,7 @@ public class ScheduleItem {
         this.title = title;
     }
 
-    @JsonProperty("description")
+    @JsonProperty(DESCRIPTION)
     public String getDescription() {
         return this.description;
     }
@@ -43,7 +47,12 @@ public class ScheduleItem {
         this.description = description;
     }
 
-    @JsonProperty("deadline")
+    @JsonProperty(CATEGORY)
+    public ScheduleItemCategory getCategory() {
+        return this.category;
+    }
+
+    @JsonProperty(DEADLINE)
     public Date getDeadline() {
         return this.deadline;
     }
@@ -52,12 +61,12 @@ public class ScheduleItem {
         this.deadline = deadline;
     }
 
-    @JsonProperty("assignedUsers")
+    @JsonProperty(ASSIGNEDUSERS)
     public ArrayList<User> getAssignedUsers() {
         return this.assignedUsers;
     }
 
-    @JsonProperty("status")
+    @JsonProperty(STATUS)
     public ScheduleItemStatus getStatus() {
         return this.status;
     }
@@ -66,7 +75,7 @@ public class ScheduleItem {
         this.status = status;
     }
 
-    @JsonProperty("percentComplete")
+    @JsonProperty(PERCENTCOMPLETE)
     public int getPercentComplete() {
         return this.percentComplete;
     }
@@ -83,12 +92,17 @@ public class ScheduleItem {
     }
 
     @JsonCreator
-    public ScheduleItem(@JsonProperty("title") String title, @JsonProperty("description") String description, @JsonProperty("deadline") Date deadline, @JsonProperty("assignedUsers") ArrayList<User> users, @JsonProperty("status") ScheduleItemStatus status, @JsonProperty("percentComplete") int percentComplete) {
+    public ScheduleItem(@JsonProperty(TITLE) String title, @JsonProperty(DESCRIPTION) String description,
+                        @JsonProperty(DEADLINE) Date deadline, @JsonProperty(ASSIGNEDUSERS) ArrayList<User> users,
+                        @JsonProperty(STATUS) ScheduleItemStatus status, @JsonProperty(PERCENTCOMPLETE) int percentComplete,
+                        @JsonProperty(WEEK) int week, @JsonProperty(CATEGORY) ScheduleItemCategory category) {
         this.title = title;
         this.description = description;
         this.deadline = deadline;
         this.assignedUsers = users;
         this.status = status;
         this.percentComplete = percentComplete;
+        this.week = week;
+        this.category = category;
     }
 }

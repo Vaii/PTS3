@@ -28,11 +28,13 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import scheduling.ScheduleConfig;
 import scheduling.ScheduleItemStatus;
+import scheduling.repository.IScheduleMongoContext;
+import scheduling.repository.ScheduleRepository;
 
 public class NewItemBoxController implements Initializable {
     private ScheduleItem scheduleItem;
-    @FXML
-    private Button closeButton;
+    private ScheduleRepository repo;
+
     @FXML
     private Button btnAddScheduleItem;
     @FXML
@@ -49,6 +51,12 @@ public class NewItemBoxController implements Initializable {
     private DatePicker dpDeadline;
     @FXML
     private Label lblAgendaItem;
+    @FXML
+    private ComboBox<Integer> cbWeek;
+
+
+    @FXML
+    private ComboBox cbCategory;
 
     public NewItemBoxController() {
     }
@@ -59,15 +67,22 @@ public class NewItemBoxController implements Initializable {
         List<TextField> txt = new ArrayList();
         txt.add(this.txtScheduleItemTitle);
         if(InputValidator.checkForStringInput(txt).booleanValue()) {
-            ScheduleConfig.getInstance().addScheduleItemObservableList(new ScheduleItem(this.txtScheduleItemTitle.getText(), this.txtScheduleItemDescription.getText(), Date.valueOf((LocalDate)this.dpDeadline.getValue()), selectedTeammembers, (ScheduleItemStatus)this.cbtxtScheduleItemStatus.getSelectionModel().getSelectedItem(), Utility.parseIntOrZero(this.txtScheduleItemStatusPercentage.getText())));
-            this.closeButtonAction();
+            repo.Insert(new ScheduleItem(this.txtScheduleItemTitle.getText(),
+                    this.txtScheduleItemDescription.getText(),
+                    Date.valueOf((LocalDate)this.dpDeadline.getValue()),
+                    selectedTeammembers,
+                    (ScheduleItemStatus)this.cbtxtScheduleItemStatus.getSelectionModel().getSelectedItem(),
+                    Utility.parseIntOrZero(this.txtScheduleItemStatusPercentage.getText()),
+                    cbWeek.getSelectionModel().getSelectedItem(),
+                    (ScheduleItemCategory) this.cbCategory.getSelectionModel().getSelectedItem()));
+            this.closeAction();
         }
 
     }
 
     @FXML
-    private void closeButtonAction() throws IOException {
-        Stage stage = (Stage)this.closeButton.getScene().getWindow();
+    private void closeAction() throws IOException {
+        Stage stage = (Stage)this.btnAddScheduleItem.getScene().getWindow();
         stage.close();
     }
 
@@ -104,11 +119,16 @@ public class NewItemBoxController implements Initializable {
     }
 
     public void initialize(URL location, ResourceBundle resources) {
+        repo = new ScheduleRepository(new IScheduleMongoContext());
         this.txtScheduleItemStatusPercentage.setDisable(true);
         this.lvScheduleItemTeamMembers.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         this.lvScheduleItemTeamMembers.setItems(ScheduleConfig.getInstance().getUsersObservableList());
         this.cbtxtScheduleItemStatus.getItems().setAll(ScheduleItemStatus.values());
+        this.cbCategory.getItems().setAll(ScheduleItemCategory.values());
         this.dpDeadline.setValue(LocalDate.now());
         this.cbtxtScheduleItemStatus.setValue(ScheduleItemStatus.TODO);
+        this.cbWeek.getItems().addAll(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20);
+
+
     }
 }
