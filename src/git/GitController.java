@@ -185,6 +185,7 @@ public class GitController implements Initializable {
     private void hideLogin(){
         btnLogout.setVisible(false);
         if (git.isLoggedIn){
+            tbToken.setVisible(false);
             apLists.setVisible(true);
             apLogin.setVisible(false);
         }
