@@ -23,7 +23,6 @@ public class GitController implements Initializable {
     @FXML private GridPane gpContents;
     @FXML private Label lblTitle;
     @FXML private Label lblInfo;
-    @FXML private Button btnLogout;
 
     private String selectedDir;
     private String currentDirectory;
