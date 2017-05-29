@@ -10,4 +10,5 @@ public interface Storageable {
     void uploadFile(File inputFile);
     void downloadFile(String fileOutputPath, String filePath);
     ArrayList<Folder> getFiles(String Path);
+    void makeClient(String accessToken);
 }

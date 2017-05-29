@@ -16,6 +16,7 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
@@ -142,6 +143,19 @@ public class LauncherController implements Initializable {
     private void loadGit() throws IOException {
         AnchorPane git = (AnchorPane)FXMLLoader.load(this.getClass().getResource("/git/GitForm.fxml"));
         this.mainBorderPane.setCenter(git);
+
+    }
+
+    @FXML
+    private void loadSettings() throws IOException{
+        AnchorPane settings = new AnchorPane();
+        VBox box = new VBox();
+        settings.getChildren().add(box);
+        AnchorPane gitSettings = (AnchorPane)FXMLLoader.load(this.getClass().getResource("/git/GitSettings.fxml"));
+        box.getChildren().add(gitSettings);
+        AnchorPane storageSettings = (AnchorPane)FXMLLoader.load(this.getClass().getResource("/storage/StorageSettings.fxml"));
+        box.getChildren().add(storageSettings);
+        this.mainBorderPane.setCenter(settings);
     }
 
     public void initialize(URL url, ResourceBundle rb) {
