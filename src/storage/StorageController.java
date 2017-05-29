@@ -3,7 +3,10 @@ package storage;
 import com.dropbox.core.*;
 import com.dropbox.core.v1.DbxClientV1;
 import com.dropbox.core.v2.DbxClientV2;
+<<<<<<< HEAD
 import domain.Config;
+=======
+>>>>>>> 6e922903f7b8120180dfd975b26ae887f925bc86
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;

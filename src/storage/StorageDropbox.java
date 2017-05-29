@@ -41,7 +41,6 @@ public class StorageDropbox implements Storageable {
 
     public StorageDropbox(){
         config = new DbxRequestConfig("Phub/1.0", Locale.getDefault().toString());
-
     }
 
     public StorageDropbox(DbxClientV1 client, DbxClientV2 client2) {
