@@ -5,13 +5,15 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="424.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="git.GitSettingsController">
    <children>
-      <Label layoutX="25.0" layoutY="35.0" text="Github Authentication Settings" />
-      <TextField layoutX="164.0" layoutY="66.0" prefHeight="25.0" prefWidth="284.0" />
-      <TextField layoutX="164.0" layoutY="104.0" prefHeight="25.0" prefWidth="284.0" />
-      <Label layoutX="25.0" layoutY="70.0" text="Token:" />
-      <Label layoutX="25.0" layoutY="108.0" text="Proftaak Repository:" />
-      <TextArea layoutX="25.0" layoutY="141.0" prefHeight="269.0" prefWidth="424.0" text="1. Go to (https://github.com/settings/tokens). &#10;2. Click on &quot;Generate new token&quot;.&#10;3. Fill in &quot;Token description&quot; with a name you want.&#10;4. Select the following scopes: &#10;* Repo &#10;-repo:status&#10;-repo:repo_deployment&#10;-repo:public_repo&#10;* Admin:org&#10;-read:org&#10;* User&#10;-read:user&#10;5. Click on &quot;Generate Token&quot;.&#10;6. Copy the token and paste it in here.&#10;7. Enter the proftaak repository name. " />
+      <Label layoutX="25.0" layoutY="35.0" text="Github Authentication Settings" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="390.0" />
+      <TextField fx:id="tbToken" layoutX="164.0" layoutY="66.0" prefHeight="25.0" prefWidth="284.0" AnchorPane.leftAnchor="164.0" AnchorPane.rightAnchor="152.0" />
+      <TextField fx:id="tbRepository" layoutX="164.0" layoutY="104.0" prefHeight="25.0" prefWidth="284.0" AnchorPane.leftAnchor="164.0" AnchorPane.rightAnchor="152.0" />
+      <Label layoutX="25.0" layoutY="70.0" text="Token:" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="468.0" />
+      <Label layoutX="25.0" layoutY="108.0" text="Proftaak Repository:" AnchorPane.bottomAnchor="324.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="468.0" AnchorPane.topAnchor="108.0" />
+      <TextArea layoutX="25.0" layoutY="141.0" prefHeight="269.0" prefWidth="424.0" text="1. Go to (https://github.com/settings/tokens). &#10;2. Click on &quot;Generate new token&quot;.&#10;3. Fill in &quot;Token description&quot; with a name you want.&#10;4. Select the following scopes: &#10;* Repo &#10;-repo:status&#10;-repo:repo_deployment&#10;-repo:public_repo&#10;* Admin:org&#10;-read:org&#10;* User&#10;-read:user&#10;5. Click on &quot;Generate Token&quot;.&#10;6. Copy the token and paste it in here.&#10;7. Enter the proftaak repository name. " AnchorPane.bottomAnchor="39.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="151.0" AnchorPane.topAnchor="141.0" />
+      <Button fx:id="btnAuthorizeToken" layoutX="26.0" layoutY="416.0" mnemonicParsing="false" onAction="#saveToken" text="Authorize github" AnchorPane.bottomAnchor="8.0" AnchorPane.topAnchor="416.0" />
+      <Button fx:id="btnRemoveToken" layoutX="343.0" layoutY="416.0" mnemonicParsing="false" onAction="#removeToken" prefHeight="25.0" prefWidth="106.0" text="Logout" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="343.0" AnchorPane.rightAnchor="151.0" AnchorPane.topAnchor="416.0" />
    </children>
 </AnchorPane>

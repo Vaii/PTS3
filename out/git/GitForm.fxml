@@ -21,13 +21,6 @@
 
 <AnchorPane minWidth="700.0" prefHeight="656.0" prefWidth="990.0" styleClass="myRootPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="git.GitController">
     <children>
-        <AnchorPane fx:id="apLogin" layoutX="402.0" prefHeight="118.0" prefWidth="438.0" styleClass="myAnchorPane">
-            <children>
-                <TextField fx:id="tbToken" layoutX="289.0" layoutY="54.0" prefHeight="25.0" prefWidth="149.0" />
-                <Button fx:id="btnLogin" layoutX="168.0" layoutY="88.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="60.0" styleClass="myButton" text="Login" />
-                <Label fx:id="lblPassword1" layoutX="237.0" layoutY="58.0" styleClass="myLabel" text="Token:" />
-            </children>
-        </AnchorPane>
         <AnchorPane fx:id="apLists" layoutX="23.0" layoutY="21.0" prefHeight="595.0" prefWidth="971.0">
             <children>
             <GridPane layoutX="101.0" layoutY="39.0" prefHeight="25.0" prefWidth="217.0">
@@ -49,7 +42,6 @@
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.0" minWidth="10.0" prefWidth="85.0" />
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="632.0" minWidth="10.0" prefWidth="174.0" />
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="627.0" minWidth="10.0" prefWidth="624.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
                </columnConstraints>
                <rowConstraints>
                   <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
@@ -57,7 +49,6 @@
                <children>
                       <Label fx:id="lblRepo" layoutX="14.0" layoutY="6.0" styleClass="myLabelTitle" text="Repositorys:" />
                       <Button fx:id="btnShowRepoInfo" layoutX="275.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#showListViewInfo" styleClass="myButton" text="Show repository" GridPane.columnIndex="2" />
-                      <Button fx:id="btnLogout" layoutX="903.0" layoutY="2.0" mnemonicParsing="false" onAction="#logout" styleClass="myLogoutBtn" text="Logout" GridPane.columnIndex="3" />
                   <ComboBox fx:id="cbRepos" layoutX="98.0" layoutY="2.0" prefHeight="25.0" prefWidth="151.0" GridPane.columnIndex="1" />
                </children>
             </GridPane>
