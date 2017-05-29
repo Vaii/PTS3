@@ -2,9 +2,6 @@ package git.repository;
 
 import domain.User;
 
-/**
- * Created by Ken on 29-5-2017.
- */
 public class GitMongoContext implements IGitContext {
 
     @Override
