@@ -12,7 +12,6 @@
       <root url="jar://$PROJECT_DIR$/lib/opengl-api-gl1.1-android-2.1_r1.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/org.eclipse.egit.github.core-2.1.5.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/sdk-1.6-beta-1.jar!/" />
-      <root url="jar://$PROJECT_DIR$/lib/servlet-api-2.2.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/servlet-api-2.5.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/xmlParserAPIs-2.6.2.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/xpp3-1.1.4c.jar!/" />

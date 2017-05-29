@@ -5,12 +5,10 @@ import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.layout.GridPane;
 
-import javafx.scene.control.Label;
-import javafx.scene.control.Button;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -20,8 +18,7 @@ import java.util.ResourceBundle;
  */
 public class FolderListViewCellController extends ListCell<Folder> implements Initializable {
     FXMLLoader mLLoader;
-    @FXML
-    private CheckBox cbSelect;
+
     @FXML
     private Label lblName;
     @FXML
@@ -30,8 +27,6 @@ public class FolderListViewCellController extends ListCell<Folder> implements In
     private Label lblSize;
     @FXML
     private FontAwesomeIconView faiIcon;
-    @FXML
-    private Button btnOption;
     @FXML
     private GridPane gridPane;
 
@@ -61,11 +56,26 @@ public class FolderListViewCellController extends ListCell<Folder> implements In
             if(folder.getFile().isFile()){
                 lblModified.setText(String.valueOf(folder.getFile().asFile().lastModified));
                 lblSize.setText(folder.getFile().asFile().humanSize);
+                String extension = folder.getFile().path.substring(folder.getFile().path.lastIndexOf('.'));
+                switch(extension){
+                    case ".pdf":
+                        faiIcon.setIcon(FontAwesomeIcon.FILE_PDF_ALT);
+                        break;
+                    case ".zip":
+                    case ".rar":
+                        faiIcon.setIcon(FontAwesomeIcon.FILE_ZIP_ALT);
+                        break;
+                    case ".txt":
+                        faiIcon.setIcon(FontAwesomeIcon.FILE_TEXT_ALT);
+                    default:
+                        faiIcon.setIcon(FontAwesomeIcon.FILE_ALT);
+                        break;
+                }
             }
             else {
                 lblModified.setText("--");
                 lblSize.setText("--");
-                faiIcon.setIcon(FontAwesomeIcon.FOLDER);
+                faiIcon.setIcon(FontAwesomeIcon.FOLDER_ALT);
             }
             setText(null);
             setGraphic(this.gridPane);

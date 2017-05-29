@@ -1,6 +1,6 @@
 package storage;
 
-import com.dropbox.core.DbxEntry;
+import com.dropbox.core.v1.DbxEntry;
 
 /**
  * Created by wei-qiang on 29-Apr-17.
