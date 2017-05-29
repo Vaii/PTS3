@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="whiteboardScene" prefHeight="637.0" prefWidth="750.0"  xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="whiteboard.WhiteboardController">
+<AnchorPane fx:id="whiteboardScene" prefHeight="637.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="whiteboard.WhiteboardController">
     <children>
         <Button fx:id="saveButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Save" />
         <Button fx:id="newButton" layoutX="71.0" layoutY="14.0" mnemonicParsing="false" text="New" />
