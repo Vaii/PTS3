@@ -37,7 +37,7 @@ public class GitController implements Initializable {
         }
         else
         {
-            JOptionPane.showMessageDialog(null,"Login failed, check settings","Login",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Login failed, set authorization token in Settings","Login",JOptionPane.ERROR_MESSAGE);
         }
 
     }

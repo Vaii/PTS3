@@ -17,17 +17,18 @@ public class GitSettingsController implements Initializable {
     @FXML TextField tbToken;
     @FXML TextField tbRepository;
 
+    public GitSettingsController() {
+    }
+
     public void saveToken(){
-        System.out.println("test");
-        if (tbToken.getText() != null){
+        if (!tbToken.getText().isEmpty()){
             Config.getUser().setGithubAuthToken(tbToken.getText());
         }
         else {
-            JOptionPane.showMessageDialog(null,"Error","Error, no token",JOptionPane.CANCEL_OPTION);
+            JOptionPane.showMessageDialog(null,"No token","Error",JOptionPane.CANCEL_OPTION);
         }
     }
     public void removeToken(){
-        System.out.println("Uhu test");
         Config.getUser().setGithubAuthToken(null);
         //Config.getUser().setMainRepository("");
     }
