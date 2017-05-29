@@ -37,7 +37,13 @@ public class Git {
         repositorys = new ArrayList<GitRepository>();
         commits = new ArrayList<RepositoryCommit>();
         contents = new ArrayList<RepositoryContents>();
-        isLoggedIn = false;
+        if (Config.getUser().getGithubAuthToken() != null){
+            isLoggedIn = true;
+        }
+        else {
+            isLoggedIn = false;
+        }
+
     }
 
     public GitHubClient getClient() {
