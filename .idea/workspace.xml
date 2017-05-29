@@ -2,18 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="adb879e0-714d-4d05-a402-2b504bd73ab6" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/git/GitController$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/git/GitController.class" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jackson_core_2_7_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/git/GitSettingsController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/git/Git.class" afterPath="$PROJECT_DIR$/out/git/Git.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/git/GitContents.class" afterPath="$PROJECT_DIR$/out/git/GitContents.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/launcher/LauncherController.class" afterPath="$PROJECT_DIR$/out/launcher/LauncherController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/storage/StorageSettingsController.class" afterPath="$PROJECT_DIR$/out/storage/StorageSettingsController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/PTS3.iml" afterPath="$PROJECT_DIR$/.idea/PTS3.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/git/gitForm.fxml" afterPath="$PROJECT_DIR$/out/git/gitForm.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/git/GitForm.fxml" afterPath="$PROJECT_DIR$/out/git/GitForm.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/git/GitSettings.fxml" afterPath="$PROJECT_DIR$/out/git/GitSettings.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/storage/Storage.fxml" afterPath="$PROJECT_DIR$/out/storage/Storage.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/git/Git.java" afterPath="$PROJECT_DIR$/src/git/Git.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/git/GitController.java" afterPath="$PROJECT_DIR$/src/git/GitController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/git/GitContents.java" afterPath="$PROJECT_DIR$/src/git/GitContents.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/git/GitForm.fxml" afterPath="$PROJECT_DIR$/src/git/GitForm.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/launcher/LauncherController.java" afterPath="$PROJECT_DIR$/src/launcher/LauncherController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/git/GitSettings.fxml" afterPath="$PROJECT_DIR$/src/git/GitSettings.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,11 +43,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GitController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GitController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/git/GitController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="53" column="28" lean-forward="true" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
+            <state relative-caret-position="697">
+              <caret line="53" column="28" lean-forward="false" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#logout#0;class#GitController#0" expanded="false" />
@@ -60,13 +63,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/domain/User.java">
+      <file leaf-file-name="GitContents.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/git/GitContents.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1241">
-              <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+            <state relative-caret-position="51">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding>
-                <element signature="e#2551#2552#0" expanded="true" />
+                <element signature="e#184#185#0" expanded="true" />
+                <element signature="e#215#216#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -75,22 +79,81 @@
       <file leaf-file-name="Git.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/git/Git.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1445">
-              <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+            <state relative-caret-position="-765">
+              <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1678#1679#0" expanded="true" />
-                <element signature="e#1712#1713#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RepositoryService.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.egit.github.core-2.1.5.jar!/org/eclipse/egit/github/core/service/RepositoryService.class">
+      <file leaf-file-name="GitCommit.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/git/GitCommit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+            <state relative-caret-position="68">
+              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GitSettingsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/git/GitSettingsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GitSettings.fxml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/git/GitSettings.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StorageSettings.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/storage/StorageSettings.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Storage.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/storage/Storage.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StorageSettingsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/storage/StorageSettingsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -98,80 +161,14 @@
       </file>
       <file leaf-file-name="GitForm.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/git/GitForm.fxml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" column="9" lean-forward="false" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-              <folding>
-                <marker date="1496070809380" expanded="true" signature="3351:4252" ph="..." />
-                <marker date="1496070809380" expanded="true" signature="3386:3496" ph="..." />
-                <marker date="1496070809380" expanded="true" signature="3528:3777" ph="..." />
-                <marker date="1496070809380" expanded="true" signature="3803:4228" ph="..." />
-                <marker date="1496070809380" expanded="true" signature="4384:5496" ph="..." />
-                <marker date="1496070809380" expanded="true" signature="4419:4529" ph="..." />
-                <marker date="1496070809380" expanded="true" signature="4561:4721" ph="..." />
-                <marker date="1496070809380" expanded="true" signature="4747:5381" ph="..." />
-                <marker date="1496070809380" expanded="true" signature="5251:5326" ph="..." />
-                <marker date="1496070809380" expanded="true" signature="5406:5472" ph="..." />
-                <marker date="1496070809380" expanded="true" signature="5576:5630" ph="..." />
-              </folding>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="146">
+              <caret line="21" column="194" lean-forward="false" selection-start-line="21" selection-start-column="161" selection-end-line="21" selection-end-column="194" />
+              <folding />
             </state>
           </provider>
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+          <provider editor-type-id="JavaFX-Scene-Builder">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GitHubService.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.egit.github.core-2.1.5.jar!/org/eclipse/egit/github/core/service/GitHubService.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-              <folding>
-                <element signature="e#1681#1682#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PagedRequest.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.egit.github.core-2.1.5.jar!/org/eclipse/egit/github/core/client/PagedRequest.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GitHubRequest.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.egit.github.core-2.1.5.jar!/org/eclipse/egit/github/core/client/GitHubRequest.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GitHubClient.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.egit.github.core-2.1.5.jar!/org/eclipse/egit/github/core/client/GitHubClient.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2380">
-              <caret line="164" column="0" lean-forward="false" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Config.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/domain/Config.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding>
-                <element signature="e#138#139#0" expanded="true" />
-              </folding>
-            </state>
           </provider>
         </entry>
       </file>
@@ -204,14 +201,16 @@
         <option value="$PROJECT_DIR$/src/chat/chatPanel.fxml" />
         <option value="$PROJECT_DIR$/src/chat/ChatPanelController.java" />
         <option value="$PROJECT_DIR$/out/whiteboard/Whiteboard.fxml" />
-        <option value="$PROJECT_DIR$/src/git/GitContents.java" />
         <option value="$PROJECT_DIR$/src/git/GitRepository.java" />
         <option value="$PROJECT_DIR$/src/git/GitCommit.java" />
         <option value="$PROJECT_DIR$/src/authentication/FHICTController.java" />
         <option value="$PROJECT_DIR$/src/launcher/LauncherController.java" />
-        <option value="$PROJECT_DIR$/src/git/Git.java" />
         <option value="$PROJECT_DIR$/src/git/GitForm.fxml" />
         <option value="$PROJECT_DIR$/src/git/GitController.java" />
+        <option value="$PROJECT_DIR$/src/git/GitContents.java" />
+        <option value="$PROJECT_DIR$/src/git/Git.java" />
+        <option value="$PROJECT_DIR$/src/git/GitSettings.fxml" />
+        <option value="$PROJECT_DIR$/src/git/GitSettingsController.java" />
       </list>
     </option>
   </component>
@@ -223,8 +222,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="width" value="1378" />
-    <option name="height" value="780" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="784" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -288,8 +288,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -313,6 +313,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PTS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PTS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -362,11 +380,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="authentication" />
+              <option name="myItemId" value="out" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -380,15 +394,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="authentication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="repository" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -878,6 +884,7 @@
       <workItem from="1496046121925" duration="7577000" />
       <workItem from="1496069284547" duration="1416000" />
       <workItem from="1496070722242" duration="1330000" />
+      <workItem from="1496075413666" duration="2709000" />
     </task>
     <task id="LOCAL-00001" summary="Latency bug fixes">
       <created>1495442404635</created>
@@ -904,10 +911,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50579000" />
+    <option name="totallyTimeSpent" value="53288000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1378" height="780" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -929,10 +936,10 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32302937" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32258064" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36418816" sideWeight="0.49462366" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36913767" sideWeight="0.49462366" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35325265" sideWeight="0.50537634" order="2" side_tool="true" content_ui="tabs" />
@@ -974,47 +981,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/whiteboard/WhiteboardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/whiteboard/Whiteboard.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="144" lean-forward="false" selection-start-line="9" selection-start-column="72" selection-end-line="9" selection-end-column="144" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/whiteboard/Whiteboard.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="86" lean-forward="false" selection-start-line="9" selection-start-column="86" selection-end-line="9" selection-end-column="86" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.egit.github.core-2.1.5.jar!/org/eclipse/egit/github/core/service/UserService.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3722">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.egit.github.core-2.1.5.jar!/org/eclipse/egit/github/core/service/TeamService.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-816">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.egit.github.core-2.1.5.jar!/org/eclipse/egit/github/core/service/PullRequestService.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1106,17 +1072,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/git/GitSettings.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/launcher/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1205,37 +1160,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/git/GitRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/git/GitContents.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding>
-            <element signature="e#224#225#0" expanded="true" />
-            <element signature="e#255#256#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/git/GitCommit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#232#233#0" expanded="false" />
-            <element signature="e#268#269#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/scene/control/TextField.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -1278,7 +1202,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2482">
           <caret line="208" column="0" lean-forward="false" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1289,20 +1212,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/launcher/LauncherController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2057">
-          <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/domain/Config.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="e#138#139#0" expanded="true" />
+            <element signature="e#138#139#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1312,7 +1227,7 @@
         <state relative-caret-position="1241">
           <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
           <folding>
-            <element signature="e#2551#2552#0" expanded="true" />
+            <element signature="e#2551#2552#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1322,18 +1237,6 @@
         <state relative-caret-position="2380">
           <caret line="164" column="0" lean-forward="false" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/git/Git.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1445">
-          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1678#1679#0" expanded="true" />
-            <element signature="e#1712#1713#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1363,41 +1266,112 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/storage/StorageDropbox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.egit.github.core-2.1.5.jar!/org/eclipse/egit/github/core/service/RepositoryService.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
+        <state relative-caret-position="326">
           <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/git/GitForm.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="9" lean-forward="false" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+    <entry file="file://$PROJECT_DIR$/src/launcher/LauncherController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="183" column="32" lean-forward="true" selection-start-line="183" selection-start-column="32" selection-end-line="183" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/git/GitRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/git/GitContents.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
-            <marker date="1496070809380" expanded="true" signature="3351:4252" ph="..." />
-            <marker date="1496070809380" expanded="true" signature="3386:3496" ph="..." />
-            <marker date="1496070809380" expanded="true" signature="3528:3777" ph="..." />
-            <marker date="1496070809380" expanded="true" signature="3803:4228" ph="..." />
-            <marker date="1496070809380" expanded="true" signature="4384:5496" ph="..." />
-            <marker date="1496070809380" expanded="true" signature="4419:4529" ph="..." />
-            <marker date="1496070809380" expanded="true" signature="4561:4721" ph="..." />
-            <marker date="1496070809380" expanded="true" signature="4747:5381" ph="..." />
-            <marker date="1496070809380" expanded="true" signature="5251:5326" ph="..." />
-            <marker date="1496070809380" expanded="true" signature="5406:5472" ph="..." />
-            <marker date="1496070809380" expanded="true" signature="5576:5630" ph="..." />
+            <element signature="e#184#185#0" expanded="true" />
+            <element signature="e#215#216#0" expanded="true" />
           </folding>
         </state>
       </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/git/GitCommit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/git/Git.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-765">
+          <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/git/GitForm.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="21" column="194" lean-forward="false" selection-start-line="21" selection-start-column="161" selection-end-line="21" selection-end-column="194" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/storage/StorageSettings.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/storage/Storage.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/storage/StorageSettingsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/git/GitController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="53" column="28" lean-forward="true" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
+        <state relative-caret-position="697">
+          <caret line="53" column="28" lean-forward="false" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#logout#0;class#GitController#0" expanded="false" />
@@ -1410,6 +1384,27 @@
             <element signature="method#enterDirectory#0;class#GitController#0" expanded="false" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/git/GitSettingsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/git/GitSettings.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
   </component>

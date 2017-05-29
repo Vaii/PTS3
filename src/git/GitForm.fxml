@@ -42,7 +42,6 @@
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.0" minWidth="10.0" prefWidth="85.0" />
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="632.0" minWidth="10.0" prefWidth="174.0" />
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="627.0" minWidth="10.0" prefWidth="624.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
                </columnConstraints>
                <rowConstraints>
                   <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
