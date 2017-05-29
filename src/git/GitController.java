@@ -36,7 +36,7 @@ public class GitController implements Initializable {
         }
         else
         {
-            JOptionPane.showMessageDialog(null,"Login failed, set authorization token in Settings","Login",JOptionPane.ERROR_MESSAGE);
+            showErrorAlert("No token found, set token in Settings");
         }
 
     }
@@ -47,24 +47,24 @@ public class GitController implements Initializable {
         }
         try {
             if (Config.getUser().getGithubAuthToken().isEmpty()){
-                JOptionPane.showMessageDialog(null,"Login failed, set token in Settings","Login",JOptionPane.ERROR_MESSAGE);
+                showErrorAlert("No token found, set token in Settings.");
             }
             else {
                 git.login();
                 showRepositorys();
                 setPrimaryRepo("PTS3");
                 showListViewInfo();
-                JOptionPane.showMessageDialog(null, "Logged in" , "Login", JOptionPane.NO_OPTION);
+                showInfoAlert("Logged in successfully");
             }
         }
         catch (IOException ex){
-            JOptionPane.showMessageDialog(null,"Login failed, set token at settings","Login",JOptionPane.ERROR_MESSAGE);
+            showErrorAlert("No token found, set token in Settings");
         }
     }
 
     public void logout() {
         git.logout();
-        JOptionPane.showMessageDialog(null,  "Logged out succesfully", " Logout", JOptionPane.NO_OPTION);
+        showInfoAlert("Logged out succesfully");
     }
 
     private void showRepositorys() throws IOException {
@@ -76,7 +76,6 @@ public class GitController implements Initializable {
         }
         cbRepos.getItems().removeAll(cbRepos.getItems());
         cbRepos.getItems().setAll(git.getRepositorys());
-
     }
 
     public void showCommits() {
@@ -87,10 +86,10 @@ public class GitController implements Initializable {
         }
         catch (Exception ex){
             if (ex instanceof NullPointerException){
-                JOptionPane.showMessageDialog(null, "No repository selected."," Error",JOptionPane.CANCEL_OPTION);
+                showErrorAlert("No repository selected.");
             }
             else{
-                JOptionPane.showMessageDialog(null, ex.getMessage()," Error",JOptionPane.ERROR_MESSAGE);
+                showErrorAlert("Error loading commits.");
             }
         }
         setLabels("Commit");
@@ -102,7 +101,7 @@ public class GitController implements Initializable {
             git.getContents(cbRepos.getSelectionModel().getSelectedItem());
         }
         catch (Exception ex){
-            JOptionPane.showMessageDialog(null,ex.getMessage(), " Error",JOptionPane.ERROR_MESSAGE);
+            showErrorAlert("Loading contents error.");
         }
         this.lvContent.getItems().removeAll(lvContent.getItems());
         this.lvContent.getItems().setAll(git.getContents());
@@ -116,7 +115,7 @@ public class GitController implements Initializable {
             System.out.println("Entering: " + path);
         }
         catch (Exception ex){
-            JOptionPane.showMessageDialog(null,ex.getMessage(), " Error",JOptionPane.ERROR_MESSAGE);
+            showErrorAlert("Loading contents error.");
         }
         this.lvContent.getItems().removeAll(lvContent.getItems());
         this.lvContent.getItems().setAll(git.getContents());
@@ -150,11 +149,16 @@ public class GitController implements Initializable {
     }
 
     public void enterDirectory(){
-        if (lvContent.getSelectionModel().getSelectedItem().getContents().getType().equals(RepositoryContents.TYPE_DIR)) {
-            showContents(lvContent.getSelectionModel().getSelectedItem().getContents().getPath());
-            currentDirectory = lvContent.getItems().get(0).getContents().getPath();
+        if (lvContent.getItems().isEmpty()){
+            showErrorAlert("No selected item");
         }
-        selectedDir = lvContent.getItems().get(0).getContents().getPath();
+        else {
+            if (lvContent.getSelectionModel().getSelectedItem().getContents().getType().equals(RepositoryContents.TYPE_DIR)) {
+                showContents(lvContent.getSelectionModel().getSelectedItem().getContents().getPath());
+                currentDirectory = lvContent.getItems().get(0).getContents().getPath();
+            }
+            selectedDir = lvContent.getItems().get(0).getContents().getPath();
+        }
     }
 
     public boolean setPrimaryRepo(String primaryRepository) {
@@ -196,5 +200,16 @@ public class GitController implements Initializable {
                 lblInfo.setText("Type - Name");
                 gpContents.setVisible(true);
         }
+    }
+
+    private void showErrorAlert(String text){
+        Alert alert = new Alert(Alert.AlertType.ERROR,text,ButtonType.CLOSE);
+        alert.setHeaderText("Something went wrong.");
+        alert.showAndWait();
+    }
+    private void showInfoAlert(String text){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION,text,ButtonType.CLOSE);
+        alert.setHeaderText("Information");
+        alert.showAndWait();
     }
 }
