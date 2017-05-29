@@ -3,6 +3,7 @@ package storage;
 import com.dropbox.core.*;
 import com.dropbox.core.v1.DbxClientV1;
 import com.dropbox.core.v2.DbxClientV2;
+import domain.Config;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -19,7 +20,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-
 import java.awt.*;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -221,6 +221,20 @@ public class StorageController implements Initializable {
         btnDelete.setOpacity(0);
         btnDownload.setDisable(true);
         btnDownload.setOpacity(0);
+        if(Config.getUser().getDropboxAuthToken() != "") {
+            config = new DbxRequestConfig("Phub/1.0", Locale.getDefault().toString());
+            client = new DbxClientV1(config, Config.getUser().getDropboxAuthToken());
+            client2 = new DbxClientV2(config, Config.getUser().getDropboxAuthToken(), DbxHost.DEFAULT);
+            storage = new StorageDropbox(client, client2);
+            try {
+                loadDirectory(storage.getCurrentDirectory());
+            } catch (DbxException e) {
+                e.printStackTrace();
+            }
+        }
+        else{
+            System.out.println("koppel dropbox account!");
+        }
     }
 
     public void setStage(Stage stage) {
