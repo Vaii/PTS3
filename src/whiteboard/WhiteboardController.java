@@ -9,6 +9,7 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;;
+import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -36,6 +37,7 @@ import whiteboard.repository.WhiteboardRepository;
 import javax.imageio.ImageIO;
 import javax.imageio.stream.ImageInputStream;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
@@ -156,11 +158,62 @@ public class WhiteboardController implements Initializable {
             loadStage.setTitle("Selecteer een whiteboard om te laden");
             loadStage.setScene(new Scene(root));
             loadStage.showAndWait();
+
+            loadSelectedWhiteboardToPane(loadedWhiteboard);
         }
         catch(IOException e){
             e.printStackTrace();
         }
 
+    }
+
+    private void loadSelectedWhiteboardToPane(Whiteboard loadedWhiteboard) throws IOException {
+        Tab tab = new Tab((Integer.toString(whiteboardPane.getTabs().size() + 1)));
+        Pane pane = new Pane();
+
+        for(WhiteboardItem x : loadedWhiteboard.getItems()){
+            if(x instanceof Text){
+                Label label = new Label(((Text) x).getText());
+                if(((Text) x).getFont() != null){
+                    label.setFont(Font.font(((Text) x).getFont()));
+                }
+                label.setLayoutX(((Text) x).getxPos());
+                label.setLayoutY(((Text) x).getyPos());
+
+                makeItemDraggable(label);
+                pane.getChildren().add(label);
+            }
+            else if(x instanceof Video){
+                WebView view  = new WebView();
+                view.getEngine().load(((Video) x).getUrl());
+                view.setPrefWidth(400);
+                view.setPrefHeight(250);
+
+                view.setLayoutX(((Video) x).getxPos());
+                view.setLayoutY(((Video) x).getyPos());
+
+                makeItemDraggable(view);
+                pane.getChildren().add(view);
+            }
+            else if(x instanceof Picture){
+
+                BufferedImage img = ImageIO.read(new ByteArrayInputStream(((Picture) x).getImage()));
+                Image toUseImage = SwingFXUtils.toFXImage(img, null);
+
+                ImageView pictureView = new ImageView(toUseImage);
+                pictureView.setLayoutX(((Picture) x).getxPos());
+                pictureView.setLayoutY(((Picture) x).getyPos());
+
+
+                makeItemDraggable(pictureView);
+                addItemToPane(pictureView);
+
+                pane.getChildren().add(pictureView);
+            }
+
+            tab.setContent(pane);
+            whiteboardPane.getTabs().add(tab);
+        }
     }
 
     private void saveWhiteboard(ActionEvent actionEvent) {
