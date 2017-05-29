@@ -142,7 +142,7 @@ public class WhiteboardController implements Initializable {
         browseButton.setOnAction(this::loadWhiteboard);
 
         whiteboardPane.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue)
-                -> selectedTab = newValue.getTabPane().getSelectionModel().getSelectedIndex());
+                -> selectedTab = newValue.getTabPane().getSelectionModel().getSelectedIndex() +1 );
     }
 
     private void loadWhiteboard(ActionEvent actionEvent){

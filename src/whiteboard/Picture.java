@@ -5,10 +5,12 @@ package whiteboard;
  */
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import javafx.scene.image.Image;
 
 import java.io.File;
 import java.net.MalformedURLException;
+
 
 public class Picture extends WhiteboardItem {
 

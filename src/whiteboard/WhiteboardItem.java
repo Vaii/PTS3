@@ -1,8 +1,12 @@
 package whiteboard;
 
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+
 /**
  * Created by bob on 10-5-17.
  */
+
+@JsonTypeInfo(use= JsonTypeInfo.Id.CLASS, property = "_class")
 public abstract class WhiteboardItem {
 
 

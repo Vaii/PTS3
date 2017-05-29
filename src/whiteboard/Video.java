@@ -2,8 +2,10 @@ package whiteboard;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 import java.io.File;
+
 
 public class Video extends WhiteboardItem {
 

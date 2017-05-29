@@ -142,6 +142,15 @@ public class LauncherController implements Initializable {
     private void loadGit() throws IOException {
         AnchorPane git = (AnchorPane)FXMLLoader.load(this.getClass().getResource("/git/gitForm.fxml"));
         this.mainBorderPane.setCenter(git);
+
+    }
+
+    @FXML
+    private void loadSettings() throws IOException{
+        AnchorPane settings = new AnchorPane();
+        AnchorPane gitSettings = (AnchorPane)FXMLLoader.load(this.getClass().getResource("/git/GitSettings.fxml"));
+        settings.getChildren().add(gitSettings);
+        this.mainBorderPane.setCenter(settings);
     }
 
     public void initialize(URL url, ResourceBundle rb) {

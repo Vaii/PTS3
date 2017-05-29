@@ -4,8 +4,7 @@ import com.mongodb.Mongo;
 import domain.DataSource;
 import org.jongo.MongoCollection;
 import org.jongo.MongoCursor;
-import whiteboard.Whiteboard;
-import whiteboard.WhiteboardItem;
+import whiteboard.*;
 
 import java.util.ArrayList;
 
@@ -40,8 +39,9 @@ public class WhiteboardMongoContext implements IWhiteboardContext {
         MongoCollection whiteboardCollection = DataSource.connect().getCollection("Whiteboard");
         MongoCursor<Whiteboard> userWhiteboards = whiteboardCollection.find("{UserID:#}", userId).as(Whiteboard.class);
 
+
         while(userWhiteboards.hasNext()){
-            whiteboards.add(userWhiteboards.next());
+                whiteboards.add(userWhiteboards.next());
         }
 
         return whiteboards;

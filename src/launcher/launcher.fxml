@@ -97,7 +97,7 @@
                         <Insets />
                     </opaqueInsets>
                 </Button>
-                <Button alignment="CENTER" layoutX="18.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="75.0" style="-fx-background-color: c43235; -fx-background-size: 0; -fx-background-radius: 0;" text="SETTINGS" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+                <Button alignment="CENTER" layoutX="18.0" mnemonicParsing="false" onAction="#loadSettings" prefHeight="32.0" prefWidth="75.0" style="-fx-background-color: c43235; -fx-background-size: 0; -fx-background-radius: 0;" text="SETTINGS" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
                     <font>
                         <Font size="9.0" />
                     </font></Button>

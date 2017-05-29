@@ -2,6 +2,7 @@ package whiteboard;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import javafx.scene.text.Font;
 
 public class Text extends WhiteboardItem {
