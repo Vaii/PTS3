@@ -5,6 +5,9 @@ import com.dropbox.core.v1.*;
 import com.dropbox.core.v1.DbxEntry;
 import com.dropbox.core.v1.DbxWriteMode;
 import com.dropbox.core.v2.DbxClientV2;
+import domain.Config;
+import domain.DataSource;
+import org.jongo.MongoCollection;
 
 import java.awt.*;
 import java.io.*;
@@ -38,7 +41,6 @@ public class StorageDropbox implements Storageable {
 
     public StorageDropbox(){
         config = new DbxRequestConfig("Phub/1.0", Locale.getDefault().toString());
-
     }
 
     public StorageDropbox(DbxClientV1 client, DbxClientV2 client2) {
@@ -47,7 +49,7 @@ public class StorageDropbox implements Storageable {
         config = new DbxRequestConfig("Phub/1.0", Locale.getDefault().toString());
     }
 
-    public void authenticate(){
+    public void authorize(){
         DbxAppInfo appInfo = new DbxAppInfo(APP_KEY, APP_SECRET);
         webAuth = new DbxWebAuthNoRedirect(config, appInfo);
         String authorizeUrl = webAuth.start();
@@ -59,6 +61,25 @@ public class StorageDropbox implements Storageable {
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
+    }
+
+    public void authenticate(String token){
+        DbxAuthFinish authFinish = null;
+        try {
+            authFinish = webAuth.finish(token);
+        } catch (DbxException e) {
+            e.printStackTrace();
+        }
+        String accessToken = authFinish.getAccessToken();
+        Config.getUser().setDropboxAuthToken(accessToken);
+        MongoCollection users = DataSource.connect().getCollection("Users");
+        users.save(Config.getUser());
+    }
+
+    public void ontkoppel(){
+        Config.getUser().setDropboxAuthToken("");
+        MongoCollection users = DataSource.connect().getCollection("Users");
+        users.save(Config.getUser());
     }
 
     public void makeClient(String accessToken){
