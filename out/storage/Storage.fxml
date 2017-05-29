@@ -2,6 +2,19 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<<<<<<< HEAD
+
+<AnchorPane prefHeight="606.0" prefWidth="1283.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="storage.StorageController">
+  <children>
+    <ListView fx:id="fileList" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#folderDoubleClick" prefHeight="484.0" prefWidth="757.0" AnchorPane.bottomAnchor="81.0" AnchorPane.leftAnchor="166.0" AnchorPane.rightAnchor="360.0" AnchorPane.topAnchor="41.0" />
+    <Button fx:id="btnDownload" mnemonicParsing="false" onAction="#handleButtonActionDownloadFile" prefWidth="118.0" text="Download" AnchorPane.rightAnchor="171.0" AnchorPane.topAnchor="130.0" />
+    <Button fx:id="btnUpload" mnemonicParsing="false" onAction="#handleButtonActionUploadFile" prefWidth="118.0" text="Upload" AnchorPane.rightAnchor="171.0" AnchorPane.topAnchor="98.0" />
+    <Button fx:id="btnBack" mnemonicParsing="false" onAction="#backDirectory" text="Back" AnchorPane.leftAnchor="166.0" AnchorPane.topAnchor="16.0" />
+    <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#handleButtonActionDelete" prefWidth="118.0" text="Delete" AnchorPane.rightAnchor="171.0" AnchorPane.topAnchor="162.0" />
+    <Label fx:id="lblDirectory" prefHeight="21.0" prefWidth="635.0" text="/" AnchorPane.leftAnchor="241.0" AnchorPane.topAnchor="15.0" />
+    <Button id="btnFolder" fx:id="btnNewFolder" mnemonicParsing="false" onAction="#addNewfolder" prefWidth="118.0" text="New folder" AnchorPane.rightAnchor="171.0" AnchorPane.topAnchor="64.0" />
+    <Button fx:id="btnRename" mnemonicParsing="false" onAction="#handleButtonActionRename" opacity="1.0" prefWidth="118.0" text="Rename" AnchorPane.rightAnchor="171.0" AnchorPane.topAnchor="193.0" />
+=======
 <AnchorPane prefHeight="606.0" prefWidth="1283.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="storage.StorageController">
   <children>
     <Button id="button" fx:id="authorizebutton" defaultButton="false" onAction="#handleButtonActionAuthenticate" text="authorize dropbox" AnchorPane.leftAnchor="67.0" AnchorPane.topAnchor="62.0" />
@@ -15,5 +28,6 @@
     <Label fx:id="lblDirectory" prefHeight="21.0" prefWidth="635.0" text="/" AnchorPane.leftAnchor="346.0" AnchorPane.topAnchor="13.0" />
     <Button id="btnFolder" fx:id="btnNewFolder" mnemonicParsing="false" onAction="#addNewfolder" prefWidth="118.0" text="New folder" AnchorPane.rightAnchor="66.0" AnchorPane.topAnchor="62.0" />
     <Button fx:id="btnRename" mnemonicParsing="false" onAction="#handleButtonActionRename" opacity="1.0" prefWidth="118.0" text="Rename" AnchorPane.rightAnchor="66.0" AnchorPane.topAnchor="191.0" />
+>>>>>>> 6e922903f7b8120180dfd975b26ae887f925bc86
   </children>
 </AnchorPane>
