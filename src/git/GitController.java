@@ -1,5 +1,6 @@
 package git;
 
+
 import domain.Config;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -9,6 +10,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import org.eclipse.egit.github.core.RepositoryContents;
+
 import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
@@ -31,7 +33,7 @@ public class GitController implements Initializable {
     public GitController()
     {
         git = new Git();
-        if (Config.getUser().getGithubAuthToken() != null){
+        if (!(Config.getUser().getGithubAuthToken().isEmpty())){
             login();
         }
         else

@@ -6,6 +6,7 @@ public class GitMongoContext implements IGitContext {
 
     @Override
     public User AddGitToken(User user, String token) {
+
         return null;
     }
 
@@ -15,7 +16,7 @@ public class GitMongoContext implements IGitContext {
     }
 
     @Override
-    public User EditMainRepository(User user, String Repository) {
+    public User EditMainRepository(User user, String repository) {
         return null;
     }
 }
