@@ -15,11 +15,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Ken on 1-4-2017.
- * Source open desktop: http://stackoverflow.com/questions/5226212/how-to-open-the-default-webbrowser-using-java
- */
-
 public class Git {
     private GitHubClient client;
     private List contents;
@@ -37,7 +32,13 @@ public class Git {
         repositorys = new ArrayList<GitRepository>();
         commits = new ArrayList<RepositoryCommit>();
         contents = new ArrayList<RepositoryContents>();
-        isLoggedIn = false;
+        if (Config.getUser().getGithubAuthToken() != null){
+            isLoggedIn = true;
+        }
+        else {
+            isLoggedIn = false;
+        }
+
     }
 
     public GitHubClient getClient() {
