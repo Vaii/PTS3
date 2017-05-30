@@ -41,7 +41,7 @@ public class GitSettingsController implements Initializable {
         if(Config.getUser().getGithubAuthToken() != null){
 
             if (!tbRepository.getText().isEmpty()){
-            //Config.getUser().setMainRepository(tbRepository.getText());
+            Config.getUser().setMainRepository(tbRepository.getText());
             gitRepo.EditMainRepository(tbRepository.getText());
             showInfoAlert("Repository set: " + tbRepository.getText());
             }
@@ -68,12 +68,17 @@ public class GitSettingsController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         taInstructions.setEditable(false);
-        if(Config.getUser().getGithubAuthToken() == null || Config.getUser().getGithubAuthToken() == ""){
+        if (Config.getUser().getGithubAuthToken() == null || Config.getUser().getGithubAuthToken() == "") {
             btnRemoveToken.setDisable(true);
-        }
-        else{
+        } else {
             tbToken.setText(Config.getUser().getGithubAuthToken());
             tbToken.setDisable(true);
+        }
+        if (Config.getUser().getMainRepository() == null || Config.getUser().getGithubAuthToken() == "") {
+
+        }
+        else {
+            tbRepository.setText(Config.getUser().getMainRepository());
         }
     }
 }
