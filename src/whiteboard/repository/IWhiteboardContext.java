@@ -12,5 +12,5 @@ public interface IWhiteboardContext {
 
     boolean saveWhiteboard(Whiteboard w);
     Whiteboard loadSingleWhiteboard(int userId);
-    ArrayList<Whiteboard> loadAllWhiteboards(int userId);
+    ArrayList<Whiteboard> loadAllWhiteboards(String userId);
 }

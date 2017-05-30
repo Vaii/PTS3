@@ -5,10 +5,12 @@ package whiteboard;
  */
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import javafx.scene.image.Image;
 
 import java.io.File;
 import java.net.MalformedURLException;
+
 
 public class Picture extends WhiteboardItem {
 
@@ -93,6 +95,16 @@ public class Picture extends WhiteboardItem {
     @JsonProperty
     public String getId() {
         return id;
+    }
+
+    @Override
+    public void setxPos(double xPos) {
+        this.xPos = xPos;
+    }
+
+    @Override
+    public void setyPos(double yPos) {
+        this.yPos = yPos;
     }
 
     @JsonProperty
