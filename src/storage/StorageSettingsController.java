@@ -1,26 +1,21 @@
 package storage;
 
 import com.dropbox.core.*;
-import com.dropbox.core.v1.DbxClientV1;
-import com.dropbox.core.v2.DbxClientV2;
 import domain.Config;
-import domain.DataSource;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import org.jongo.MongoCollection;
-
-import java.awt.*;
 import java.io.IOException;
-import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.Locale;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 /**
  * Created by wei-qiang on 29-May-17.
  */
-public class StorageSettingsController {
+public class StorageSettingsController implements Initializable{
     private StorageDropbox storage = new StorageDropbox();
     @FXML
     private Button btnAuthorize;
@@ -39,10 +34,33 @@ public class StorageSettingsController {
     @FXML
     private void handleButtonActionSendAuthenticate(ActionEvent event) throws DbxException {
         storage.authenticate(tbToken.getText());
+        btnAuthorize.setDisable(true);
+        btnSendToken.setDisable(true);
+        tbToken.setText("Gekoppeld");
+        tbToken.setDisable(true);
+        btnOntkoppel.setDisable(false);
     }
 
     @FXML
     private void handleButtonActionOntkoppel(ActionEvent event){
         storage.ontkoppel();
+        btnAuthorize.setDisable(false);
+        btnSendToken.setDisable(false);
+        tbToken.setText("");
+        tbToken.setDisable(false);
+        btnOntkoppel.setDisable(true);
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        if(Config.getUser().getDropboxAuthToken() == null || Config.getUser().getDropboxAuthToken() == ""){
+            btnOntkoppel.setDisable(true);
+        }
+        else{
+            btnAuthorize.setDisable(true);
+            btnSendToken.setDisable(true);
+            tbToken.setText("Gekoppeld");
+            tbToken.setDisable(true);
+        }
     }
 }
