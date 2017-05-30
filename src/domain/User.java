@@ -23,6 +23,7 @@ public class User implements Serializable {
     private static final String DROPBOX = "Dropbox";
     private static final String COLOR = "Color";
     private static final String STUDENTID = "StudentID";
+    private static final String MAINREPOSITORY = "MainRepository";
 
 
     @MongoObjectId
@@ -33,6 +34,7 @@ public class User implements Serializable {
     private String dropboxAuthToken;
     private String studentid;
     private UserType userType;
+    private String mainRepository;
     public Color color;
     private static final Random RANDOM = new Random();
     private static final List<Color> VALUES = Collections.unmodifiableList(Arrays.asList((Color[]) Color.values()));
@@ -55,13 +57,15 @@ public class User implements Serializable {
                 @JsonProperty(GITHUB) String githubAuth,
                 @JsonProperty(DROPBOX) String dropboxAuth,
                 @JsonProperty(COLOR) Color color,
-                @JsonProperty(STUDENTID) String studentid){
+                @JsonProperty(STUDENTID) String studentid,
+                @JsonProperty(MAINREPOSITORY) String mainRepository){
         this.name = name;
         this.userType = type;
         this.githubAuthToken = githubAuth;
         this.dropboxAuthToken = dropboxAuth;
         this.color = color;
         this.studentid = studentid;
+        this.mainRepository = mainRepository;
     }
 
     public User(String name, Color color) {
@@ -96,6 +100,16 @@ public class User implements Serializable {
         this.githubAuthToken = githubAuthToken;
     }
 
+    @JsonProperty(MAINREPOSITORY)
+    public String getMainRepository(){
+        return mainRepository;
+    }
+
+    public void setMainRepository(String mainRepo){
+        this.mainRepository = mainRepo;
+    }
+
+
     @JsonProperty(DROPBOX)
     public String getDropboxAuthToken() {
         return dropboxAuthToken;
@@ -124,6 +138,7 @@ public class User implements Serializable {
                 ", studentid='" + studentid + '\'' +
                 ", userType=" + userType +
                 ", color=" + color +
+                ", Proftaak repository=" + mainRepository +
                 '}';
     }
 

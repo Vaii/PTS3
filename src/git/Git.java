@@ -41,10 +41,6 @@ public class Git {
 
     }
 
-    public GitHubClient getClient() {
-        return client;
-    }
-
     public List getContents() {
         return contents;
     }
@@ -61,16 +57,7 @@ public class Git {
         if (Config.getUser().getGithubAuthToken() != null) {
             client.setOAuth2Token(Config.getUser().getGithubAuthToken());
             isLoggedIn = true;
-            return true;
-        }
-        return false;
-    }
 
-    public boolean login(String token) throws IOException {
-        if (token != null){
-            client.setOAuth2Token(token);
-            isLoggedIn = true;
-            System.out.println("Token is set.");
             return true;
         }
         return false;

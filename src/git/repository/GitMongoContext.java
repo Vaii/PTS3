@@ -31,9 +31,9 @@ public class GitMongoContext implements IGitContext {
 
     @Override
     public boolean EditMainRepository(String repository) {
-       // Config.getUser().setGitRepository(repository);
-       // MongoCollection users = DataSource.connect().getCollection("Users");
-        //users.save(Config.getUser());
+        Config.getUser().setMainRepository(repository);
+        MongoCollection users = DataSource.connect().getCollection("Users");
+        users.save(Config.getUser());
         return true;
     }
 }

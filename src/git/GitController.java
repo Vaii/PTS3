@@ -42,8 +42,10 @@ public class GitController implements Initializable {
             else {
                 git.login();
                 showRepositorys();
-                setPrimaryRepo("PTS3");
-                showListViewInfo();
+                setPrimaryRepo();
+                if (Config.getUser().getMainRepository() != null){
+                    showListViewInfo();
+                }
                 showInfoAlert("Logged in successfully");
             }
         }
@@ -151,13 +153,18 @@ public class GitController implements Initializable {
         }
     }
 
-    public boolean setPrimaryRepo(String primaryRepository) {
-        for (GitRepository repo : git.getRepositorys()){
-            if (repo.getRepository().getName().equals(primaryRepository)){
-                cbRepositorys.getSelectionModel().select(repo);
-                System.out.println("Proftaak repository:" + repo.getRepository().getName());
-                return true;
+    public boolean setPrimaryRepo() {
+        if (Config.getUser().getMainRepository() != null){
+            for (GitRepository repo : git.getRepositorys()){
+                if (repo.getRepository().getName().equals(Config.getUser().getMainRepository())){
+                    cbRepositorys.getSelectionModel().select(repo);
+                    System.out.println("Proftaak repository:" + repo.getRepository().getName());
+                    return true;
+                }
             }
+        }
+        else{
+            showInfoAlert("No Proftaak repository selected, check settings");
         }
         return false;
     }
