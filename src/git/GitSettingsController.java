@@ -15,7 +15,8 @@ public class GitSettingsController implements Initializable {
     @FXML Button btnAuthorizeToken;
     @FXML TextField tbToken;
     @FXML TextField tbRepository;
-    @FXML TextArea taInstructions;
+    @FXML TextArea taInstructionsToken;
+    @FXML TextArea taInstructionsRepo;
 
     git.repository.GitRepository gitRepo;
 
@@ -67,7 +68,8 @@ public class GitSettingsController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        taInstructions.setEditable(false);
+        taInstructionsRepo.setEditable(false);
+        taInstructionsToken.setEditable(false);
         if (Config.getUser().getGithubAuthToken() == null || Config.getUser().getGithubAuthToken() == "") {
             btnRemoveToken.setDisable(true);
         } else {
