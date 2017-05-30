@@ -1,20 +1,18 @@
 package git.repository;
 
-import domain.User;
-
 public class GitRepository {
     private IGitContext gitContext;
 
     public GitRepository(IGitContext gitContext) {
         this.gitContext = gitContext;
     }
-    public User AddGitToken(User user, String token){
-        return gitContext.AddGitToken(user,token);
+    public boolean AddGitToken(String token){
+        return gitContext.AddGitToken(token);
     }
-    public User RemoveGitToken(User user){
-        return gitContext.RemoveGitToken(user);
+    public void RemoveGitToken(){
+        gitContext.RemoveGitToken();
     }
-    public User EditMainRepository(User user, String repository){
-        return gitContext.EditMainRepository(user,repository);
+    public boolean EditMainRepository(String repository){
+        return gitContext.EditMainRepository(repository);
     }
 }
