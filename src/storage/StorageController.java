@@ -176,17 +176,6 @@ public class StorageController implements Initializable {
     }
 
     public void initialize(URL url, ResourceBundle rb) {
-        this.fileList.setItems(fileObservableList);
-        this.fileList.setCellFactory((FolderListView) -> {
-            return new FolderListViewCellController();
-        });
-        this.fileList.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-        btnRename.setDisable(true);
-        btnRename.setOpacity(0);
-        btnDelete.setDisable(true);
-        btnDelete.setOpacity(0);
-        btnDownload.setDisable(true);
-        btnDownload.setOpacity(0);
         if(Config.getUser().getDropboxAuthToken() != "") {
             config = new DbxRequestConfig("Phub/1.0", Locale.getDefault().toString());
             client = new DbxClientV1(config, Config.getUser().getDropboxAuthToken());
@@ -205,7 +194,21 @@ public class StorageController implements Initializable {
             alert.setContentText("Koppel uw dropbox account in de settings");
             alert.showAndWait();
             System.out.println("koppel dropbox account!");
+            return;
         }
+
+        this.fileList.setItems(fileObservableList);
+        this.fileList.setCellFactory((FolderListView) -> {
+            return new FolderListViewCellController();
+        });
+        this.fileList.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        btnRename.setDisable(true);
+        btnRename.setOpacity(0);
+        btnDelete.setDisable(true);
+        btnDelete.setOpacity(0);
+        btnDownload.setDisable(true);
+        btnDownload.setOpacity(0);
+
     }
 
     public void setStage(Stage stage) {
