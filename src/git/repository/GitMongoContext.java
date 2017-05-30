@@ -1,22 +1,39 @@
 package git.repository;
 
-import domain.User;
+import domain.Config;
+import domain.DataSource;
+import org.jongo.MongoCollection;
 
 public class GitMongoContext implements IGitContext {
 
     @Override
-    public User AddGitToken(User user, String token) {
+    public boolean AddGitToken(String token) {
+        try{
+            Config.getUser().setGithubAuthToken(token);
+            MongoCollection users = DataSource.connect().getCollection("Users");
+            users.save(Config.getUser());
+            System.out.println("Token saved.");
+            return true;
+        }
+        catch (Exception ex){
+            System.out.println("Token save failed.");
+            return false;
+        }
 
-        return null;
     }
 
     @Override
-    public User RemoveGitToken(User user) {
-        return null;
+    public void RemoveGitToken() {
+        Config.getUser().setGithubAuthToken(null);
+        MongoCollection users = DataSource.connect().getCollection("Users");
+        users.save(Config.getUser());
     }
 
     @Override
-    public User EditMainRepository(User user, String repository) {
-        return null;
+    public boolean EditMainRepository(String repository) {
+       // Config.getUser().setGitRepository(repository);
+       // MongoCollection users = DataSource.connect().getCollection("Users");
+        //users.save(Config.getUser());
+        return true;
     }
 }
