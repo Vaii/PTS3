@@ -153,8 +153,6 @@ public class LauncherController implements Initializable {
             alert.setHeaderText("Something went wrong.");
             alert.showAndWait();
         }
-
-
     }
 
     @FXML
@@ -195,6 +193,5 @@ public class LauncherController implements Initializable {
             e.printStackTrace();
         }
         this.mainBorderPane.setCenter(whiteboardPane);
-
     }
 }
