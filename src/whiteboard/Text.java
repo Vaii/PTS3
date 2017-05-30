@@ -2,6 +2,7 @@ package whiteboard;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import javafx.scene.text.Font;
 
 public class Text extends WhiteboardItem {
@@ -70,6 +71,16 @@ public class Text extends WhiteboardItem {
     @JsonProperty
     public String getId() {
         return id;
+    }
+
+    @Override
+    public void setxPos(double xPos) {
+        this.xPos = xPos;
+    }
+
+    @Override
+    public void setyPos(double yPos) {
+        this.yPos = yPos;
     }
 
     @JsonProperty

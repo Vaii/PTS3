@@ -2,8 +2,10 @@ package whiteboard;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 import java.io.File;
+
 
 public class Video extends WhiteboardItem {
 
@@ -59,6 +61,16 @@ public class Video extends WhiteboardItem {
     @JsonProperty
     public String getId() {
         return id;
+    }
+
+    @Override
+    public void setxPos(double xPos) {
+        this.xPos = xPos;
+    }
+
+    @Override
+    public void setyPos(double yPos) {
+        this.yPos = yPos;
     }
 
     @JsonProperty

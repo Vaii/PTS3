@@ -70,8 +70,6 @@ public class FHICTController implements Initializable {
             if(Config.getUser() != null){
 
                 try{
-                    System.out.println(Config.getUser().toString());
-
                     Platform.runLater(new Runnable() {
                         @Override
                         public void run() {
