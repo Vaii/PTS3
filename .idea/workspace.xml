@@ -2,47 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="adb879e0-714d-4d05-a402-2b504bd73ab6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/git/GitSettingsController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/git/repository/GitMongoContext.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/git/repository/GitRepository.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/git/repository/IGitContext.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jackson_core_2_7_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/git/GitSettingsController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/git/repository/GitMongoContext.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/git/repository/GitRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/git/repository/IGitContext.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/chat/ChatPanelController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/chat/chatPanel.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/git/gitForm.fxml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/git/Git.class" afterPath="$PROJECT_DIR$/out/git/Git.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/git/GitContents.class" afterPath="$PROJECT_DIR$/out/git/GitContents.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/git/GitController$1.class" afterPath="$PROJECT_DIR$/out/git/GitController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/git/GitController.class" afterPath="$PROJECT_DIR$/out/git/GitController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/launcher/LauncherController.class" afterPath="$PROJECT_DIR$/out/launcher/LauncherController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/storage/StorageController.class" afterPath="$PROJECT_DIR$/out/storage/StorageController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/storage/StorageSettingsController.class" afterPath="$PROJECT_DIR$/out/storage/StorageSettingsController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/PTS3.iml" afterPath="$PROJECT_DIR$/.idea/PTS3.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/git/GitForm.fxml" afterPath="$PROJECT_DIR$/out/git/GitForm.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/git/GitSettings.fxml" afterPath="$PROJECT_DIR$/out/git/GitSettings.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/launcher/launcher.fxml" afterPath="$PROJECT_DIR$/out/launcher/launcher.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/scheduling/NewItemBox.fxml" afterPath="$PROJECT_DIR$/out/scheduling/NewItemBox.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/storage/Storage.fxml" afterPath="$PROJECT_DIR$/out/storage/Storage.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/whiteboard/Text.fxml" afterPath="$PROJECT_DIR$/out/whiteboard/Text.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/whiteboard/Video.fxml" afterPath="$PROJECT_DIR$/out/whiteboard/Video.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/whiteboard/Whiteboard.fxml" afterPath="$PROJECT_DIR$/out/whiteboard/Whiteboard.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/git/Git.java" afterPath="$PROJECT_DIR$/src/git/Git.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/git/GitContents.java" afterPath="$PROJECT_DIR$/src/git/GitContents.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/git/GitController.java" afterPath="$PROJECT_DIR$/src/git/GitController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/git/GitForm.fxml" afterPath="$PROJECT_DIR$/src/git/GitForm.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/git/GitSettings.fxml" afterPath="$PROJECT_DIR$/src/git/GitSettings.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/launcher/LauncherController.java" afterPath="$PROJECT_DIR$/src/launcher/LauncherController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/storage/Folder.java" afterPath="$PROJECT_DIR$/src/storage/Folder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/storage/Storage.fxml" afterPath="$PROJECT_DIR$/src/storage/Storage.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/storage/StorageController.java" afterPath="$PROJECT_DIR$/src/storage/StorageController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/storage/StorageDropbox.java" afterPath="$PROJECT_DIR$/src/storage/StorageDropbox.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/storage/StorageSettingsController.java" afterPath="$PROJECT_DIR$/src/storage/StorageSettingsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/storage/Storageable.java" afterPath="$PROJECT_DIR$/src/storage/Storageable.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -95,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StorageSettingsController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StorageSettingsController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/storage/StorageSettingsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="661">
+              <caret line="47" column="39" lean-forward="true" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,11 +68,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StorageController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="StorageDropbox.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/storage/StorageDropbox.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1379">
+              <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StorageController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/storage/StorageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+            <state relative-caret-position="868">
+              <caret line="204" column="74" lean-forward="false" selection-start-line="204" selection-start-column="74" selection-end-line="204" selection-end-column="74" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LauncherController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/launcher/LauncherController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="151" column="30" lean-forward="true" selection-start-line="151" selection-start-column="30" selection-end-line="151" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -187,6 +170,7 @@
         <option value="$PROJECT_DIR$/src/git/GitSettingsController.java" />
         <option value="$PROJECT_DIR$/src/git/GitController.java" />
         <option value="$PROJECT_DIR$/src/storage/StorageSettingsController.java" />
+        <option value="$PROJECT_DIR$/src/storage/StorageController.java" />
       </list>
     </option>
   </component>
@@ -305,6 +289,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proftaak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proftaak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="launcher" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -797,7 +799,7 @@
       <workItem from="1496069284547" duration="1416000" />
       <workItem from="1496070722242" duration="1330000" />
       <workItem from="1496075413666" duration="3216000" />
-      <workItem from="1496138386625" duration="205000" />
+      <workItem from="1496138386625" duration="992000" />
     </task>
     <task id="LOCAL-00001" summary="Latency bug fixes">
       <created>1495442404635</created>
@@ -824,7 +826,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54000000" />
+    <option name="totallyTimeSpent" value="54787000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1142,25 +1144,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/storage/StorageDropbox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.egit.github.core-2.1.5.jar!/org/eclipse/egit/github/core/service/RepositoryService.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="326">
           <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/launcher/LauncherController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="183" column="32" lean-forward="true" selection-start-line="183" selection-start-column="32" selection-end-line="183" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1224,20 +1211,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/storage/StorageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/git/GitController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="43" column="25" lean-forward="false" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1247,7 +1226,7 @@
         <state relative-caret-position="17">
           <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1257,7 +1236,7 @@
         <state relative-caret-position="459">
           <caret line="27" column="48" lean-forward="false" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1294,11 +1273,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/storage/StorageSettingsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="661">
+          <caret line="47" column="39" lean-forward="true" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/launcher/LauncherController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="151" column="30" lean-forward="true" selection-start-line="151" selection-start-column="30" selection-end-line="151" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/storage/StorageDropbox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1379">
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/storage/StorageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="868">
+          <caret line="204" column="74" lean-forward="false" selection-start-line="204" selection-start-column="74" selection-end-line="204" selection-end-column="74" />
+          <folding />
         </state>
       </provider>
     </entry>

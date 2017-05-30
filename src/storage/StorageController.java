@@ -199,6 +199,10 @@ public class StorageController implements Initializable {
             }
         }
         else{
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Dropbox Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Koppel uw dropbox account in de settings");
             System.out.println("koppel dropbox account!");
         }
     }
