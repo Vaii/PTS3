@@ -151,7 +151,7 @@ public class WhiteboardController implements Initializable {
 
         try{
             Stage loadStage = new Stage();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("load.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/whiteboard/load.fxml"));
             Parent root = loader.load();
             LoadController lc = loader.getController();
             lc.setWc(this);
