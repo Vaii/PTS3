@@ -7,8 +7,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
 import org.eclipse.egit.github.core.RepositoryContents;
 
 import javax.swing.*;
@@ -19,10 +17,8 @@ import java.util.ResourceBundle;
 
 public class GitController implements Initializable {
 
-    @FXML private AnchorPane apLists;
     @FXML private ListView<GitContents> lvContent;
-    @FXML private ComboBox<GitRepository> cbRepos;
-    @FXML private GridPane gpContents;
+    @FXML private ComboBox<GitRepository> cbRepositorys;
     @FXML private Label lblTitle;
     @FXML private Label lblInfo;
 
@@ -33,14 +29,6 @@ public class GitController implements Initializable {
     public GitController()
     {
         git = new Git();
-        if (!(Config.getUser().getGithubAuthToken().isEmpty())){
-            login();
-        }
-        else
-        {
-            showErrorAlert("No token found, set token in Settings");
-        }
-
     }
 
     public void login() {
@@ -76,14 +64,14 @@ public class GitController implements Initializable {
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, ex.getMessage(), " Error", JOptionPane.ERROR_MESSAGE);
         }
-        cbRepos.getItems().removeAll(cbRepos.getItems());
-        cbRepos.getItems().setAll(git.getRepositorys());
+            cbRepositorys.getItems().removeAll(cbRepositorys.getItems());
+            cbRepositorys.getItems().setAll(git.getRepositorys());
     }
 
     public void showCommits() {
         lvContent.getItems().removeAll(lvContent.getItems());
         try{
-            git.getCommits(cbRepos.getSelectionModel().getSelectedItem());
+            git.getCommits(cbRepositorys.getSelectionModel().getSelectedItem());
             lvContent.getItems().setAll(git.getCommits());
         }
         catch (Exception ex){
@@ -100,7 +88,7 @@ public class GitController implements Initializable {
     public void showContents() {
         this.lvContent.getItems().removeAll(lvContent.getItems());
         try{
-            git.getContents(cbRepos.getSelectionModel().getSelectedItem());
+            git.getContents(cbRepositorys.getSelectionModel().getSelectedItem());
         }
         catch (Exception ex){
             showErrorAlert("Loading contents error.");
@@ -113,7 +101,7 @@ public class GitController implements Initializable {
     public void showContents(String path){
         this.lvContent.getItems().removeAll(lvContent.getItems());
         try{
-            git.getContents(cbRepos.getSelectionModel().getSelectedItem(),path);
+            git.getContents(cbRepositorys.getSelectionModel().getSelectedItem(),path);
             System.out.println("Entering: " + path);
         }
         catch (Exception ex){
@@ -166,7 +154,7 @@ public class GitController implements Initializable {
     public boolean setPrimaryRepo(String primaryRepository) {
         for (GitRepository repo : git.getRepositorys()){
             if (repo.getRepository().getName().equals(primaryRepository)){
-                cbRepos.getSelectionModel().select(repo);
+                cbRepositorys.getSelectionModel().select(repo);
                 System.out.println("Proftaak repository:" + repo.getRepository().getName());
                 return true;
             }
@@ -188,6 +176,13 @@ public class GitController implements Initializable {
                 }
             }
         });
+        if (!(Config.getUser().getGithubAuthToken().isEmpty())){
+            login();
+        }
+        else
+        {
+            showErrorAlert("No token found, set token in Settings");
+        }
     }
 
     private void setLabels(String selectedContent){
@@ -195,12 +190,10 @@ public class GitController implements Initializable {
             case "Commit":
                 lblTitle.setText("Commits:");
                 lblInfo.setText("Username - Message");
-                gpContents.setVisible(false);
                 break;
             default:
                 lblTitle.setText("Content:");
                 lblInfo.setText("Type - Name");
-                gpContents.setVisible(true);
         }
     }
 
