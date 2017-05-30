@@ -131,8 +131,16 @@ public class LauncherController implements Initializable {
 
     @FXML
     private void loadStorage() throws IOException {
-        AnchorPane storage = (AnchorPane)FXMLLoader.load(this.getClass().getResource("/storage/Storage.fxml"));
-        this.mainBorderPane.setCenter(storage);
+        if(Config.getUser().getDropboxAuthToken() == null || Config.getUser().getDropboxAuthToken() == ""){
+            Alert alert = new Alert(Alert.AlertType.ERROR,"No token found, set token in Settings", ButtonType.CLOSE);
+            alert.setHeaderText("Something went wrong.");
+            alert.showAndWait();
+        }
+        else{
+            AnchorPane storage = (AnchorPane)FXMLLoader.load(this.getClass().getResource("/storage/Storage.fxml"));
+            this.mainBorderPane.setCenter(storage);
+        }
+
     }
 
     @FXML
