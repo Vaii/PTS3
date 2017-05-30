@@ -203,6 +203,7 @@ public class StorageController implements Initializable {
             alert.setTitle("Dropbox Error");
             alert.setHeaderText(null);
             alert.setContentText("Koppel uw dropbox account in de settings");
+            alert.showAndWait();
             System.out.println("koppel dropbox account!");
         }
     }

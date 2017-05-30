@@ -6,5 +6,5 @@ public interface IGitContext {
 
     User AddGitToken(User user, String token);
     User RemoveGitToken(User user);
-    User EditMainRepository(User user, String Repository);
+    User EditMainRepository(User user, String repository);
 }
