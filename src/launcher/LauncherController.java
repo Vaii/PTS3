@@ -7,16 +7,18 @@ package launcher;
 
 import de.jensd.fx.glyphs.GlyphsDude;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
+import domain.Config;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
@@ -141,9 +143,16 @@ public class LauncherController implements Initializable {
 
     @FXML
     private void loadGit() throws IOException {
-        AnchorPane git = (AnchorPane)FXMLLoader.load(this.getClass().getResource("/git/GitForm.fxml"));
-        this.mainBorderPane.setCenter(git);
-
+        if (Config.getUser().getGithubAuthToken() != null){
+            AnchorPane git = (AnchorPane)FXMLLoader.load(this.getClass().getResource("/git/GitForm.fxml"));
+            this.mainBorderPane.setCenter(git);
+        }
+        else
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR,"No token found, set token in Settings", ButtonType.CLOSE);
+            alert.setHeaderText("Something went wrong.");
+            alert.showAndWait();
+        }
     }
 
     @FXML
@@ -184,6 +193,5 @@ public class LauncherController implements Initializable {
             e.printStackTrace();
         }
         this.mainBorderPane.setCenter(whiteboardPane);
-
     }
 }
