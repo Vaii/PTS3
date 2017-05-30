@@ -40,11 +40,7 @@ public class StorageController implements Initializable {
     @FXML
     private Label lblDirectory;
     @FXML
-    private Button authorizebutton;
-    @FXML
     private Button btnRename;
-    @FXML
-    private Button sendbutton;
     @FXML
     private Button btnDownload;
     @FXML
@@ -56,16 +52,11 @@ public class StorageController implements Initializable {
     @FXML
     private Button btnDelete;
     @FXML
-    private TextField inputtxt;
-    @FXML
-    private TextArea outputtxt;
-    @FXML
     private ListView<Folder> fileList;
 
     private ObservableList<Folder> fileObservableList;
     //private Storageable storage;
     private StorageDropbox storage;
-    private DbxWebAuthNoRedirect webAuth;
     private DbxRequestConfig config;
     private String selectedFolder;
     private Stage stage;
@@ -77,31 +68,6 @@ public class StorageController implements Initializable {
         fileObservableList = FXCollections.observableArrayList();
     }
 
-    @FXML
-    private void handleButtonActionAuthenticate(ActionEvent event) throws URISyntaxException, IOException {
-        final String APP_KEY = "5f5yop2b2qwidq9";
-        final String APP_SECRET = "6njyd71d4ncif1d";
-        DbxAppInfo appInfo = new DbxAppInfo(APP_KEY, APP_SECRET);
-        config = new DbxRequestConfig(
-                "Phub/1.0", Locale.getDefault().toString());
-        //webAuth = new DbxWebAuthNoRedirect(config, appInfo);
-
-        // String authorizeUrl = webAuth.start();
-        Desktop d = Desktop.getDesktop();
-        //d.browse(new URI(authorizeUrl));
-    }
-
-    @FXML
-    private void handleButtonActionSendAuthenticate(ActionEvent event) throws DbxException {
-        // DbxAuthFinish authFinish = webAuth.finish(inputtxt.getText());
-        //String accessToken = authFinish.accessToken;
-        String accessToken = "Io6xbQm1nbYAAAAAAAABDq241FjWGVGCSFpG1r0-Lc4oSCKWSNgLXLAvukfLQCZs";
-        client = new DbxClientV1(config, accessToken);
-        client2 = new DbxClientV2(config, accessToken, DbxHost.DEFAULT);
-        storage = new StorageDropbox(client, client2);
-        //outputtxt.setText("Linked account: " + client.getAccountInfo().displayName);
-        loadDirectory(storage.getCurrentDirectory());
-    }
 
     @FXML
     private void folderDoubleClick(MouseEvent event) throws DbxException {
@@ -233,6 +199,11 @@ public class StorageController implements Initializable {
             }
         }
         else{
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Dropbox Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Koppel uw dropbox account in de settings");
+            alert.showAndWait();
             System.out.println("koppel dropbox account!");
         }
     }
