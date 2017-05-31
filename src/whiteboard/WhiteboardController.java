@@ -5,9 +5,11 @@ package whiteboard;
  */
 import android.util.Base64;
 import domain.Config;
+import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableArray;
 import javafx.collections.ObservableList;;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
@@ -30,6 +32,8 @@ import javafx.scene.text.Font;
 import javafx.scene.web.WebView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import whiteboard.Shared.DrawEvent;
+import whiteboard.Shared.MoveEvent;
 import whiteboard.repository.WhiteboardMongoContext;
 import whiteboard.repository.WhiteboardRepository;
 
@@ -43,8 +47,10 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Files;
+import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
@@ -110,6 +116,8 @@ public class WhiteboardController implements Initializable {
     private ObservableList<String> whiteboarditemList = FXCollections.observableArrayList();
 
     private Whiteboard loadedWhiteboard;
+
+    private WhiteboardCommunicator communicator;
     @FXML
     Button saveButton;
     @FXML
@@ -122,6 +130,10 @@ public class WhiteboardController implements Initializable {
     TabPane whiteboardPane;
     @FXML
     AnchorPane whiteboardScene;
+    @FXML
+    Button connectPublisher;
+
+    private int itemCount = 0;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -143,8 +155,73 @@ public class WhiteboardController implements Initializable {
         saveButton.setOnAction(this::saveWhiteboard);
         browseButton.setOnAction(this::loadWhiteboard);
 
+
         whiteboardPane.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue)
                 -> selectedTab = newValue.getTabPane().getSelectionModel().getSelectedIndex() +1 );
+
+        //temp disabling buttons untill their functions work without error
+        browseButton.setDisable(true);
+        saveButton.setDisable(true);
+
+        try{
+            this.communicator = new WhiteboardCommunicator(this);
+            connectToPublisher();
+        }
+        catch(RemoteException ex){
+            Logger.getLogger(WhiteboardController.class.getName()).log(Level.SEVERE, ex, null);
+        }
+    }
+
+    private void connectToPublisher() {
+
+        communicator.connectToPublisher();
+
+        communicator.register("Text");
+        communicator.subscribe("Text");
+
+        communicator.register("Move");
+        communicator.subscribe("Move");
+    }
+
+    public void broadcastDrawText(String property, double xPos, double yPos, String input, String id){
+        DrawEvent drawEvent = new DrawEvent(xPos, yPos, input, id);
+        communicator.broadcast(property, drawEvent);
+    }
+
+    public void broadcastMoveEvent(String property, double xPos, double yPos, String objectID){
+        MoveEvent moveEvent = new MoveEvent(xPos, yPos, objectID);
+        communicator.broadcast(property, moveEvent);
+    }
+
+    private void moveNode(String objectId, double xPos, double yPos){
+
+        whiteboardPane.lookup("#" + objectId).setLayoutX(xPos);
+        whiteboardPane.lookup("#" + objectId).setLayoutY(yPos);
+    }
+
+    private void drawText(String Text, double xPos, double yPos, String id){
+        Label label = new Label(Text);
+        label.setLayoutX(xPos);
+        label.setLayoutY(yPos);
+
+        makeItemDraggable(label);
+
+        label.setId(id);
+
+        addItemToPane(label);
+
+    }
+
+    public void requestMoveEvent(String property, MoveEvent event){
+        Platform.runLater(() ->{
+            moveNode(event.getObjectID(), event.getxPos(), event.getyPos());
+        });
+    }
+
+    public void requestDrawText(String property, DrawEvent event){
+        Platform.runLater(() -> {
+            drawText(event.getText(), event.getxPos(), event.getyPos(), event.getId());
+        });
     }
 
     private void loadWhiteboard(ActionEvent actionEvent){
@@ -269,17 +346,10 @@ public class WhiteboardController implements Initializable {
                     textStage.showAndWait();
 
                     if(userInput != null){
-                        Label userText = new Label(userInput.getText());
 
-                        if(userInput.getFont() != null){
-                            userText.setFont(Font.font(userInput.getFont()));
-                        }
-
-                        makeItemDraggable(userText);
-
-                        addItemToList(userText);
-                        addItemToPane(userText);
+                        broadcastDrawText("Text", 0,0, userInput.getText(), "lol");
                     }
+
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -399,7 +469,10 @@ public class WhiteboardController implements Initializable {
             dragDelta.setY(n.getLayoutY() - event.getSceneY());
             n.setCursor(Cursor.MOVE);
         });
-        n.setOnMouseReleased(e -> n.setCursor(Cursor.HAND));
+        n.setOnMouseReleased(e -> {
+            n.setCursor(Cursor.HAND);
+            broadcastMoveEvent("Move", n.getLayoutX(), n.getLayoutY(), n.getId());
+        });
         n.setOnMouseDragged(e ->{
             n.setLayoutY(e.getSceneY() + dragDelta.getY());
             n.setLayoutX(e.getSceneX() + dragDelta.getX());
@@ -412,6 +485,7 @@ public class WhiteboardController implements Initializable {
                     }
                 }
             }
+
         });
         n.setOnMouseEntered(e -> n.setCursor(Cursor.HAND));
 

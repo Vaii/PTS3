@@ -130,16 +130,7 @@ public class User implements Serializable {
 
     @Override
     public String toString() {
-        return "User{" +
-                "_id='" + _id + '\'' +
-                ", name='" + name + '\'' +
-                ", githubAuthToken='" + githubAuthToken + '\'' +
-                ", dropboxAuthToken='" + dropboxAuthToken + '\'' +
-                ", studentid='" + studentid + '\'' +
-                ", userType=" + userType +
-                ", color=" + color +
-                ", Proftaak repository=" + mainRepository +
-                '}';
+        return name;
     }
 
 
