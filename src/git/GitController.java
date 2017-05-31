@@ -1,6 +1,7 @@
 package git;
 
 
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import domain.Config;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -46,7 +47,7 @@ public class GitController implements Initializable {
                 if (Config.getUser().getMainRepository() != null){
                     showListViewInfo();
                 }
-                showInfoAlert("Logged in successfully");
+                System.out.println("Logged in successfully");
             }
         }
         catch (IOException ex){
@@ -195,11 +196,9 @@ public class GitController implements Initializable {
     private void setLabels(String selectedContent){
         switch (selectedContent){
             case "Commit":
-                lblTitle.setText("Commits:");
                 lblInfo.setText("Username - Message");
                 break;
             default:
-                lblTitle.setText("Content:");
                 lblInfo.setText("Type - Name");
         }
     }
