@@ -237,7 +237,7 @@ public class SchedulingMainController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         repo = new ScheduleRepository(new IScheduleMongoContext());
-
+        currentWeek = 1;
         Text addItem = GlyphsDude.createIcon(FontAwesomeIcon.PLUS_CIRCLE, "1.5em");
         addItem.setFill(Color.WHITE);
         this.lblAddItemIcon.setGraphic(addItem);
