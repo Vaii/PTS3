@@ -18,5 +18,15 @@
     <orderEntry type="library" exported="" name="javax.websocket-api-1.0" level="project" />
     <orderEntry type="library" exported="" name="tyrus-client-1.3" level="project" />
     <orderEntry type="library" name="jackson-core-2.7.4" level="project" />
+    <orderEntry type="module-library">
+      <library name="JUnit5">
+        <CLASSES>
+          <root url="jar://$APPLICATION_HOME_DIR$/plugins/junit/lib/junit-jupiter-api-5.0.0-M4.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/plugins/junit/lib/opentest4j-1.0.0-M2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
