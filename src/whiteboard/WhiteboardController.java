@@ -154,7 +154,7 @@ public class WhiteboardController implements Initializable {
         whiteboardItems.getSelectionModel().selectFirst();
         saveButton.setOnAction(this::saveWhiteboard);
         browseButton.setOnAction(this::loadWhiteboard);
-        connectPublisher.setOnAction(this::connectToPublisher);
+
 
         whiteboardPane.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue)
                 -> selectedTab = newValue.getTabPane().getSelectionModel().getSelectedIndex() +1 );
@@ -165,13 +165,14 @@ public class WhiteboardController implements Initializable {
 
         try{
             this.communicator = new WhiteboardCommunicator(this);
+            connectToPublisher();
         }
         catch(RemoteException ex){
             Logger.getLogger(WhiteboardController.class.getName()).log(Level.SEVERE, ex, null);
         }
     }
 
-    private void connectToPublisher(ActionEvent actionEvent) {
+    private void connectToPublisher() {
 
         communicator.connectToPublisher();
 
