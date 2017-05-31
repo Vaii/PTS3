@@ -347,7 +347,8 @@ public class WhiteboardController implements Initializable {
 
                     if(userInput != null){
 
-                        broadcastDrawText("Text", 0,0, userInput.getText(), "lol");
+                        broadcastDrawText("Text", 0,0, userInput.getText(), Integer.toString(itemCount));
+                        itemCount++;
                     }
 
                 } catch (IOException e) {
