@@ -24,4 +24,19 @@ public enum Color {
         public ColorConstants() {
         }
     }
+
+    public static class WebColors{
+
+        public static String getWebColor(Color color){
+            switch (color) {
+                case RED:  return "#FF0000";
+                case CRIMSON:  return "#DC143C";
+                case SLATEBLUE:  return "#ADD8E6";
+                case FORESTGREEN:  return "#228B22";
+                case MAGENTA:  return "#FF00FF";
+            }
+            return null;
+
+        }
+    }
 }
