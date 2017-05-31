@@ -1,7 +1,6 @@
 package git;
 
 
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import domain.Config;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -22,6 +21,10 @@ public class GitController implements Initializable {
     @FXML private ComboBox<GitRepository> cbRepositorys;
     @FXML private Label lblTitle;
     @FXML private Label lblInfo;
+    @FXML private Button btnBack;
+    @FXML private Button btnShowDir;
+    @FXML private Button btnShowFiles;
+    @FXML private Button btnShowCommits;
 
     private String selectedDir;
     private String currentDirectory;
@@ -197,9 +200,17 @@ public class GitController implements Initializable {
         switch (selectedContent){
             case "Commit":
                 lblInfo.setText("Username - Message");
+                btnBack.setVisible(false);
+                btnShowDir.setVisible(false);
+                btnShowFiles.setStyle("-fx-background-color: lightgray");
+                btnShowCommits.setStyle("-fx-background-color: limegreen; -fx-background-radius: 0;");
                 break;
             default:
+                btnBack.setVisible(true);
+                btnShowDir.setVisible(true);
                 lblInfo.setText("Type - Name");
+                btnShowFiles.setStyle("-fx-background-color: limegreen; -fx-background-radius: 0;");
+                btnShowCommits.setStyle("-fx-background-color: lightgray");
         }
     }
 
