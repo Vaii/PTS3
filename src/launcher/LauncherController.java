@@ -158,7 +158,7 @@ public class LauncherController implements Initializable {
         else
         {
             Alert alert = new Alert(Alert.AlertType.ERROR,"No token found, set token in Settings", ButtonType.CLOSE);
-            alert.setHeaderText("Something went wrong.");
+            alert.setHeaderText("Github, Something went wrong.");
             alert.showAndWait();
         }
     }

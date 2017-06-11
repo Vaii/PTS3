@@ -200,14 +200,12 @@ public class GitController implements Initializable {
         switch (selectedContent){
             case "Commit":
                 lblInfo.setText("Username - Message");
-                btnBack.setVisible(false);
-                btnShowDir.setVisible(false);
+                hideContentButtons(false);
                 btnShowFiles.setStyle("-fx-background-color: lightgray");
                 btnShowCommits.setStyle("-fx-background-color: limegreen; -fx-background-radius: 0;");
                 break;
             default:
-                btnBack.setVisible(true);
-                btnShowDir.setVisible(true);
+                hideContentButtons(true);
                 lblInfo.setText("Type - Name");
                 btnShowFiles.setStyle("-fx-background-color: limegreen; -fx-background-radius: 0;");
                 btnShowCommits.setStyle("-fx-background-color: lightgray");
@@ -223,5 +221,9 @@ public class GitController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.INFORMATION,text,ButtonType.CLOSE);
         alert.setHeaderText("Information");
         alert.showAndWait();
+    }
+    private void hideContentButtons(Boolean condition){
+        btnBack.setVisible(condition);
+        btnShowDir.setVisible(condition);
     }
 }
