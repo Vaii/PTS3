@@ -4,6 +4,7 @@ package whiteboard;
  * Created by bob on 10-5-17.
  */
 import android.util.Base64;
+import com.sun.deploy.cache.Cache;
 import domain.Config;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
@@ -13,6 +14,7 @@ import javafx.collections.ObservableArray;
 import javafx.collections.ObservableList;;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -26,6 +28,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
@@ -34,6 +38,8 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import whiteboard.Shared.DrawEvent;
 import whiteboard.Shared.MoveEvent;
+import whiteboard.Shared.PictureEvent;
+import whiteboard.Shared.VideoEvent;
 import whiteboard.repository.WhiteboardMongoContext;
 import whiteboard.repository.WhiteboardRepository;
 
@@ -41,10 +47,7 @@ import whiteboard.repository.WhiteboardRepository;
 import javax.imageio.ImageIO;
 import javax.imageio.stream.ImageInputStream;
 import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
 import java.nio.file.Files;
 import java.rmi.RemoteException;
@@ -95,10 +98,6 @@ public class WhiteboardController implements Initializable {
 
     private String whiteboardName;
 
-    private SaveController sc;
-
-    private int selectedTab = 1;
-
     public void setWhiteboardName(String whiteboardName) {
         this.whiteboardName = whiteboardName;
     }
@@ -115,53 +114,50 @@ public class WhiteboardController implements Initializable {
 
     private ObservableList<String> whiteboarditemList = FXCollections.observableArrayList();
 
-    private Whiteboard loadedWhiteboard;
-
     private WhiteboardCommunicator communicator;
-    @FXML
-    Button saveButton;
-    @FXML
-    Button newButton;
-    @FXML
-    Button browseButton;
-    @FXML
-    ComboBox whiteboardItems;
+
+    private Node selectedNode;
+
     @FXML
     TabPane whiteboardPane;
     @FXML
     AnchorPane whiteboardScene;
-    @FXML
-    Button connectPublisher;
+
 
     private int itemCount = 0;
+
+    private double menuItemxPos;
+    private double menuItemyPos;
+    private ContextMenu deleteMenu;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
         wRepo = new WhiteboardRepository(new WhiteboardMongoContext());
-        whiteboards = new ArrayList<>();
 
-        whiteboarditemList.add("Select Item");
-        whiteboarditemList.add("Text");
-        whiteboarditemList.add("Picture");
-        whiteboarditemList.add("Video");
-        whiteboardItems.setItems(whiteboarditemList);
-
-        whiteboard = new Whiteboard(Integer.toString(whiteboardPane.getTabs().size()), Config.getUser().get_id());
-        whiteboards.add(whiteboard);
-
-        newButton.setOnAction(this::addPane);
-        whiteboardItems.getSelectionModel().selectFirst();
-        saveButton.setOnAction(this::saveWhiteboard);
-        browseButton.setOnAction(this::loadWhiteboard);
+        deleteMenu = new ContextMenu();
+        MenuItem Delete = new MenuItem("Delete");
+        deleteMenu.getItems().addAll(Delete);
+        deleteMenu.setOnAction(event -> deleteItem());
 
 
-        whiteboardPane.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue)
-                -> selectedTab = newValue.getTabPane().getSelectionModel().getSelectedIndex() +1 );
+        final ContextMenu contextMenu = new ContextMenu();
+        MenuItem Text = new MenuItem("Text");
+        MenuItem Video = new MenuItem("Video");
+        MenuItem Picture = new MenuItem("Picture");
+        contextMenu.getItems().addAll(Text,Video,Picture);
 
-        //temp disabling buttons untill their functions work without error
-        browseButton.setDisable(true);
-        saveButton.setDisable(true);
+        Text.setOnAction(event -> startText());
+        Video.setOnAction(event -> startVideo());
+        Picture.setOnAction(event -> startPicture());
+
+        whiteboardPane.setOnMousePressed(event -> {
+            if(event.isSecondaryButtonDown()){
+                contextMenu.show(whiteboardPane, event.getScreenX(), event.getScreenY());
+                menuItemxPos = event.getX();
+                menuItemyPos = event.getY();
+            }
+        });
 
         try{
             this.communicator = new WhiteboardCommunicator(this);
@@ -172,12 +168,96 @@ public class WhiteboardController implements Initializable {
         }
     }
 
+    private void startVideo(){
+
+        try {
+            Stage videoStage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Video.fxml"));
+            Parent root = loader.load();
+            VideoController vc = loader.getController();
+
+            vc.setWhiteboardController(this);
+            vc.setVideoStage(videoStage);
+            videoStage.setTitle("Enter video Url");
+            videoStage.setScene(new Scene(root));
+            videoStage.showAndWait();
+
+            if (videoUrl != null) {
+
+                broadcastDrawVideo("Video", menuItemxPos, menuItemyPos, Integer.toString(itemCount), videoUrl);
+                itemCount++;
+
+            }
+        }
+        catch(Exception e){
+            Logger.getLogger(WhiteboardController.class.getName()).log(Level.SEVERE, null, e);
+        }
+    }
+
+    private void startPicture(){
+
+        try {
+            FileChooser fileChooser = new FileChooser();
+            fileChooser.setTitle("Select picture");
+            FileChooser.ExtensionFilter extensions = new FileChooser.ExtensionFilter(
+                    "Pictures", "*.jpg", "*.png", "*.gif");
+            fileChooser.getExtensionFilters().add(extensions);
+            Picture p = new Picture();
+
+            p.setFile(fileChooser.showOpenDialog(pictureStage));
+
+            if (p.getFile() != null) {
+
+                FileInputStream fis = new FileInputStream(p.getFile());
+                byte[] picture = inputStreamToByteArray(fis);
+                broadcastDrawPicture("Picture", menuItemxPos, menuItemyPos, Integer.toString(itemCount), picture);
+                itemCount++;
+            }
+        }
+        catch(Exception e){
+            Logger.getLogger(WhiteboardController.class.getName()).log(Level.SEVERE, null, e);
+        }
+    }
+    private void startText(){
+        try{
+            userInput = null;
+            Stage textStage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Text.fxml"));
+            Parent root = loader.load();
+            TextController tc = loader.getController();
+            tc.setMainController(this);
+            tc.setTextStage(textStage);
+
+            textStage.setTitle("Text input");
+            textStage.setScene(new Scene(root));
+            textStage.showAndWait();
+
+            if(userInput != null)
+
+                broadcastDrawText("Text", menuItemxPos, menuItemyPos, userInput.getText(), Integer.toString(itemCount));
+                itemCount++;
+            }
+        catch(IOException e){
+            Logger.getLogger(WhiteboardController.class.getName()).log(Level.SEVERE, null, e);
+        }
+
+    }
+    private void deleteItem(){
+
+    }
+
     private void connectToPublisher() {
 
         communicator.connectToPublisher();
 
         communicator.register("Text");
         communicator.subscribe("Text");
+
+        communicator.register("Picture");
+        communicator.subscribe("Picture");
+
+        communicator.register("Video");
+        communicator.subscribe("Video");
 
         communicator.register("Move");
         communicator.subscribe("Move");
@@ -191,6 +271,16 @@ public class WhiteboardController implements Initializable {
     public void broadcastMoveEvent(String property, double xPos, double yPos, String objectID){
         MoveEvent moveEvent = new MoveEvent(xPos, yPos, objectID);
         communicator.broadcast(property, moveEvent);
+    }
+
+    public void broadcastDrawVideo(String property, double xPos, double yPos, String id, String url){
+        VideoEvent videoEvent = new VideoEvent(xPos, yPos, url, id);
+        communicator.broadcast(property, videoEvent);
+    }
+
+    public void broadcastDrawPicture(String property, double xPos, double yPos, String id, byte[] picture){
+        PictureEvent pictureEvent = new PictureEvent(xPos, yPos, id, picture);
+        communicator.broadcast(property, pictureEvent);
     }
 
     private void moveNode(String objectId, double xPos, double yPos){
@@ -212,6 +302,45 @@ public class WhiteboardController implements Initializable {
 
     }
 
+    private void drawPicture(byte[] picture, double xPos, double yPos, String id){
+
+        try{
+            File imageToCreate = File.createTempFile("image", "png", Cache.getActiveCacheDir());
+            imageToCreate.deleteOnExit();
+            FileOutputStream fos = new FileOutputStream(imageToCreate);
+            fos.write(picture);
+            fos.close();
+            String imagepath = imageToCreate.toURI().toString();
+
+            ImageView view = new ImageView(imagepath);
+
+            view.setLayoutX(xPos);
+            view.setLayoutY(yPos);
+            view.setId(id);
+            makeItemDraggable(view);
+
+            addItemToPane(view);
+        }
+        catch(IOException e){
+            Logger.getLogger(WhiteboardController.class.getName()).log(Level.SEVERE, null, e);
+        }
+
+    }
+
+    public void drawVideo(String url, double xPos, double yPos, String id){
+
+        WebView view  = new WebView();
+        view.getEngine().load(url);
+        view.setLayoutY(yPos);
+        view.setLayoutX(xPos);
+        view.setPrefWidth(400);
+        view.setPrefHeight(250);
+        view.setId(id);
+
+        makeItemDraggable(view);
+        addItemToPane(view);
+    }
+
     public void requestMoveEvent(String property, MoveEvent event){
         Platform.runLater(() ->{
             moveNode(event.getObjectID(), event.getxPos(), event.getyPos());
@@ -224,232 +353,27 @@ public class WhiteboardController implements Initializable {
         });
     }
 
-    private void loadWhiteboard(ActionEvent actionEvent){
-
-        try{
-            Stage loadStage = new Stage();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/whiteboard/load.fxml"));
-            Parent root = loader.load();
-            LoadController lc = loader.getController();
-            lc.setWc(this);
-            loadStage.setTitle("Selecteer een whiteboard om te laden");
-            loadStage.setScene(new Scene(root));
-            loadStage.showAndWait();
-
-            loadSelectedWhiteboardToPane(loadedWhiteboard);
-        }
-        catch(IOException e){
-            e.printStackTrace();
-        }
-
+    public void requestDrawVideo(String property, VideoEvent event){
+        Platform.runLater(() ->{
+            drawVideo(event.getVideoURL(), event.getxPos(), event.getyPos(), event.getID());
+        });
     }
 
-    private void loadSelectedWhiteboardToPane(Whiteboard loadedWhiteboard) throws IOException {
-        Tab tab = new Tab((Integer.toString(whiteboardPane.getTabs().size() + 1)));
-        Pane pane = new Pane();
-
-        for(WhiteboardItem x : loadedWhiteboard.getItems()){
-            if(x instanceof Text){
-                Label label = new Label(((Text) x).getText());
-                if(((Text) x).getFont() != null){
-                    label.setFont(Font.font(((Text) x).getFont()));
-                }
-                label.setLayoutX(((Text) x).getxPos());
-                label.setLayoutY(((Text) x).getyPos());
-
-                makeItemDraggable(label);
-                pane.getChildren().add(label);
-            }
-            else if(x instanceof Video){
-                WebView view  = new WebView();
-                view.getEngine().load(((Video) x).getUrl());
-                view.setPrefWidth(400);
-                view.setPrefHeight(250);
-
-                view.setLayoutX(((Video) x).getxPos());
-                view.setLayoutY(((Video) x).getyPos());
-
-                makeItemDraggable(view);
-                pane.getChildren().add(view);
-            }
-            else if(x instanceof Picture){
-
-                BufferedImage img = ImageIO.read(new ByteArrayInputStream(((Picture) x).getImage()));
-                Image toUseImage = SwingFXUtils.toFXImage(img, null);
-
-                ImageView pictureView = new ImageView(toUseImage);
-                pictureView.setLayoutX(((Picture) x).getxPos());
-                pictureView.setLayoutY(((Picture) x).getyPos());
-
-
-                makeItemDraggable(pictureView);
-                addItemToPane(pictureView);
-
-                pane.getChildren().add(pictureView);
-            }
-
-            tab.setContent(pane);
-            whiteboardPane.getTabs().add(tab);
-        }
+    public void requestDrawPicture(String property, PictureEvent event){
+        Platform.runLater(() ->{
+            drawPicture(event.getPicture(), event.getxPos(), event.getyPos(), event.getId());
+        });
     }
 
-    private void saveWhiteboard(ActionEvent actionEvent) {
 
-        Whiteboard wToSave;
-        for(Whiteboard w : whiteboards) {
-            if (w.getId().equals(Integer.toString(selectedTab))){
-
-                wToSave = w;
-                try{
-                    Stage nameStage = new Stage();
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("save.fxml"));
-                    Parent root = loader.load();
-                    sc = loader.getController();
-                    sc.setWc(this);
-                    nameStage.setTitle("Enter name");
-                    nameStage.setScene(new Scene(root));
-                    nameStage.showAndWait();
-                    wToSave.setName(whiteboardName);
-                    wRepo.saveWhiteboard(wToSave);
-
-                }
-                catch(Exception e){
-                    e.printStackTrace();
-                }
-            }
+    public byte[] inputStreamToByteArray(InputStream inputStream) throws IOException{
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        byte[] buffer = new byte[8192];
+        int bytesRead;
+        while((bytesRead = inputStream.read(buffer)) > 0){
+            baos.write(buffer,0,bytesRead);
         }
-    }
-
-    private void addPane(ActionEvent actionEvent) {
-        Tab tab = new Tab((Integer.toString(whiteboardPane.getTabs().size() +1)));
-        whiteboardPane.getTabs().add(tab);
-        Whiteboard board = new Whiteboard(Integer.toString(whiteboardPane.getTabs().size() + 1), Config.getUser().get_id());
-        whiteboards.add(board);
-    }
-
-    @FXML
-    private void handleComboboxAction() throws IOException {
-        if (whiteboardItems.getSelectionModel().getSelectedItem() != null)
-        {
-            if (whiteboardItems.getSelectionModel().getSelectedItem().equals("Text")) {
-                try {
-                    userInput = null;
-                    Stage textStage = new Stage();
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("Text.fxml"));
-                    Parent root = loader.load();
-                    TextController tc = loader.getController();
-                    tc.setMainController(this);
-                    tc.setTextStage(textStage);
-
-                    textStage.setTitle("Text input");
-                    textStage.setScene(new Scene(root));
-                    textStage.showAndWait();
-
-                    if(userInput != null){
-
-                        broadcastDrawText("Text", 0,0, userInput.getText(), Integer.toString(itemCount));
-                        itemCount++;
-                    }
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            } else if (whiteboardItems.getSelectionModel().getSelectedItem().equals("Picture")) {
-                FileChooser fileChooser = new FileChooser();
-                fileChooser.setTitle("Select picture");
-                FileChooser.ExtensionFilter extensions = new FileChooser.ExtensionFilter(
-                        "Pictures", "*.jpg", "*.png", "*.gif");
-                fileChooser.getExtensionFilters().add(extensions);
-                Picture p = new Picture();
-
-                p.setFile(fileChooser.showOpenDialog(pictureStage));
-
-                if(p.getFile() != null){
-                    ImageView pictureView = new ImageView(p.getSelectedImage());
-                    makeItemDraggable(pictureView);
-
-                    addItemToList(pictureView, p.getFile());
-                    addItemToPane(pictureView);
-                }
-
-            } else if (whiteboardItems.getSelectionModel().getSelectedItem().equals("Video")) {
-
-                Stage videoStage = new Stage();
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("Video.fxml"));
-                Parent root = loader.load();
-                VideoController vc = loader.getController();
-
-                vc.setWhiteboardController(this);
-                vc.setVideoStage(videoStage);
-                videoStage.setTitle("Enter video Url");
-                videoStage.setScene(new Scene(root));
-                videoStage.showAndWait();
-
-                if(videoUrl != null){
-
-                    WebView view  = new WebView();
-                    view.getEngine().load(videoUrl);
-                    view.setPrefWidth(400);
-                    view.setPrefHeight(250);
-
-                    makeItemDraggable(view);
-                    addItemToList(view);
-                    addItemToPane(view);
-                }
-            }
-        }
-    }
-
-    private void addItemToList(WebView w) {
-
-        for (Whiteboard board : whiteboards){
-            if(board.getId().equals(Integer.toString(selectedTab))){
-
-                String id  = Config.getUser().getName() + board.getId() +
-                        Integer.toString(board.getItems().size() + 1) ;
-                Video video = new Video(w.getEngine().getLocation(), w.getLayoutX(), w.getLayoutY(),
-                        id, w.getWidth(), w.getHeight());
-                w.setId(id);
-                board.addItem(video);
-            }
-        }
-    }
-
-    private void addItemToList(Label l){
-
-        for (Whiteboard board : whiteboards){
-            if(board.getId().equals(Integer.toString(selectedTab))){
-
-                String id  = Config.getUser().getName() + board.getId() +
-                        Integer.toString(board.getItems().size() + 1) ;
-                Text text = new Text(l.getText(), l.getFont().toString(), id, l.getLayoutX(), l.getLayoutY(),
-                        l.getWidth(), l.getHeight());
-                l.setId(id);
-                board.addItem(text);
-            }
-        }
-    }
-
-    private void addItemToList(ImageView I, File F){
-
-        for (Whiteboard board : whiteboards){
-            if(board.getId().equals(Integer.toString(selectedTab))){
-
-                String id  = Config.getUser().getName() + board.getId() +
-                        Integer.toString(board.getItems().size() + 1) ;
-
-                try{
-                    byte[] imageToByte = Files.readAllBytes(F.toPath());
-                    Picture picture = new Picture(imageToByte, id, I.getLayoutX(), I.getLayoutY(),
-                            I.getImage().getWidth(), I.getImage().getHeight());
-                    I.setId(id);
-                    board.addItem(picture);
-                }
-                catch(IOException e){
-                    e.printStackTrace();
-                }
-            }
-        }
+        return baos.toByteArray();
     }
 
     private void addItemToPane(Node n){
@@ -466,9 +390,9 @@ public class WhiteboardController implements Initializable {
     private void makeItemDraggable(Node n){
 
         n.setOnMousePressed(event -> {
-            dragDelta.setX(n.getLayoutX() - event.getSceneX());
-            dragDelta.setY(n.getLayoutY() - event.getSceneY());
-            n.setCursor(Cursor.MOVE);
+                dragDelta.setX(n.getLayoutX() - event.getSceneX());
+                dragDelta.setY(n.getLayoutY() - event.getSceneY());
+                n.setCursor(Cursor.MOVE);
         });
         n.setOnMouseReleased(e -> {
             n.setCursor(Cursor.HAND);
@@ -477,22 +401,9 @@ public class WhiteboardController implements Initializable {
         n.setOnMouseDragged(e ->{
             n.setLayoutY(e.getSceneY() + dragDelta.getY());
             n.setLayoutX(e.getSceneX() + dragDelta.getX());
-
-            for (Whiteboard w : whiteboards){
-                for(WhiteboardItem wi : w.getItems()){
-                    if(wi.getId().equals(n.getId())){
-                        wi.setyPos(n.getLayoutY());
-                        wi.setxPos(n.getLayoutX());
-                    }
-                }
-            }
-
         });
         n.setOnMouseEntered(e -> n.setCursor(Cursor.HAND));
 
     }
 
-    public void setLoadedWhiteboard(Whiteboard loadedWhiteboard) {
-        this.loadedWhiteboard = loadedWhiteboard;
-    }
 }

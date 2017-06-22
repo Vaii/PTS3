@@ -5,6 +5,8 @@ import whiteboard.FontysPublisher.IRemotePublisherForDomain;
 import whiteboard.FontysPublisher.IRemotePublisherForListener;
 import whiteboard.Shared.DrawEvent;
 import whiteboard.Shared.MoveEvent;
+import whiteboard.Shared.PictureEvent;
+import whiteboard.Shared.VideoEvent;
 
 import java.beans.PropertyChangeEvent;
 import java.rmi.NoSuchObjectException;
@@ -48,9 +50,17 @@ public class WhiteboardCommunicator extends UnicastRemoteObject implements IRemo
             DrawEvent drawEvent = (DrawEvent) evt.getNewValue();
             wController.requestDrawText(property, drawEvent);
         }
-        if(property.equals("Move")){
+        else if(property.equals("Move")){
             MoveEvent moveEvent = (MoveEvent) evt.getNewValue();
             wController.requestMoveEvent(property, moveEvent);
+        }
+        else if(property.equals("Video")){
+            VideoEvent videoEvent = (VideoEvent) evt.getNewValue();
+            wController.requestDrawVideo(property, videoEvent);
+        }
+        else if(property.equals("Picture")){
+            PictureEvent pictureEvent = (PictureEvent) evt.getNewValue();
+            wController.requestDrawPicture(property, pictureEvent);
         }
 
 
@@ -110,24 +120,11 @@ public class WhiteboardCommunicator extends UnicastRemoteObject implements IRemo
         }
     }
 
-    public void broadcast(String property, DrawEvent drawEvent){
+    public void broadcast(String property, Object object){
         if(connected){
             threadPool.execute(() -> {
                 try{
-                    publisherForDomain.inform(property, null, drawEvent);
-                }
-                catch(RemoteException ex){
-                    Logger.getLogger(WhiteboardCommunicator.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            });
-        }
-    }
-
-    public void broadcast(String property, MoveEvent moveEvent){
-        if(connected){
-            threadPool.execute(() ->{
-                try{
-                    publisherForDomain.inform(property, null, moveEvent);
+                    publisherForDomain.inform(property, null, object);
                 }
                 catch(RemoteException ex){
                     Logger.getLogger(WhiteboardCommunicator.class.getName()).log(Level.SEVERE, null, ex);
