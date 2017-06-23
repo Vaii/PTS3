@@ -4,6 +4,7 @@ import com.dropbox.core.*;
 import com.dropbox.core.v1.DbxClientV1;
 import com.dropbox.core.v2.DbxClientV2;
 import domain.Config;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -15,19 +16,18 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.*;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import java.awt.*;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.Locale;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 /**
@@ -55,7 +55,6 @@ public class StorageController implements Initializable {
     private ListView<Folder> fileList;
 
     private ObservableList<Folder> fileObservableList;
-    //private Storageable storage;
     private StorageDropbox storage;
     private DbxRequestConfig config;
     private String selectedFolder;
@@ -117,7 +116,7 @@ public class StorageController implements Initializable {
     @FXML
     private void backDirectory(ActionEvent event) throws DbxException {
         String directory = storage.getCurrentDirectory();
-        String parent = directory.substring(0, directory.lastIndexOf("/"));
+        String parent = directory.substring(0, directory.lastIndexOf('/'));
         if (!parent.contains("/")) {
             parent = "/";
         }
@@ -143,7 +142,12 @@ public class StorageController implements Initializable {
     public void loadDirectory(String path) throws DbxException {
         fileObservableList.clear();
         fileObservableList.addAll(storage.getFiles(path));
-        lblDirectory.setText(path);
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                lblDirectory.setText(path);
+            }
+        });
 
     }
 
@@ -157,37 +161,34 @@ public class StorageController implements Initializable {
             Scene scene = new Scene(root);
             stage.setScene(scene);
             RenameFilePopupController controller = loader.getController();
-            controller.storage = storage;
-            controller.createFolder = createFolder;
-            if(folder != null){
-                controller.folder = folder;
+            controller.setStorage(storage);
+            controller.setCreateFolder(createFolder);
+            if (folder != null) {
+                controller.setFolder(folder);
             }
-            controller.parent = this;
+            controller.setParent(this);
             controller.setStage(stage);
             stage.show();
             loadDirectory(storage.getCurrentDirectory());
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (DbxException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            Logger.getLogger(StorageController.class.getName()).log(Level.SEVERE, null, e);
         }
 
 
     }
 
     public void initialize(URL url, ResourceBundle rb) {
-        if(Config.getUser().getDropboxAuthToken() != "") {
+        if (Config.getUser().getDropboxAuthToken() != "") {
             config = new DbxRequestConfig("Phub/1.0", Locale.getDefault().toString());
             client = new DbxClientV1(config, Config.getUser().getDropboxAuthToken());
             client2 = new DbxClientV2(config, Config.getUser().getDropboxAuthToken(), DbxHost.DEFAULT);
             storage = new StorageDropbox(client, client2);
             try {
                 loadDirectory(storage.getCurrentDirectory());
-            } catch (DbxException e) {
-                e.printStackTrace();
+            } catch (Exception e) {
+                Logger.getLogger(StorageController.class.getName()).log(Level.SEVERE, null, e);
             }
-        }
-        else{
+        } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Dropbox Error");
             alert.setHeaderText(null);
