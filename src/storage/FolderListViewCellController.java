@@ -12,6 +12,8 @@ import javafx.scene.layout.GridPane;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Created by wei-qiang on 13-May-17.
@@ -30,14 +32,14 @@ public class FolderListViewCellController extends ListCell<Folder> implements In
     @FXML
     private GridPane gridPane;
 
-    public FolderListViewCellController(){
+    public FolderListViewCellController() {
     }
 
     @Override
     protected void updateItem(Folder folder, boolean empty) {
         super.updateItem(folder, empty);
 
-        if(folder == null) {
+        if (folder == null) {
             setText(null);
             setGraphic(null);
         } else {
@@ -47,17 +49,17 @@ public class FolderListViewCellController extends ListCell<Folder> implements In
                 try {
                     mLLoader.load();
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    Logger.getLogger(FolderListViewCellController.class.getName()).log(Level.SEVERE, null, e);
                 }
             }
 
             lblName.setText(String.valueOf(folder.getFile().name));
 
-            if(folder.getFile().isFile()){
+            if (folder.getFile().isFile()) {
                 lblModified.setText(String.valueOf(folder.getFile().asFile().lastModified));
                 lblSize.setText(folder.getFile().asFile().humanSize);
                 String extension = folder.getFile().path.substring(folder.getFile().path.lastIndexOf('.'));
-                switch(extension){
+                switch (extension) {
                     case ".pdf":
                         faiIcon.setIcon(FontAwesomeIcon.FILE_PDF_ALT);
                         break;
@@ -67,12 +69,12 @@ public class FolderListViewCellController extends ListCell<Folder> implements In
                         break;
                     case ".txt":
                         faiIcon.setIcon(FontAwesomeIcon.FILE_TEXT_ALT);
+                        break;
                     default:
                         faiIcon.setIcon(FontAwesomeIcon.FILE_ALT);
                         break;
                 }
-            }
-            else {
+            } else {
                 lblModified.setText("--");
                 lblSize.setText("--");
                 faiIcon.setIcon(FontAwesomeIcon.FOLDER_ALT);

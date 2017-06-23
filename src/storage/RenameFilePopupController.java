@@ -1,6 +1,5 @@
 package storage;
 
-import com.dropbox.core.DbxException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -10,16 +9,18 @@ import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Created by wei-qiang on 27-May-17.
  */
 public class RenameFilePopupController implements Initializable {
-    public StorageController parent;
+    private StorageController parent;
     private Stage stage;
-    public Folder folder;
-    public boolean createFolder;
-    public  StorageDropbox storage;
+    private Folder folder;
+    private boolean createFolder;
+    private StorageDropbox storage;
     @FXML
     private Button btnCancel;
     @FXML
@@ -27,40 +28,69 @@ public class RenameFilePopupController implements Initializable {
     @FXML
     private TextField tbName;
 
-    public RenameFilePopupController(){
+    public RenameFilePopupController() {
     }
-    public RenameFilePopupController(StorageDropbox storage){
+
+    public RenameFilePopupController(StorageDropbox storage) {
         this.storage = storage;
         createFolder = true;
     }
-    public RenameFilePopupController(Folder renameFolder, StorageDropbox storage){
+
+    public RenameFilePopupController(Folder renameFolder, StorageDropbox storage) {
         folder = renameFolder;
         this.storage = storage;
         createFolder = false;
     }
 
+    public StorageController getParent() {
+        return parent;
+    }
+
+    public void setParent(StorageController parent) {
+        this.parent = parent;
+    }
+
+    public Folder getFolder() {
+        return folder;
+    }
+
+    public void setFolder(Folder folder) {
+        this.folder = folder;
+    }
+
+    public boolean isCreateFolder() {
+        return createFolder;
+    }
+
+    public void setCreateFolder(boolean createFolder) {
+        this.createFolder = createFolder;
+    }
+
+    public StorageDropbox getStorage() {
+        return storage;
+    }
+
+    public void setStorage(StorageDropbox storage) {
+        this.storage = storage;
+    }
+
     @FXML
-    private void handleButtonActionCancel(ActionEvent event){
+    private void handleButtonActionCancel(ActionEvent event) {
         Stage stage = (Stage) btnCancel.getScene().getWindow();
         stage.close();
     }
 
     @FXML
-    private void handleButtonActionSubmit(ActionEvent event){
-        if(createFolder == true){
-            try {
-                storage.addNewfolder(tbName.getText());
-            } catch (DbxException e) {
-                e.printStackTrace();
-            }
-        }
-        else {
-            storage.moveFile(folder.getFile().path, folder.getFile().path.substring(0, folder.getFile().path.lastIndexOf("/")) + "/" + tbName.getText());
-        }
+    private void handleButtonActionSubmit(ActionEvent event) {
         try {
+            if (createFolder) {
+                storage.addNewfolder(tbName.getText());
+            } else {
+                storage.moveFile(folder.getFile().path, folder.getFile().path.substring(0, folder.getFile().path.lastIndexOf("/")) + "/" + tbName.getText());
+            }
             parent.loadDirectory(storage.getCurrentDirectory());
-        } catch (DbxException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            Logger.getLogger(FolderListViewCellController.class.getName()).log(Level.SEVERE, null, e);
         }
         Stage stage = (Stage) btnSubmit.getScene().getWindow();
         stage.close();

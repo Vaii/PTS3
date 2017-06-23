@@ -25,6 +25,5 @@
             <Font name="System Bold" size="22.0" />
          </font>
       </Text>
-      <Button fx:id="clear" layoutX="279.0" layoutY="16.0" mnemonicParsing="false" text="Clear board" />
     </children>
 </AnchorPane>
