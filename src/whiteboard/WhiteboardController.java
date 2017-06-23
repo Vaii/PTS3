@@ -141,7 +141,7 @@ public class WhiteboardController implements Initializable {
         deleteMenu.getItems().addAll(Delete);
         deleteMenu.setOnAction(event -> deleteItem());
 
-        rnd = new Random(100000);
+        rnd = new Random();
 
 
         final ContextMenu contextMenu = new ContextMenu();
@@ -187,7 +187,7 @@ public class WhiteboardController implements Initializable {
 
             if (videoUrl != null) {
 
-                broadcastDrawVideo("Video", menuItemxPos, menuItemyPos, Integer.toString(rnd.nextInt()), videoUrl);
+                broadcastDrawVideo("Video", menuItemxPos, menuItemyPos, Integer.toString(rnd.nextInt(10000)), videoUrl);
 
             }
         }
@@ -212,7 +212,7 @@ public class WhiteboardController implements Initializable {
 
                 FileInputStream fis = new FileInputStream(p.getFile());
                 byte[] picture = inputStreamToByteArray(fis);
-                broadcastDrawPicture("Picture", menuItemxPos, menuItemyPos, Integer.toString(rnd.nextInt()), picture);
+                broadcastDrawPicture("Picture", menuItemxPos, menuItemyPos, Integer.toString(rnd.nextInt(100000)), picture);
             }
         }
         catch(Exception e){
@@ -235,7 +235,7 @@ public class WhiteboardController implements Initializable {
 
             if(userInput != null)
 
-                broadcastDrawText("Text", menuItemxPos, menuItemyPos, userInput.getText(), Integer.toString(rnd.nextInt()));
+                broadcastDrawText("Text", menuItemxPos, menuItemyPos, userInput.getText(), Integer.toString(rnd.nextInt(10000)));
             }
         catch(IOException e){
             Logger.getLogger(WhiteboardController.class.getName()).log(Level.SEVERE, null, e);

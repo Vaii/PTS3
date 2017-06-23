@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="adb879e0-714d-4d05-a402-2b504bd73ab6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/authentication/LoginController.java" afterPath="$PROJECT_DIR$/src/authentication/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/authentication/LoginScreen.fxml" afterPath="$PROJECT_DIR$/src/authentication/LoginScreen.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/whiteboard/WhiteboardController.java" afterPath="$PROJECT_DIR$/src/whiteboard/WhiteboardController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/authentication/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="39" column="57" lean-forward="true" selection-start-line="39" selection-start-column="57" selection-end-line="40" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -85,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WhiteboardController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WhiteboardController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/whiteboard/WhiteboardController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1039">
-              <caret line="237" column="121" lean-forward="false" selection-start-line="237" selection-start-column="121" selection-end-line="237" selection-end-column="121" />
+            <state relative-caret-position="299">
+              <caret line="233" column="36" lean-forward="true" selection-start-line="233" selection-start-column="36" selection-end-line="233" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -156,8 +155,8 @@
         <option value="$PROJECT_DIR$/src/storage/StorageDropboxTest.java" />
         <option value="$PROJECT_DIR$/src/whiteboard/FontysPublisherServer/WhiteboardServer.java" />
         <option value="$PROJECT_DIR$/src/whiteboard/WhiteboardCommunicator.java" />
-        <option value="$PROJECT_DIR$/src/whiteboard/WhiteboardController.java" />
         <option value="$PROJECT_DIR$/src/authentication/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/whiteboard/WhiteboardController.java" />
       </list>
     </option>
   </component>
@@ -882,7 +881,7 @@
       <workItem from="1496217743859" duration="169000" />
       <workItem from="1498233627976" duration="369000" />
       <workItem from="1498234024554" duration="773000" />
-      <workItem from="1498235383453" duration="1717000" />
+      <workItem from="1498235383453" duration="2812000" />
     </task>
     <task id="LOCAL-00001" summary="Latency bug fixes">
       <created>1495442404635</created>
@@ -914,7 +913,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72153000" />
+    <option name="totallyTimeSpent" value="73248000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1279" height="737" extended-state="6" />
@@ -1323,18 +1322,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/whiteboard/WhiteboardController.java">
+    <entry file="file://$PROJECT_DIR$/src/authentication/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1039">
-          <caret line="237" column="121" lean-forward="false" selection-start-line="237" selection-start-column="121" selection-end-line="237" selection-end-column="121" />
+        <state relative-caret-position="270">
+          <caret line="39" column="57" lean-forward="true" selection-start-line="39" selection-start-column="57" selection-end-line="40" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/authentication/LoginController.java">
+    <entry file="file://$PROJECT_DIR$/src/whiteboard/WhiteboardController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        <state relative-caret-position="299">
+          <caret line="233" column="36" lean-forward="true" selection-start-line="233" selection-start-column="36" selection-end-line="233" selection-end-column="36" />
           <folding />
         </state>
       </provider>
