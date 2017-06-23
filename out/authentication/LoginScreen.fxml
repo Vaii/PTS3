@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
@@ -20,12 +21,7 @@
    <children>
       <AnchorPane fx:id="userNamePane" prefHeight="646.0" prefWidth="665.0">
          <children>
-            <Label layoutX="252.0" layoutY="263.0" text="P-Hub">
-               <font>
-                  <Font size="48.0" />
-               </font>
-            </Label>
-            <Button fx:id="login" layoutX="252.0" layoutY="336.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="147.0" text="Click om in te loggen" />
+            <ImageView fx:id="logo" fitHeight="233.0" fitWidth="295.0" layoutX="178.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="200.0" />
          </children>
       </AnchorPane>
    </children>
