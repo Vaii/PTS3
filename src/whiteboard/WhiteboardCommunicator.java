@@ -1,12 +1,17 @@
 package whiteboard;
 
+import com.sun.org.apache.bcel.internal.classfile.Unknown;
 import whiteboard.FontysPublisher.IRemotePropertyListener;
 import whiteboard.FontysPublisher.IRemotePublisherForDomain;
 import whiteboard.FontysPublisher.IRemotePublisherForListener;
 import whiteboard.Shared.DrawEvent;
 import whiteboard.Shared.MoveEvent;
+import whiteboard.Shared.PictureEvent;
+import whiteboard.Shared.VideoEvent;
 
 import java.beans.PropertyChangeEvent;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.rmi.NoSuchObjectException;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
@@ -48,9 +53,17 @@ public class WhiteboardCommunicator extends UnicastRemoteObject implements IRemo
             DrawEvent drawEvent = (DrawEvent) evt.getNewValue();
             wController.requestDrawText(property, drawEvent);
         }
-        if(property.equals("Move")){
+        else if(property.equals("Move")){
             MoveEvent moveEvent = (MoveEvent) evt.getNewValue();
             wController.requestMoveEvent(property, moveEvent);
+        }
+        else if(property.equals("Video")){
+            VideoEvent videoEvent = (VideoEvent) evt.getNewValue();
+            wController.requestDrawVideo(property, videoEvent);
+        }
+        else if(property.equals("Picture")){
+            PictureEvent pictureEvent = (PictureEvent) evt.getNewValue();
+            wController.requestDrawPicture(property, pictureEvent);
         }
 
 
@@ -58,13 +71,14 @@ public class WhiteboardCommunicator extends UnicastRemoteObject implements IRemo
 
     public void connectToPublisher(){
         try{
-            Registry registry = LocateRegistry.getRegistry("localhost", portNumber);
+            System.setProperty("java.rmi.server.hostname", String.valueOf(InetAddress.getLocalHost().getHostAddress()));
+            Registry registry = LocateRegistry.getRegistry("192.168.178.26", portNumber);
             publisherForDomain = (IRemotePublisherForDomain) registry.lookup(bindingName);
             publisherForListener = (IRemotePublisherForListener) registry.lookup(bindingName);
             connected = true;
             System.out.println("Connection with the remotepublisher established");
         }
-        catch(RemoteException | NotBoundException re){
+        catch(RemoteException | NotBoundException | UnknownHostException re){
             connected = false;
             System.err.println("Cannot establish connection to the remote publisher");
             System.err.println("Run WhiteboardServer to start remote publisher");
@@ -110,24 +124,11 @@ public class WhiteboardCommunicator extends UnicastRemoteObject implements IRemo
         }
     }
 
-    public void broadcast(String property, DrawEvent drawEvent){
+    public void broadcast(String property, Object object){
         if(connected){
             threadPool.execute(() -> {
                 try{
-                    publisherForDomain.inform(property, null, drawEvent);
-                }
-                catch(RemoteException ex){
-                    Logger.getLogger(WhiteboardCommunicator.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            });
-        }
-    }
-
-    public void broadcast(String property, MoveEvent moveEvent){
-        if(connected){
-            threadPool.execute(() ->{
-                try{
-                    publisherForDomain.inform(property, null, moveEvent);
+                    publisherForDomain.inform(property, null, object);
                 }
                 catch(RemoteException ex){
                     Logger.getLogger(WhiteboardCommunicator.class.getName()).log(Level.SEVERE, null, ex);
