@@ -52,6 +52,7 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -118,13 +119,13 @@ public class WhiteboardController implements Initializable {
 
     private Node selectedNode;
 
+    private Random rnd;
+
     @FXML
     TabPane whiteboardPane;
     @FXML
     AnchorPane whiteboardScene;
 
-
-    private int itemCount = 0;
 
     private double menuItemxPos;
     private double menuItemyPos;
@@ -139,6 +140,8 @@ public class WhiteboardController implements Initializable {
         MenuItem Delete = new MenuItem("Delete");
         deleteMenu.getItems().addAll(Delete);
         deleteMenu.setOnAction(event -> deleteItem());
+
+        rnd = new Random(100000);
 
 
         final ContextMenu contextMenu = new ContextMenu();
@@ -184,8 +187,7 @@ public class WhiteboardController implements Initializable {
 
             if (videoUrl != null) {
 
-                broadcastDrawVideo("Video", menuItemxPos, menuItemyPos, Integer.toString(itemCount), videoUrl);
-                itemCount++;
+                broadcastDrawVideo("Video", menuItemxPos, menuItemyPos, Integer.toString(rnd.nextInt()), videoUrl);
 
             }
         }
@@ -210,8 +212,7 @@ public class WhiteboardController implements Initializable {
 
                 FileInputStream fis = new FileInputStream(p.getFile());
                 byte[] picture = inputStreamToByteArray(fis);
-                broadcastDrawPicture("Picture", menuItemxPos, menuItemyPos, Integer.toString(itemCount), picture);
-                itemCount++;
+                broadcastDrawPicture("Picture", menuItemxPos, menuItemyPos, Integer.toString(rnd.nextInt()), picture);
             }
         }
         catch(Exception e){
@@ -234,8 +235,7 @@ public class WhiteboardController implements Initializable {
 
             if(userInput != null)
 
-                broadcastDrawText("Text", menuItemxPos, menuItemyPos, userInput.getText(), Integer.toString(itemCount));
-                itemCount++;
+                broadcastDrawText("Text", menuItemxPos, menuItemyPos, userInput.getText(), Integer.toString(rnd.nextInt()));
             }
         catch(IOException e){
             Logger.getLogger(WhiteboardController.class.getName()).log(Level.SEVERE, null, e);
