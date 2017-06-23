@@ -1,5 +1,6 @@
 package whiteboard;
 
+import com.sun.org.apache.bcel.internal.classfile.Unknown;
 import whiteboard.FontysPublisher.IRemotePropertyListener;
 import whiteboard.FontysPublisher.IRemotePublisherForDomain;
 import whiteboard.FontysPublisher.IRemotePublisherForListener;
@@ -9,6 +10,8 @@ import whiteboard.Shared.PictureEvent;
 import whiteboard.Shared.VideoEvent;
 
 import java.beans.PropertyChangeEvent;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.rmi.NoSuchObjectException;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
@@ -68,13 +71,14 @@ public class WhiteboardCommunicator extends UnicastRemoteObject implements IRemo
 
     public void connectToPublisher(){
         try{
-            Registry registry = LocateRegistry.getRegistry("localhost", portNumber);
+            System.setProperty("java.rmi.server.hostname", String.valueOf(InetAddress.getLocalHost().getHostAddress()));
+            Registry registry = LocateRegistry.getRegistry("192.168.178.26", portNumber);
             publisherForDomain = (IRemotePublisherForDomain) registry.lookup(bindingName);
             publisherForListener = (IRemotePublisherForListener) registry.lookup(bindingName);
             connected = true;
             System.out.println("Connection with the remotepublisher established");
         }
-        catch(RemoteException | NotBoundException re){
+        catch(RemoteException | NotBoundException | UnknownHostException re){
             connected = false;
             System.err.println("Cannot establish connection to the remote publisher");
             System.err.println("Run WhiteboardServer to start remote publisher");

@@ -3,6 +3,7 @@ package whiteboard.FontysPublisherServer;
 
 import whiteboard.FontysPublisher.RemotePublisher;
 
+import java.net.InetAddress;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -16,14 +17,18 @@ public class WhiteboardServer {
     private static String bindingName = "publisher";
 
     public static void main(String[] args) throws RemoteException{
-        RemotePublisher remotePublisher = new RemotePublisher();
+// Create an instance of RemotePublisher
+        RemotePublisher remotePublisher = null;
+        try {
+            remotePublisher = new RemotePublisher();
+            Registry registry = LocateRegistry.createRegistry(portNumber);
+            System.setProperty("java.rmi.server.hostname", String.valueOf(InetAddress.getLocalHost().getHostAddress()));
+            registry.rebind(bindingName, remotePublisher);
 
-        Registry registry = LocateRegistry.createRegistry(portNumber);
-        registry.rebind(bindingName, remotePublisher);
-
-        System.out.println("Remote publisher registered.");
-        System.out.println("Port number: " + portNumber);
-        System.out.println("Binding name: " + bindingName);
+            System.out.println("connection established");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 }
