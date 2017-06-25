@@ -66,8 +66,7 @@ public class StorageController implements Initializable {
         storage = new StorageDropbox();
         fileObservableList = FXCollections.observableArrayList();
     }
-
-
+    
     @FXML
     private void folderDoubleClick(MouseEvent event) throws DbxException {
         if (fileList.getSelectionModel().getSelectedItems().size() > 1) {
@@ -148,6 +147,12 @@ public class StorageController implements Initializable {
                 lblDirectory.setText(path);
             }
         });
+        btnRename.setDisable(true);
+        btnRename.setOpacity(0);
+        btnDelete.setDisable(true);
+        btnDelete.setOpacity(0);
+        btnDownload.setDisable(true);
+        btnDownload.setOpacity(0);
 
     }
 

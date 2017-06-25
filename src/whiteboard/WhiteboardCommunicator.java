@@ -7,6 +7,7 @@ import whiteboard.FontysPublisher.IRemotePublisherForListener;
 import whiteboard.Shared.*;
 
 import java.beans.PropertyChangeEvent;
+import java.io.Serializable;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.rmi.NoSuchObjectException;
@@ -23,7 +24,7 @@ import java.util.logging.Logger;
 /**
  * Created by Vai on 5/30/17.
  */
-public class WhiteboardCommunicator extends UnicastRemoteObject implements IRemotePropertyListener {
+public class WhiteboardCommunicator extends UnicastRemoteObject implements IRemotePropertyListener{
 
     private final WhiteboardController wController;
 
@@ -34,7 +35,7 @@ public class WhiteboardCommunicator extends UnicastRemoteObject implements IRemo
     private boolean connected = false;
 
     private final int nrThreads = 10;
-    private ExecutorService threadPool = null;
+    private transient ExecutorService threadPool = null;
 
 
     public WhiteboardCommunicator(WhiteboardController wController) throws RemoteException{
@@ -83,6 +84,7 @@ public class WhiteboardCommunicator extends UnicastRemoteObject implements IRemo
             connected = false;
             System.err.println("Cannot establish connection to the remote publisher");
             System.err.println("Run WhiteboardServer to start remote publisher");
+            Logger.getLogger(WhiteboardCommunicator.class.getName()).log(Level.SEVERE, null, re);
         }
     }
 

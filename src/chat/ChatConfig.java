@@ -45,10 +45,8 @@ public class ChatConfig {
         if(instance == null) {
             Class var0 = ChatConfig.class;
             synchronized(ChatConfig.class) {
-                if(instance == null) {
                     instance = new ChatConfig();
                     instance.init();
-                }
             }
         }
 

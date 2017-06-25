@@ -1,5 +1,5 @@
 projectKey=my:ProftaakHub
 serverUrl=http://localhost:9000
 dashboardUrl=http://localhost:9000/dashboard/index/my:ProftaakHub
-ceTaskId=AVzWc4X8-lmdTVdsZRQ1
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AVzWc4X8-lmdTVdsZRQ1
+ceTaskId=AVzf0JGwHDoed2Vkxp7D
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AVzf0JGwHDoed2Vkxp7D

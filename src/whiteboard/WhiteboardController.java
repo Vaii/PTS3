@@ -308,11 +308,11 @@ public class WhiteboardController implements Initializable {
     }
 
     private void drawPicture(byte[] picture, double xPos, double yPos, String id){
-
+        FileOutputStream fos = null;
         try{
             File imageToCreate = File.createTempFile("image", "png", Cache.getActiveCacheDir());
             imageToCreate.deleteOnExit();
-            FileOutputStream fos = new FileOutputStream(imageToCreate);
+            fos = new FileOutputStream(imageToCreate);
             fos.write(picture);
             fos.close();
             String imagepath = imageToCreate.toURI().toString();
@@ -328,6 +328,14 @@ public class WhiteboardController implements Initializable {
         }
         catch(IOException e){
             Logger.getLogger(WhiteboardController.class.getName()).log(Level.SEVERE, null, e);
+        }
+        finally {
+            try {
+                assert fos != null;
+                fos.close();
+            } catch (IOException e) {
+                Logger.getLogger(WhiteboardController.class.getName()).log(Level.SEVERE, null, e);
+            }
         }
 
     }

@@ -27,10 +27,8 @@ public class ScheduleConfig {
         if(instance == null) {
             Class var0 = ScheduleConfig.class;
             synchronized(ScheduleConfig.class) {
-                if(instance == null) {
                     instance = new ScheduleConfig();
                     instance.init();
-                }
             }
         }
 
