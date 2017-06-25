@@ -7,7 +7,8 @@ import org.jongo.MongoCursor;
 import scheduling.ScheduleItem;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Created by bob on 26-5-17.
@@ -16,17 +17,17 @@ public class IScheduleMongoContext implements IScheduleContext {
 
     private MongoCollection schedule;
 
-    public IScheduleMongoContext(){
+    public IScheduleMongoContext() {
         schedule = DataSource.connect().getCollection("schedule");
     }
 
     @Override
     public boolean DeleteById(String id) {
-        try{
+        try {
             schedule.remove(new ObjectId(id));
-                    return true;
-        }
-        catch(Exception e){
+            return true;
+        } catch (Exception e) {
+            Logger.getLogger(IScheduleMongoContext.class.getName()).log(Level.SEVERE, null, e);
             return false;
         }
     }
@@ -43,7 +44,7 @@ public class IScheduleMongoContext implements IScheduleContext {
 
     @Override
     public ArrayList<ScheduleItem> GetAllScheduleItemsByWeek(int week) {
-        MongoCursor<ScheduleItem> scheduleItems = schedule.find("{week:"+ week + "}").as(ScheduleItem.class);
+        MongoCursor<ScheduleItem> scheduleItems = schedule.find("{week:" + week + "}").as(ScheduleItem.class);
         ArrayList<ScheduleItem> result = new ArrayList<ScheduleItem>();
         while (scheduleItems.hasNext()) {
             result.add(scheduleItems.next());
@@ -53,7 +54,7 @@ public class IScheduleMongoContext implements IScheduleContext {
 
     @Override
     public ArrayList<ScheduleItem> GetAllScheduleItemsByWeek(int week, String UserId) {
-        MongoCursor<ScheduleItem> scheduleItems = schedule.find( "{ assignedUsers: { $elemMatch: { name: 'Bob' } } }" ).as(ScheduleItem.class);
+        MongoCursor<ScheduleItem> scheduleItems = schedule.find("{ assignedUsers: { $elemMatch: { name: 'Bob' } } }").as(ScheduleItem.class);
 
         ArrayList<ScheduleItem> result = new ArrayList<ScheduleItem>();
         while (scheduleItems.hasNext()) {

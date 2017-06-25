@@ -3,7 +3,9 @@ package scheduling;
 /**
  * Created by bob on 10-5-17.
  */
+
 import domain.*;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -24,14 +26,13 @@ public class ScheduleConfig {
     }
 
     public static ScheduleConfig getInstance() {
-        if(instance == null) {
-            Class var0 = ScheduleConfig.class;
-            synchronized(ScheduleConfig.class) {
-                    instance = new ScheduleConfig();
-                    instance.init();
+        if (instance == null) {
+            //Class var0 = ScheduleConfig.class;
+            synchronized (ScheduleConfig.class) {
+                instance = new ScheduleConfig();
+                instance.init();
             }
         }
-
         return instance;
     }
 
@@ -66,9 +67,9 @@ public class ScheduleConfig {
         cal.set(1, 2017);
         cal.set(2, 7);
         cal.set(5, 1);
-        Date dateRepresentation = cal.getTime();
+        //Date dateRepresentation = cal.getTime();
         // this.scheduleItemObservableList.addAll(new ScheduleItem[]{new ScheduleItem("Klassendiagram", "Eerste versie, voor controle door tutor.", dateRepresentation, users, ScheduleItemStatus.TODO, 0), new ScheduleItem("AcceptatieTestplan", "Eerste versie, voor controle door tutor.", dateRepresentation, users, ScheduleItemStatus.INPROGRESS, 0)});
-         this.updateSchedule.setValue(false);
+        this.updateSchedule.setValue(false);
     }
 }
 

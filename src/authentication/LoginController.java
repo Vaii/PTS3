@@ -22,14 +22,14 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class LoginController implements Initializable {
     @FXML
     ImageView logo;
 
     LoginRepository loginRepo;
-
-
 
     private FHICTController fController;
 
@@ -43,22 +43,19 @@ public class LoginController implements Initializable {
     }
 
     private void tryAuthentication() {
-
-        try{
+        try {
             Stage stage = new Stage();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("fhictAuthentication.fxml"));
             Parent root = loader.load();
             fController = loader.getController();
             fController.setThisStage(stage);
-            fController.setLoginStage((Stage)logo.getScene().getWindow());
+            fController.setLoginStage((Stage) logo.getScene().getWindow());
             stage.setTitle("Fontys Authentication");
             stage.setScene(new Scene(root));
             stage.showAndWait();
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
+            Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, e);
         }
-
     }
-
 }
