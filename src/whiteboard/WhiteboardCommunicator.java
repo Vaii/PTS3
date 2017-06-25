@@ -4,10 +4,7 @@ import com.sun.org.apache.bcel.internal.classfile.Unknown;
 import whiteboard.FontysPublisher.IRemotePropertyListener;
 import whiteboard.FontysPublisher.IRemotePublisherForDomain;
 import whiteboard.FontysPublisher.IRemotePublisherForListener;
-import whiteboard.Shared.DrawEvent;
-import whiteboard.Shared.MoveEvent;
-import whiteboard.Shared.PictureEvent;
-import whiteboard.Shared.VideoEvent;
+import whiteboard.Shared.*;
 
 import java.beans.PropertyChangeEvent;
 import java.net.InetAddress;
@@ -64,6 +61,10 @@ public class WhiteboardCommunicator extends UnicastRemoteObject implements IRemo
         else if(property.equals("Picture")){
             PictureEvent pictureEvent = (PictureEvent) evt.getNewValue();
             wController.requestDrawPicture(property, pictureEvent);
+        }
+        else if(property.equals("Clear")){
+            ClearEvent clearEvent = (ClearEvent) evt.getNewValue();
+            wController.requestClearEvent(property, clearEvent);
         }
 
 

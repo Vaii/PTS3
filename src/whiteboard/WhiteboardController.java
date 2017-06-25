@@ -36,10 +36,7 @@ import javafx.scene.text.Font;
 import javafx.scene.web.WebView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import whiteboard.Shared.DrawEvent;
-import whiteboard.Shared.MoveEvent;
-import whiteboard.Shared.PictureEvent;
-import whiteboard.Shared.VideoEvent;
+import whiteboard.Shared.*;
 import whiteboard.repository.WhiteboardMongoContext;
 import whiteboard.repository.WhiteboardRepository;
 
@@ -125,6 +122,8 @@ public class WhiteboardController implements Initializable {
     TabPane whiteboardPane;
     @FXML
     AnchorPane whiteboardScene;
+    @FXML
+    Button clearBoard;
 
 
     private double menuItemxPos;
@@ -136,10 +135,7 @@ public class WhiteboardController implements Initializable {
 
         wRepo = new WhiteboardRepository(new WhiteboardMongoContext());
 
-        deleteMenu = new ContextMenu();
-        MenuItem Delete = new MenuItem("Delete");
-        deleteMenu.getItems().addAll(Delete);
-        deleteMenu.setOnAction(event -> deleteItem());
+        clearBoard.setOnAction(this::clearBoard);
 
         rnd = new Random();
 
@@ -169,6 +165,10 @@ public class WhiteboardController implements Initializable {
         catch(RemoteException ex){
             Logger.getLogger(WhiteboardController.class.getName()).log(Level.SEVERE, ex, null);
         }
+    }
+
+    private void clearBoard(ActionEvent actionEvent) {
+        broadcastClearEvent("Clear", true);
     }
 
     private void startVideo(){
@@ -242,9 +242,6 @@ public class WhiteboardController implements Initializable {
         }
 
     }
-    private void deleteItem(){
-
-    }
 
     private void connectToPublisher() {
 
@@ -258,6 +255,9 @@ public class WhiteboardController implements Initializable {
 
         communicator.register("Video");
         communicator.subscribe("Video");
+
+        communicator.register("Clear");
+        communicator.subscribe("Clear");
 
         communicator.register("Move");
         communicator.subscribe("Move");
@@ -281,6 +281,11 @@ public class WhiteboardController implements Initializable {
     public void broadcastDrawPicture(String property, double xPos, double yPos, String id, byte[] picture){
         PictureEvent pictureEvent = new PictureEvent(xPos, yPos, id, picture);
         communicator.broadcast(property, pictureEvent);
+    }
+
+    public void broadcastClearEvent(String property, boolean clearAll){
+        ClearEvent clearEvent = new ClearEvent(clearAll);
+        communicator.broadcast(property, clearEvent);
     }
 
     private void moveNode(String objectId, double xPos, double yPos){
@@ -341,9 +346,23 @@ public class WhiteboardController implements Initializable {
         addItemToPane(view);
     }
 
+    private void clearAll(boolean clearAll){
+        if(clearAll){
+            Pane pane = new Pane();
+            whiteboardPane.getSelectionModel().getSelectedItem().setContent(pane);
+        }
+
+    }
+
     public void requestMoveEvent(String property, MoveEvent event){
         Platform.runLater(() ->{
             moveNode(event.getObjectID(), event.getxPos(), event.getyPos());
+        });
+    }
+
+    public void requestClearEvent(String property, ClearEvent event){
+        Platform.runLater(() ->{
+            clearAll(event.isClearAll());
         });
     }
 
