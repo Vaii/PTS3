@@ -147,6 +147,12 @@ public class StorageController implements Initializable {
                 lblDirectory.setText(path);
             }
         });
+        btnRename.setDisable(true);
+        btnRename.setOpacity(0);
+        btnDelete.setDisable(true);
+        btnDelete.setOpacity(0);
+        btnDownload.setDisable(true);
+        btnDownload.setOpacity(0);
 
     }
 
