@@ -5,10 +5,25 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<AnchorPane prefHeight="191.0" prefWidth="460.9998779296875" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="storage.RenameFilePopupController">
+<?import javafx.geometry.Insets?>
+<AnchorPane prefHeight="191.0" prefWidth="460.9998779296875" style="-fx-background-color: #efefef;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="storage.RenameFilePopupController">
   <children>
-    <Button fx:id="btnSubmit" layoutX="102.0" layoutY="119.0" mnemonicParsing="false" onAction="#handleButtonActionSubmit" text="Submit" />
-    <Button fx:id="btnCancel" layoutX="266.0" layoutY="119.0" mnemonicParsing="false" onAction="#handleButtonActionCancel" text="Cancel" />
+    <Button fx:id="btnSubmit" layoutX="102.0" layoutY="119.0" mnemonicParsing="false" style="-fx-background-color: #ccc; -fx-background-radius: 0;" onAction="#handleButtonActionSubmit" text="Submit" >
+      <padding>
+        <Insets bottom="9.0" left="12.0" right="12.0" top="9.0" />
+      </padding>
+      <font>
+        <Font name="System Bold" size="13.0" />
+      </font>
+    </Button>
+    <Button fx:id="btnCancel" layoutX="266.0" layoutY="119.0" mnemonicParsing="false" style="-fx-background-color: #ccc; -fx-background-radius: 0;" onAction="#handleButtonActionCancel" text="Cancel" >
+      <padding>
+        <Insets bottom="9.0" left="12.0" right="12.0" top="9.0" />
+      </padding>
+      <font>
+        <Font name="System Bold" size="13.0" />
+      </font>
+    </Button>
     <TextField id="tb" fx:id="tbName" layoutX="130.0" layoutY="53.0" prefHeight="35.0" prefWidth="289.0" />
     <Label layoutX="46.0" layoutY="52.0" prefHeight="36.0" prefWidth="56.0" text="Name:">
       <font>

@@ -7,6 +7,8 @@ import java.net.InetAddress;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Created by Vai on 5/30/17.
@@ -27,7 +29,7 @@ public class WhiteboardServer {
 
             System.out.println("connection established");
         } catch (Exception e) {
-            e.printStackTrace();
+            Logger.getLogger(WhiteboardServer.class.getName()).log(Level.SEVERE, null, e);
         }
 
     }

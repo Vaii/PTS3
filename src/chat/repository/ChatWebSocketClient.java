@@ -63,7 +63,6 @@ public  class ChatWebSocketClient {
             System.out.println("Connected with WebSocket server.");
         } catch (DeploymentException | IOException ex) {
             LOGGER.log(Level.SEVERE, null, ex);
-            System.exit(-1);
         }
     }
 
