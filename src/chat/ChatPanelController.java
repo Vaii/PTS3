@@ -32,6 +32,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Created by bob on 7-5-17.
@@ -53,27 +55,22 @@ public class ChatPanelController implements Initializable {
     private Boolean emojiPanelIsOpen;
     private AnchorPane emojiPane;
 
-
     @FXML
     private void OpenEmojiWindow() throws IOException {
-
-
-        if(!emojiPanelIsOpen){
+        if (!emojiPanelIsOpen) {
             emojiPane = (AnchorPane) FXMLLoader.load(this.getClass().getResource("EmojiPanel.fxml"));
             AnchorPane.setBottomAnchor(emojiPane, 29.0);
             AnchorPane.setRightAnchor(emojiPane, 1.0);
             AnchorPane.setLeftAnchor(emojiPane, 1.0);
             chatPanel.getChildren().add(emojiPane);
             emojiPanelIsOpen = true;
-        }
-        else{
+        } else {
             chatPanel.getChildren().remove(emojiPane);
             emojiPanelIsOpen = false;
         }
-
     }
 
-    private void AddMessage(Message message){
+    private void AddMessage(Message message) {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Message.fxml"));
         // Create a controller instance
         MessageController controller = new MessageController(message);
@@ -85,8 +82,7 @@ public class ChatPanelController implements Initializable {
             System.out.println("new message added");
             slowScrollToBottom(messagesPane);
         } catch (IOException e) {
-            e.printStackTrace();
-
+            Logger.getLogger(ChatPanelController.class.getName()).log(Level.SEVERE, null, e);
         }
     }
 
@@ -97,7 +93,7 @@ public class ChatPanelController implements Initializable {
         animation.play();
     }
 
-    private void NewMessage(){
+    private void NewMessage() {
         System.out.println("enter pressed");
     }
 
@@ -112,9 +108,7 @@ public class ChatPanelController implements Initializable {
         inputMessage.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent keyEvent) {
-                if (keyEvent.getCode() == KeyCode.ENTER)  {
-                    String text = inputMessage.getText();
-
+                if (keyEvent.getCode() == KeyCode.ENTER) {
                     // do your thing...
                     ChatConfig.getInstance().addMessageToOutbox(new Message(inputMessage.getText(), new Date(), domain.Config.getUser()));
                     // clear text
@@ -131,7 +125,5 @@ public class ChatPanelController implements Initializable {
                 AddMessage(messages.get(messages.size() - 1));
             }
         });
-
     }
-
 }

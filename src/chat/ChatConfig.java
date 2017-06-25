@@ -29,7 +29,6 @@ public class ChatConfig {
         this.inbox.add(m);
     }
 
-
     public ChatConfig() {
         client.openConnection();
         outbox.addListener(new ListChangeListener() {
@@ -42,22 +41,15 @@ public class ChatConfig {
     }
 
     public static ChatConfig getInstance() {
-        if(instance == null) {
-            Class var0 = ChatConfig.class;
-            synchronized(ChatConfig.class) {
-                if(instance == null) {
-                    instance = new ChatConfig();
-                    instance.init();
-                }
+        if (instance == null) {
+            synchronized (ChatConfig.class) {
+                instance = new ChatConfig();
+                instance.init();
             }
         }
-
         return instance;
     }
 
     public void init() {
-
     }
-
-
 }

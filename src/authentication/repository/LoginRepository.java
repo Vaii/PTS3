@@ -14,6 +14,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Created by Vai on 5/21/17.
@@ -22,11 +24,11 @@ public class LoginRepository {
 
     private ILoginContext loginContext;
 
-    public LoginRepository(ILoginContext loginContext){
+    public LoginRepository(ILoginContext loginContext) {
         this.loginContext = loginContext;
     }
 
-    public User loginuser(User user){
+    public User loginuser(User user) {
         return loginContext.loginUser(user);
     }
 
@@ -44,14 +46,13 @@ public class LoginRepository {
 
             int responsecode = con.getResponseCode();
 
-
-            if(responsecode == 200){
+            if (responsecode == 200) {
 
                 BufferedReader in = new BufferedReader(
                         new InputStreamReader(con.getInputStream())
                 );
                 String output;
-                StringBuffer response = new StringBuffer();
+                StringBuilder response = new StringBuilder();
 
                 while ((output = in.readLine()) != null) {
                     response.append(output);
@@ -59,30 +60,24 @@ public class LoginRepository {
 
                 in.close();
 
-
                 JSONObject object = new JSONObject(response.toString());
 
                 JSONArray temp = object.getJSONArray("affiliations");
                 int length = temp.length();
                 String[] affiliations = new String[length];
 
-                if(length > 0){
-                    for(int i = 0; i < length; i++){
+                if (length > 0) {
+                    for (int i = 0; i < length; i++) {
                         affiliations[i] = temp.getString(i);
                     }
                 }
-
 
                 User user = new User(object.get("givenName") + " " + object.get("surName"),
                         UserType.valueOf(affiliations[1]),
                         object.getString("id"));
 
-
                 return user;
-
-            }
-            else if(responsecode == 403){
-
+            } else if (responsecode == 403) {
                 Platform.runLater(new Runnable() {
                     @Override
                     public void run() {
@@ -91,13 +86,10 @@ public class LoginRepository {
                         alert.setHeaderText("Er ging iets mis bij het inloggen");
                         alert.setContentText("Zorg er voor dat je de applicatie toestaat om data in te zien.");
                         alert.show();
-
                     }
                 });
-
                 return null;
-            }
-            else if(responsecode == 401){
+            } else if (responsecode == 401) {
 
                 Platform.runLater(new Runnable() {
                     @Override
@@ -109,18 +101,13 @@ public class LoginRepository {
                         alert.show();
                     }
                 });
-
                 return null;
             }
-
-        }
-        catch(IOException e) {
-            e.printStackTrace();
-        }
-        catch(JSONException e){
-            e.printStackTrace();
+        } catch (IOException e) {
+            Logger.getLogger(LoginRepository.class.getName()).log(Level.SEVERE, null, e);
+        } catch (JSONException e) {
+            Logger.getLogger(LoginRepository.class.getName()).log(Level.SEVERE, null, e);
         }
         return null;
     }
-
 }

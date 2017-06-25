@@ -2,6 +2,8 @@ package domain;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Created by Vai on 5/21/17.
@@ -24,17 +26,16 @@ public class Crypt {
         return new String(hexChars);
     }
 
-    public static String hashPassword(String in){
-        try{
+    public static String hashPassword(String in) {
+        try {
             MessageDigest md = MessageDigest.getInstance("SHA-256");
             md.update(SALT.getBytes());
             md.update(in.getBytes());
             byte[] out = md.digest();
             return bytesToHex(out);
+        } catch (NoSuchAlgorithmException e) {
+            Logger.getLogger(Crypt.class.getName()).log(Level.SEVERE, null, e);
         }
-        catch(NoSuchAlgorithmException e){
-            e.printStackTrace();
-        }
-        return"";
+        return "";
     }
 }

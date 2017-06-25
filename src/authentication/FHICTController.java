@@ -17,6 +17,8 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Created by Vai on 5/25/17.
@@ -48,28 +50,21 @@ public class FHICTController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        try{
+        try {
             this.lRepo = new LoginRepository(new LoginMongoContext());
             server = new LoginServer(new LoginRepository(new LoginMongoContext()), auth, this);
             auth.getEngine().load(AUTHLOCATION);
+        } catch (IOException e) {
+            Logger.getLogger(FHICTController.class.getName()).log(Level.SEVERE, null, e);
         }
-        catch(IOException e){
-            e.printStackTrace();
-        }
-
-
     }
 
-    public void succesfullToken(){
-
+    public void succesfullToken() {
         User user = lRepo.getAuthorizedUser(Config.getAccesToken());
-        if(user != null){
-
+        if (user != null) {
             Config.setUser(lRepo.loginuser(user));
-
-            if(Config.getUser() != null){
-
-                try{
+            if (Config.getUser() != null) {
+                try {
                     Platform.runLater(new Runnable() {
                         @Override
                         public void run() {
@@ -79,7 +74,7 @@ public class FHICTController implements Initializable {
                             try {
                                 root = loader.load();
                             } catch (IOException e) {
-                                e.printStackTrace();
+                                Logger.getLogger(FHICTController.class.getName()).log(Level.SEVERE, null, e);
                             }
                             launcher.setTitle("ProftaakHub");
                             launcher.initStyle(StageStyle.DECORATED);
@@ -93,16 +88,11 @@ public class FHICTController implements Initializable {
                             loginStage.close();
                         }
                     });
-
-                }
-                catch(Exception e){
+                } catch (Exception e) {
                     e.toString();
+                    Logger.getLogger(FHICTController.class.getName()).log(Level.SEVERE, null, e);
                 }
-
-
-            }
-            else{
-
+            } else {
                 Platform.runLater(new Runnable() {
                     @Override
                     public void run() {
@@ -110,8 +100,6 @@ public class FHICTController implements Initializable {
                     }
                 });
             }
-
         }
-
     }
 }

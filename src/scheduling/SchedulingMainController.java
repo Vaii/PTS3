@@ -27,6 +27,8 @@ import scheduling.repository.ScheduleRepository;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import static javafx.scene.text.FontWeight.*;
 
@@ -43,27 +45,34 @@ public class SchedulingMainController implements Initializable {
     private Label lblAddItemIcon;
 
     // VBOXES & buttons
-    @FXML Button btnWeek1;
-    @FXML Button btnWeek2;
-    @FXML Button btnWeek3;
-    @FXML Button btnWeek4;
-
+    @FXML
+    Button btnWeek1;
+    @FXML
+    Button btnWeek2;
+    @FXML
+    Button btnWeek3;
+    @FXML
+    Button btnWeek4;
 
     // Weeks
-    @FXML VBox vboxWeekA;
-    @FXML VBox vboxWeekB;
-    @FXML VBox vboxWeekC;
-    @FXML VBox vboxWeekD;
-    @FXML VBox vboxWeekE;
+    @FXML
+    VBox vboxWeekA;
+    @FXML
+    VBox vboxWeekB;
+    @FXML
+    VBox vboxWeekC;
+    @FXML
+    VBox vboxWeekD;
+    @FXML
+    VBox vboxWeekE;
 
     @FXML
     Button btnAddNewItem;
 
-
-    private void setVBoxesHeaders(int weeks){
-        int i = weeks;
-        for( Node node: mainAnchorPane.getChildren()) {
-            if( node instanceof VBox) {
+    private void setVBoxesHeaders(int weeks) {
+        //int i = weeks;
+        for (Node node : mainAnchorPane.getChildren()) {
+            if (node instanceof VBox) {
                 Text txt = new Text("WEEK " + weeks);
                 txt.setX(110);
                 txt.setY(25);
@@ -72,56 +81,54 @@ public class SchedulingMainController implements Initializable {
                 AnchorPane header = new AnchorPane(txt);
                 header.setStyle("-fx-background-color: #ccc;");
 
-
                 header.setMinHeight(40);
                 ((VBox) node).getChildren().add(header);
                 weeks++;
             }
-
         }
     }
 
-    private void clearVBoxes(){
+    private void clearVBoxes() {
         vboxWeekA.getChildren().clear();
         vboxWeekB.getChildren().clear();
         vboxWeekC.getChildren().clear();
         vboxWeekD.getChildren().clear();
         vboxWeekE.getChildren().clear();
     }
+
     @FXML
-    private void loadWeek1(ActionEvent event){
+    private void loadWeek1(ActionEvent event) {
         currentWeek = 1;
-        setActiveButton((Button)event.getSource());
+        setActiveButton((Button) event.getSource());
         setVBoxesHeaders(1);
         loadAllScheduleItems(1);
     }
 
     @FXML
-    private void loadWeek6(ActionEvent event){
+    private void loadWeek6(ActionEvent event) {
         currentWeek = 6;
-        setActiveButton((Button)event.getSource());
+        setActiveButton((Button) event.getSource());
         setVBoxesHeaders(6);
         loadAllScheduleItems(6);
     }
 
     @FXML
-    private void loadWeek11(ActionEvent event){
+    private void loadWeek11(ActionEvent event) {
         currentWeek = 11;
-        setActiveButton((Button)event.getSource());
+        setActiveButton((Button) event.getSource());
         setVBoxesHeaders(11);
         loadAllScheduleItems(11);
     }
 
     @FXML
-    private void loadWeek16(ActionEvent event){
+    private void loadWeek16(ActionEvent event) {
         currentWeek = 16;
-        setActiveButton((Button)event.getSource());
+        setActiveButton((Button) event.getSource());
         setVBoxesHeaders(16);
         loadAllScheduleItems(16);
     }
 
-    private void changePeriod(){
-
+    private void changePeriod() {
     }
 
     @FXML
@@ -134,8 +141,8 @@ public class SchedulingMainController implements Initializable {
         } catch (Exception var4) {
             System.out.println("Shit went wrong ");
             var4.printStackTrace();
+            Logger.getLogger(SchedulingMainController.class.getName()).log(Level.SEVERE, null, var4);
         }
-
     }
 
     public void openFormWindow(ScheduleItem scheduleItem, boolean isUpdate) throws IOException {
@@ -144,9 +151,9 @@ public class SchedulingMainController implements Initializable {
         s.initModality(Modality.APPLICATION_MODAL);
         s.initStyle(StageStyle.UTILITY);
         FXMLLoader loader = new FXMLLoader(this.getClass().getResource("NewItemBox.fxml"));
-        AnchorPane page = (AnchorPane)loader.load();
-        NewItemBoxController ct = (NewItemBoxController)loader.getController();
-        if(isUpdate) {
+        AnchorPane page = (AnchorPane) loader.load();
+        NewItemBoxController ct = (NewItemBoxController) loader.getController();
+        if (isUpdate) {
             ct.setScheduleItem(scheduleItem);
         }
 
@@ -157,7 +164,7 @@ public class SchedulingMainController implements Initializable {
         s.showAndWait();
     }
 
-    public void revertButtonStyles(){
+    public void revertButtonStyles() {
         btnWeek1.setStyle("-fx-background-color: #ccc; -fx-background-radius: 0;");
         btnWeek1.setTextFill(Color.web("#000"));
         btnWeek2.setStyle("-fx-background-color: #ccc; -fx-background-radius: 0;");
@@ -168,16 +175,16 @@ public class SchedulingMainController implements Initializable {
         btnWeek4.setTextFill(Color.web("#000"));
     }
 
-    public void setActiveButton(Button btn){
+    public void setActiveButton(Button btn) {
         clearVBoxes();
         revertButtonStyles();
         btn.setStyle("-fx-background-color: limegreen; -fx-background-radius: 0;");
         btn.setTextFill(Color.web("#fff"));
     }
 
-    public void addScheduleItems(int week){
+    public void addScheduleItems(int week) {
 
-        for (ScheduleItem item: repo.GetAllScheduleItemsByWeek(week)) {
+        for (ScheduleItem item : repo.GetAllScheduleItemsByWeek(week)) {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("ScheduleItem.fxml"));
             // Create a controller instance
             ScheduleItemController controller = new ScheduleItemController(item);
@@ -190,20 +197,20 @@ public class SchedulingMainController implements Initializable {
                 System.out.println("new ScheduleItem added");
             } catch (IOException e) {
                 e.printStackTrace();
-
+                Logger.getLogger(SchedulingMainController.class.getName()).log(Level.SEVERE, null, e);
             }
         }
     }
 
-    private void loadAllScheduleItems(int week){
+    private void loadAllScheduleItems(int week) {
         addScheduleItems(week);
         addScheduleItems(week + 1);
-        addScheduleItems( week + 2);
+        addScheduleItems(week + 2);
         addScheduleItems(week + 3);
         addScheduleItems(week + 4);
     }
 
-    private String getWeekChar(int week){
+    private String getWeekChar(int week) {
         switch (week) {
             case 1:
             case 6:
@@ -246,7 +253,6 @@ public class SchedulingMainController implements Initializable {
         btnWeek1.setStyle("-fx-background-color: limegreen; -fx-background-radius: 0;");
         btnWeek1.setTextFill(Color.web("#fff"));
         loadAllScheduleItems(1);
-
 
         ScheduleConfig.getInstance().updateSchedule.addListener(new ChangeListener<Boolean>() {
             @Override
