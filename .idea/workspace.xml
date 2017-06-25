@@ -2,21 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="adb879e0-714d-4d05-a402-2b504bd73ab6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/chat/ChatConfig.class" afterPath="$PROJECT_DIR$/out/chat/ChatConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/chat/repository/ChatWebSocketClient.class" afterPath="$PROJECT_DIR$/out/chat/repository/ChatWebSocketClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/scheduling/ScheduleConfig.class" afterPath="$PROJECT_DIR$/out/scheduling/ScheduleConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/whiteboard/FontysPublisherServer/WhiteboardServer.class" afterPath="$PROJECT_DIR$/out/whiteboard/FontysPublisherServer/WhiteboardServer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/whiteboard/Shared/ClearEvent.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/whiteboard/Shared/ClearEvent.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/whiteboard/WhiteboardCommunicator.class" afterPath="$PROJECT_DIR$/out/whiteboard/WhiteboardCommunicator.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/whiteboard/WhiteboardController.class" afterPath="$PROJECT_DIR$/out/whiteboard/WhiteboardController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.scannerwork/report-task.txt" afterPath="$PROJECT_DIR$/.scannerwork/report-task.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/storage/Storage.fxml" afterPath="$PROJECT_DIR$/out/storage/Storage.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/chat/ChatConfig.java" afterPath="$PROJECT_DIR$/src/chat/ChatConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/chat/repository/ChatWebSocketClient.java" afterPath="$PROJECT_DIR$/src/chat/repository/ChatWebSocketClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scheduling/ScheduleConfig.java" afterPath="$PROJECT_DIR$/src/scheduling/ScheduleConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/storage/RenameFilePopup.fxml" afterPath="$PROJECT_DIR$/src/storage/RenameFilePopup.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/storage/Storage.fxml" afterPath="$PROJECT_DIR$/src/storage/Storage.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/whiteboard/FontysPublisherServer/WhiteboardServer.java" afterPath="$PROJECT_DIR$/src/whiteboard/FontysPublisherServer/WhiteboardServer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/whiteboard/Whiteboard.fxml" afterPath="$PROJECT_DIR$/out/whiteboard/Whiteboard.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/whiteboard/Whiteboard.fxml" afterPath="$PROJECT_DIR$/src/whiteboard/Whiteboard.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/whiteboard/WhiteboardCommunicator.java" afterPath="$PROJECT_DIR$/src/whiteboard/WhiteboardCommunicator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/whiteboard/WhiteboardController.java" afterPath="$PROJECT_DIR$/src/whiteboard/WhiteboardController.java" />
     </list>
@@ -52,9 +44,19 @@
         <entry file="file://$PROJECT_DIR$/src/whiteboard/WhiteboardCommunicator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="171">
-              <caret line="80" column="9" lean-forward="true" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
+              <caret line="81" column="9" lean-forward="true" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
               <folding>
-                <marker date="1498403395874" expanded="true" signature="5048:5250" ph="{...}" />
+                <marker date="1498407676489" expanded="true" signature="2598:2623" ph="{...}" />
+                <marker date="1498407676489" expanded="true" signature="2661:3587" ph="{...}" />
+                <marker date="1498407676489" expanded="true" signature="3630:3919" ph="{...}" />
+                <marker date="1498407676489" expanded="true" signature="3963:4409" ph="{...}" />
+                <marker date="1498407676489" expanded="true" signature="4084:4391" ph="{...}" />
+                <marker date="1498407676489" expanded="true" signature="4455:4903" ph="{...}" />
+                <marker date="1498407676489" expanded="true" signature="4576:4885" ph="{...}" />
+                <marker date="1498407676489" expanded="true" signature="4962:5334" ph="{...}" />
+                <marker date="1498407676489" expanded="true" signature="5024:5316" ph="{...}" />
+                <marker date="1498407676489" expanded="true" signature="5114:5316" ph="{...}" />
+                <marker date="1498407676489" expanded="true" signature="5358:5892" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -83,16 +85,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Storage.fxml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Storage.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/storage/Storage.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="177" lean-forward="false" selection-start-line="12" selection-start-column="177" selection-end-line="12" selection-end-column="177" />
+            <state relative-caret-position="34">
+              <caret line="2" column="33" lean-forward="true" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
               <folding />
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder">
             <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WhiteboardController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/whiteboard/WhiteboardController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2376">
+              <caret line="384" column="92" lean-forward="true" selection-start-line="384" selection-start-column="92" selection-end-line="384" selection-end-column="92" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -1014,7 +1026,7 @@
       <workItem from="1498234024554" duration="773000" />
       <workItem from="1498235383453" duration="2812000" />
       <workItem from="1498242319810" duration="6727000" />
-      <workItem from="1498396173951" duration="7973000" />
+      <workItem from="1498396173951" duration="8331000" />
     </task>
     <task id="LOCAL-00001" summary="Latency bug fixes">
       <created>1495442404635</created>
@@ -1046,7 +1058,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87948000" />
+    <option name="totallyTimeSpent" value="88306000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -1386,14 +1398,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/whiteboard/WhiteboardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="327" column="17" lean-forward="true" selection-start-line="327" selection-start-column="17" selection-end-line="327" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/storage/FolderListViewCellController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="453">
@@ -1442,9 +1446,19 @@
     <entry file="file://$PROJECT_DIR$/src/whiteboard/WhiteboardCommunicator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
-          <caret line="80" column="9" lean-forward="true" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
+          <caret line="81" column="9" lean-forward="true" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
           <folding>
-            <marker date="1498403395874" expanded="true" signature="5048:5250" ph="{...}" />
+            <marker date="1498407676489" expanded="true" signature="2598:2623" ph="{...}" />
+            <marker date="1498407676489" expanded="true" signature="2661:3587" ph="{...}" />
+            <marker date="1498407676489" expanded="true" signature="3630:3919" ph="{...}" />
+            <marker date="1498407676489" expanded="true" signature="3963:4409" ph="{...}" />
+            <marker date="1498407676489" expanded="true" signature="4084:4391" ph="{...}" />
+            <marker date="1498407676489" expanded="true" signature="4455:4903" ph="{...}" />
+            <marker date="1498407676489" expanded="true" signature="4576:4885" ph="{...}" />
+            <marker date="1498407676489" expanded="true" signature="4962:5334" ph="{...}" />
+            <marker date="1498407676489" expanded="true" signature="5024:5316" ph="{...}" />
+            <marker date="1498407676489" expanded="true" signature="5114:5316" ph="{...}" />
+            <marker date="1498407676489" expanded="true" signature="5358:5892" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1499,13 +1513,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/storage/Storage.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="177" lean-forward="false" selection-start-line="12" selection-start-column="177" selection-end-line="12" selection-end-column="177" />
+        <state relative-caret-position="34">
+          <caret line="2" column="33" lean-forward="true" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
           <folding />
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/whiteboard/WhiteboardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2376">
+          <caret line="384" column="92" lean-forward="true" selection-start-line="384" selection-start-column="92" selection-end-line="384" selection-end-column="92" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
