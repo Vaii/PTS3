@@ -27,6 +27,31 @@ public class GitController implements Initializable {
     @FXML private Button btnShowCommits;
 
     private String selectedDir;
+
+    public String getSelectedDir() {
+        return selectedDir;
+    }
+
+    public void setSelectedDir(String selectedDir) {
+        this.selectedDir = selectedDir;
+    }
+
+    public String getCurrentDirectory() {
+        return currentDirectory;
+    }
+
+    public void setCurrentDirectory(String currentDirectory) {
+        this.currentDirectory = currentDirectory;
+    }
+
+    public Git getGit() {
+        return git;
+    }
+
+    public void setGit(Git git) {
+        this.git = git;
+    }
+
     private String currentDirectory;
     private Git git;
 
