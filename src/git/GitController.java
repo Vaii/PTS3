@@ -19,12 +19,10 @@ public class GitController implements Initializable {
 
     @FXML private ListView<GitContents> lvContent;
     @FXML private ComboBox<GitRepository> cbRepositorys;
-    @FXML private Label lblTitle;
+    @FXML private Label lblPath;
     @FXML private Label lblInfo;
-    @FXML private Button btnBack;
-    @FXML private Button btnShowDir;
-    @FXML private Button btnShowFiles;
-    @FXML private Button btnShowCommits;
+    @FXML private Button btnBack, btnShowDir, btnShowFiles, btnShowCommits;
+
 
     private String selectedDir;
 
@@ -126,6 +124,7 @@ public class GitController implements Initializable {
         }
         this.lvContent.getItems().removeAll(lvContent.getItems());
         this.lvContent.getItems().setAll(git.getContents());
+        setLblPath(cbRepositorys.getSelectionModel().getSelectedItem().toString());
         setLabels("Files");
     }
 
@@ -134,6 +133,7 @@ public class GitController implements Initializable {
         try{
             git.getContents(cbRepositorys.getSelectionModel().getSelectedItem(),path);
             System.out.println("Entering: " + path);
+            setLblPath(cbRepositorys.getSelectionModel().getSelectedItem().toString() +"/" +path);
         }
         catch (Exception ex){
             showErrorAlert("Loading contents error.");
@@ -250,5 +250,10 @@ public class GitController implements Initializable {
     private void hideContentButtons(Boolean condition){
         btnBack.setVisible(condition);
         btnShowDir.setVisible(condition);
+        lblPath.setVisible(condition);
+    }
+    private void setLblPath(String path)
+    {
+        lblPath.setText(path);
     }
 }
