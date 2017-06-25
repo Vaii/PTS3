@@ -14,17 +14,13 @@ import java.util.Random;
  * Created by bob on 10-5-17.
  */
 public class User implements Serializable {
-
-
     private static final String NAME = "name";
-    private static final String PASSWORD = "password";
     private static final String USERTYPE = "userType";
     private static final String GITHUB = "Github";
     private static final String DROPBOX = "Dropbox";
     private static final String COLOR = "Color";
     private static final String STUDENTID = "StudentID";
     private static final String MAINREPOSITORY = "MainRepository";
-
 
     @MongoObjectId
     private String _id;
@@ -39,16 +35,15 @@ public class User implements Serializable {
     private static final Random RANDOM = new Random();
     private static final List<Color> VALUES = Collections.unmodifiableList(Arrays.asList((Color[]) Color.values()));
 
-
     public User(String name) {
         this.name = name;
     }
 
-    public User(String name, UserType type, String studentid){
+    public User(String name, UserType type, String studentid) {
         this.name = name;
         this.userType = type;
         this.studentid = studentid;
-        this.color = VALUES.get(RANDOM.nextInt(VALUES.size() -1 ));
+        this.color = VALUES.get(RANDOM.nextInt(VALUES.size() - 1));
     }
 
     @JsonCreator
@@ -58,7 +53,7 @@ public class User implements Serializable {
                 @JsonProperty(DROPBOX) String dropboxAuth,
                 @JsonProperty(COLOR) Color color,
                 @JsonProperty(STUDENTID) String studentid,
-                @JsonProperty(MAINREPOSITORY) String mainRepository){
+                @JsonProperty(MAINREPOSITORY) String mainRepository) {
         this.name = name;
         this.userType = type;
         this.githubAuthToken = githubAuth;
@@ -101,14 +96,13 @@ public class User implements Serializable {
     }
 
     @JsonProperty(MAINREPOSITORY)
-    public String getMainRepository(){
+    public String getMainRepository() {
         return mainRepository;
     }
 
-    public void setMainRepository(String mainRepo){
+    public void setMainRepository(String mainRepo) {
         this.mainRepository = mainRepo;
     }
-
 
     @JsonProperty(DROPBOX)
     public String getDropboxAuthToken() {
@@ -132,7 +126,4 @@ public class User implements Serializable {
     public String toString() {
         return name;
     }
-
-
-
 }
