@@ -66,8 +66,7 @@ public class StorageController implements Initializable {
         storage = new StorageDropbox();
         fileObservableList = FXCollections.observableArrayList();
     }
-
-
+    
     @FXML
     private void folderDoubleClick(MouseEvent event) throws DbxException {
         if (fileList.getSelectionModel().getSelectedItems().size() > 1) {
