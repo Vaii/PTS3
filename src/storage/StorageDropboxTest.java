@@ -1,6 +1,6 @@
 package storage;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Created by wei-qiang on 31-May-17.

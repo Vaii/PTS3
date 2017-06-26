@@ -27,8 +27,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Iterator;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class LauncherController implements Initializable {
     @FXML
@@ -54,6 +52,7 @@ public class LauncherController implements Initializable {
     @FXML
     private Label lblGitText;
     @FXML
+
     private VBox vBoxFiles;
     @FXML
     private Label lblFile;
@@ -70,17 +69,17 @@ public class LauncherController implements Initializable {
 
     @FXML
     private void changeBackgroundColorOn(MouseEvent event) {
-        VBox c = (VBox) event.getSource();
+        VBox c = (VBox)event.getSource();
         Iterator var3 = c.getChildren().iterator();
 
-        while (var3.hasNext()) {
-            Node node = (Node) var3.next();
-            if (node instanceof Label) {
-                ((Label) node).setTextFill(Color.web("#c43235"));
-                if (((Label) node).getGraphic() != null) {
-                    Text file = (Text) ((Label) node).getGraphic();
+        while(var3.hasNext()) {
+            Node node = (Node)var3.next();
+            if(node instanceof Label) {
+                ((Label)node).setTextFill(Color.web("#c43235"));
+                if(((Label)node).getGraphic() != null) {
+                    Text file = (Text)((Label)node).getGraphic();
                     file.setFill(Color.web("#c43235"));
-                    ((Label) node).setGraphic(file);
+                    ((Label)node).setGraphic(file);
                 }
             }
         }
@@ -88,83 +87,90 @@ public class LauncherController implements Initializable {
 
     @FXML
     private void changeBackgroundColorOff(MouseEvent event) {
-        VBox c = (VBox) event.getSource();
-        Iterator var3 = c.getChildren().iterator();
-        while (var3.hasNext()) {
-            Node node = (Node) var3.next();
-            if (node instanceof Label) {
-                ((Label) node).setTextFill(Color.web("#ffffff"));
-                if (((Label) node).getGraphic() != null) {
-                    Text file = (Text) ((Label) node).getGraphic();
-                    file.setFill(Color.web("#ffffff"));
-                    ((Label) node).setGraphic(file);
+            VBox c = (VBox)event.getSource();
+            Iterator var3 = c.getChildren().iterator();
+            while(var3.hasNext()) {
+                Node node = (Node)var3.next();
+                if(node instanceof Label) {
+                    ((Label)node).setTextFill(Color.web("#ffffff"));
+                    if(((Label)node).getGraphic() != null) {
+                        Text file = (Text)((Label)node).getGraphic();
+                        file.setFill(Color.web("#ffffff"));
+                        ((Label)node).setGraphic(file);
+                    }
                 }
             }
-        }
     }
 
     @FXML
-    private void setActiveModule() {
+    private void setActiveModule(){
+
     }
+
 
     @FXML
     private void openChat() throws IOException {
-        if (this.mainBorderPane.getChildren().contains(this.mainBorderPane.lookup("#chatPanel"))) {
+        if(this.mainBorderPane.getChildren().contains(this.mainBorderPane.lookup("#chatPanel"))) {
             this.mainBorderPane.getChildren().remove(this.mainBorderPane.lookup("#chatPanel"));
         } else {
-            AnchorPane chat = (AnchorPane) FXMLLoader.load(this.getClass().getResource("/chat/ChatPanel.fxml"));
+            AnchorPane chat = (AnchorPane)FXMLLoader.load(this.getClass().getResource("/chat/ChatPanel.fxml"));
             AnchorPane.setRightAnchor(chat, Double.valueOf(0.0D));
             AnchorPane.setBottomAnchor(chat, Double.valueOf(0.0D));
             chat.setId("chatPanel");
             chat.setPrefWidth(295.0D);
             this.mainBorderPane.setRight(chat);
         }
+
     }
 
     @FXML
     private void loadScheduling() throws IOException {
-        ScrollPane schedule = (ScrollPane) FXMLLoader.load(this.getClass().getResource("/scheduling/SchedulingMain.fxml"));
+        ScrollPane schedule = (ScrollPane)FXMLLoader.load(this.getClass().getResource("/scheduling/SchedulingMain.fxml"));
         this.mainBorderPane.setCenter(schedule);
     }
 
     @FXML
     private void loadStorage() throws IOException {
-        if (Config.getUser().getDropboxAuthToken() == null || Config.getUser().getDropboxAuthToken() == "") {
-            Alert alert = new Alert(Alert.AlertType.ERROR, "No token found, set token in Settings", ButtonType.CLOSE);
-            alert.setHeaderText("Dropbox, Something went wrong.");
+        if(Config.getUser().getDropboxAuthToken() == null || Config.getUser().getDropboxAuthToken() == ""){
+            Alert alert = new Alert(Alert.AlertType.ERROR,"No token found, set token in Settings", ButtonType.CLOSE);
+            alert.setHeaderText("Something went wrong.");
             alert.showAndWait();
-        } else {
-            AnchorPane storage = (AnchorPane) FXMLLoader.load(this.getClass().getResource("/storage/Storage.fxml"));
+        }
+        else{
+            AnchorPane storage = (AnchorPane)FXMLLoader.load(this.getClass().getResource("/storage/Storage.fxml"));
             this.mainBorderPane.setCenter(storage);
         }
+
     }
 
     @FXML
     private void loadWhiteboard() throws IOException {
-        AnchorPane whiteboard = (AnchorPane) FXMLLoader.load(this.getClass().getResource("/whiteboard/Whiteboard.fxml"));
+        AnchorPane whiteboard = (AnchorPane)FXMLLoader.load(this.getClass().getResource("/whiteboard/Whiteboard.fxml"));
         this.mainBorderPane.setCenter(whiteboard);
     }
 
     @FXML
     private void loadGit() throws IOException {
-        if (Config.getUser().getGithubAuthToken() != null) {
-            AnchorPane git = (AnchorPane) FXMLLoader.load(this.getClass().getResource("/git/GitForm.fxml"));
+        if (Config.getUser().getGithubAuthToken() != null){
+            AnchorPane git = (AnchorPane)FXMLLoader.load(this.getClass().getResource("/git/GitForm.fxml"));
             this.mainBorderPane.setCenter(git);
-        } else {
-            Alert alert = new Alert(Alert.AlertType.ERROR, "No token found, set token in Settings", ButtonType.CLOSE);
+        }
+        else
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR,"No token found, set token in Settings", ButtonType.CLOSE);
             alert.setHeaderText("Github, Something went wrong.");
             alert.showAndWait();
         }
     }
 
     @FXML
-    private void loadSettings() throws IOException {
+    private void loadSettings() throws IOException{
         AnchorPane settings = new AnchorPane();
         VBox box = new VBox();
         settings.getChildren().add(box);
-        AnchorPane gitSettings = (AnchorPane) FXMLLoader.load(this.getClass().getResource("/git/GitSettings.fxml"));
+        AnchorPane gitSettings = (AnchorPane)FXMLLoader.load(this.getClass().getResource("/git/GitSettings.fxml"));
         box.getChildren().add(gitSettings);
-        AnchorPane storageSettings = (AnchorPane) FXMLLoader.load(this.getClass().getResource("/storage/StorageSettings.fxml"));
+        AnchorPane storageSettings = (AnchorPane)FXMLLoader.load(this.getClass().getResource("/storage/StorageSettings.fxml"));
         box.getChildren().add(storageSettings);
         this.mainBorderPane.setCenter(settings);
     }
@@ -192,7 +198,7 @@ public class LauncherController implements Initializable {
         try {
             whiteboardPane = (AnchorPane) FXMLLoader.load(this.getClass().getResource("/whiteboard/Whiteboard.fxml"));
         } catch (IOException e) {
-            Logger.getLogger(LauncherController.class.getName()).log(Level.SEVERE, null, e);
+            e.printStackTrace();
         }
         this.mainBorderPane.setCenter(whiteboardPane);
     }

@@ -20,7 +20,6 @@ public class Git {
     private List contents;
     private List<GitRepository> repositorys;
     private List commits;
-    private String mainRepository;
     private CommitService commitService;
     private ContentsService contentsService;
     private UserService userService;

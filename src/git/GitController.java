@@ -14,55 +14,70 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class GitController implements Initializable {
 
-    @FXML
-    private ListView<GitContents> lvContent;
-    @FXML
-    private ComboBox<GitRepository> cbRepositorys;
-    @FXML
-    private Label lblTitle;
-    @FXML
-    private Label lblInfo;
-    @FXML
-    private Button btnBack;
-    @FXML
-    private Button btnShowDir;
-    @FXML
-    private Button btnShowFiles;
-    @FXML
-    private Button btnShowCommits;
+    @FXML private ListView<GitContents> lvContent;
+    @FXML private ComboBox<GitRepository> cbRepositorys;
+    @FXML private Label lblPath;
+    @FXML private Label lblInfo;
+    @FXML private Button btnBack, btnShowDir, btnShowFiles, btnShowCommits;
+
 
     private String selectedDir;
+
+    public String getSelectedDir() {
+        return selectedDir;
+    }
+
+    public void setSelectedDir(String selectedDir) {
+        this.selectedDir = selectedDir;
+    }
+
+    public String getCurrentDirectory() {
+        return currentDirectory;
+    }
+
+    public void setCurrentDirectory(String currentDirectory) {
+        this.currentDirectory = currentDirectory;
+    }
+
+    public Git getGit() {
+        return git;
+    }
+
+    public void setGit(Git git) {
+        this.git = git;
+    }
+
     private String currentDirectory;
     private Git git;
 
-    public GitController() {
+    public GitController()
+    {
         git = new Git();
     }
 
     public void login() {
-        if (Config.getUser().getGithubAuthToken() == null) {
+        if (Config.getUser().getGithubAuthToken() == null){
             System.out.println("No token set.");
         }
         try {
-            if (Config.getUser().getGithubAuthToken().isEmpty()) {
+            if (Config.getUser().getGithubAuthToken().isEmpty()){
                 showErrorAlert("No token found, set token in Settings.");
-            } else {
+            }
+            else {
                 git.login();
                 showRepositorys();
                 setPrimaryRepo();
-                if (Config.getUser().getMainRepository() != null) {
+                if (Config.getUser().getMainRepository() != null){
                     showListViewInfo();
                 }
                 System.out.println("Logged in successfully");
             }
-        } catch (IOException ex) {
+        }
+        catch (IOException ex){
             showErrorAlert("No token found, set token in Settings");
-            Logger.getLogger(GitController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -77,24 +92,23 @@ public class GitController implements Initializable {
             git.getAllRepos();
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, ex.getMessage(), " Error", JOptionPane.ERROR_MESSAGE);
-            Logger.getLogger(GitController.class.getName()).log(Level.SEVERE, null, ex);
         }
-        cbRepositorys.getItems().removeAll(cbRepositorys.getItems());
-        cbRepositorys.getItems().setAll(git.getRepositorys());
+            cbRepositorys.getItems().removeAll(cbRepositorys.getItems());
+            cbRepositorys.getItems().setAll(git.getRepositorys());
     }
 
     public void showCommits() {
         lvContent.getItems().removeAll(lvContent.getItems());
-        try {
+        try{
             git.getCommits(cbRepositorys.getSelectionModel().getSelectedItem());
             lvContent.getItems().setAll(git.getCommits());
-        } catch (Exception ex) {
-            if (ex instanceof NullPointerException) {
+        }
+        catch (Exception ex){
+            if (ex instanceof NullPointerException){
                 showErrorAlert("No repository selected.");
-                Logger.getLogger(GitController.class.getName()).log(Level.SEVERE, null, ex);
-            } else {
+            }
+            else{
                 showErrorAlert("Error loading commits.");
-                Logger.getLogger(GitController.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         setLabels("Commit");
@@ -102,59 +116,64 @@ public class GitController implements Initializable {
 
     public void showContents() {
         this.lvContent.getItems().removeAll(lvContent.getItems());
-        try {
+        try{
             git.getContents(cbRepositorys.getSelectionModel().getSelectedItem());
-        } catch (Exception ex) {
+        }
+        catch (Exception ex){
             showErrorAlert("Loading contents error.");
-            Logger.getLogger(GitController.class.getName()).log(Level.SEVERE, null, ex);
         }
         this.lvContent.getItems().removeAll(lvContent.getItems());
         this.lvContent.getItems().setAll(git.getContents());
+        setLblPath(cbRepositorys.getSelectionModel().getSelectedItem().toString());
         setLabels("Files");
     }
 
-    public void showContents(String path) {
+    public void showContents(String path){
         this.lvContent.getItems().removeAll(lvContent.getItems());
-        try {
-            git.getContents(cbRepositorys.getSelectionModel().getSelectedItem(), path);
+        try{
+            git.getContents(cbRepositorys.getSelectionModel().getSelectedItem(),path);
             System.out.println("Entering: " + path);
-        } catch (Exception ex) {
+            setLblPath(cbRepositorys.getSelectionModel().getSelectedItem().toString() +"/" +path);
+        }
+        catch (Exception ex){
             showErrorAlert("Loading contents error.");
-            Logger.getLogger(GitController.class.getName()).log(Level.SEVERE, null, ex);
         }
         this.lvContent.getItems().removeAll(lvContent.getItems());
         this.lvContent.getItems().setAll(git.getContents());
     }
 
-    public void showListViewInfo() {
+    public void showListViewInfo(){
         showContents();
         setLabels("");
     }
 
-    public void returnDirectory() {
+    public void returnDirectory(){
         if (currentDirectory != null) {
             boolean hasParent = new File(currentDirectory).getParentFile() != null;
             if (hasParent) {
-                if (!selectedDir.equals(currentDirectory)) {
+                if (!selectedDir.equals(currentDirectory)){
                     System.out.println("Nope");
-                } else {
-                    showContents((currentDirectory.substring(0, currentDirectory.lastIndexOf('/'))));
-                    currentDirectory = selectedDir.substring(0, selectedDir.lastIndexOf('/'));
+                }
+                else {
+                    showContents((currentDirectory.substring(0,currentDirectory.lastIndexOf('/'))));
+                    currentDirectory = selectedDir.substring(0,selectedDir.lastIndexOf('/'));
                     selectedDir = currentDirectory;
                 }
             } else {
                 showContents();
                 System.out.println("Can't go further back.");
             }
-        } else {
+        }
+        else {
             System.out.println("Nope");
         }
     }
 
-    public void enterDirectory() {
-        if (lvContent.getItems().isEmpty()) {
+    public void enterDirectory(){
+        if (lvContent.getItems().isEmpty()){
             showErrorAlert("No selected item");
-        } else {
+        }
+        else {
             if (lvContent.getSelectionModel().getSelectedItem().getContents().getType().equals(RepositoryContents.TYPE_DIR)) {
                 showContents(lvContent.getSelectionModel().getSelectedItem().getContents().getPath());
                 currentDirectory = lvContent.getItems().get(0).getContents().getPath();
@@ -164,15 +183,16 @@ public class GitController implements Initializable {
     }
 
     public boolean setPrimaryRepo() {
-        if (Config.getUser().getMainRepository() != null) {
-            for (GitRepository repo : git.getRepositorys()) {
-                if (repo.getRepository().getName().equals(Config.getUser().getMainRepository())) {
+        if (Config.getUser().getMainRepository() != null){
+            for (GitRepository repo : git.getRepositorys()){
+                if (repo.getRepository().getName().equals(Config.getUser().getMainRepository())){
                     cbRepositorys.getSelectionModel().select(repo);
                     System.out.println("Proftaak repository:" + repo.getRepository().getName());
                     return true;
                 }
             }
-        } else {
+        }
+        else{
             showInfoAlert("No Proftaak repository selected, check settings");
         }
         return false;
@@ -183,7 +203,7 @@ public class GitController implements Initializable {
         lvContent.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                if (event.getClickCount() == 2) {
+                if (event.getClickCount() == 2){
                     if (lvContent.getSelectionModel().getSelectedItem().getContents().getType().equals(RepositoryContents.TYPE_DIR)) {
                         showContents(lvContent.getSelectionModel().getSelectedItem().getContents().getPath());
                         currentDirectory = lvContent.getItems().get(0).getContents().getPath();
@@ -192,15 +212,17 @@ public class GitController implements Initializable {
                 }
             }
         });
-        if (!(Config.getUser().getGithubAuthToken().isEmpty())) {
+        if (!(Config.getUser().getGithubAuthToken().isEmpty())){
             login();
-        } else {
+        }
+        else
+        {
             showErrorAlert("No token found, set token in Settings");
         }
     }
 
-    private void setLabels(String selectedContent) {
-        switch (selectedContent) {
+    private void setLabels(String selectedContent){
+        switch (selectedContent){
             case "Commit":
                 lblInfo.setText("Username - Message");
                 hideContentButtons(false);
@@ -215,20 +237,23 @@ public class GitController implements Initializable {
         }
     }
 
-    private void showErrorAlert(String text) {
-        Alert alert = new Alert(Alert.AlertType.ERROR, text, ButtonType.CLOSE);
+    private void showErrorAlert(String text){
+        Alert alert = new Alert(Alert.AlertType.ERROR,text,ButtonType.CLOSE);
         alert.setHeaderText("Something went wrong.");
         alert.showAndWait();
     }
-
-    private void showInfoAlert(String text) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION, text, ButtonType.CLOSE);
+    private void showInfoAlert(String text){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION,text,ButtonType.CLOSE);
         alert.setHeaderText("Information");
         alert.showAndWait();
     }
-
-    private void hideContentButtons(Boolean condition) {
+    private void hideContentButtons(Boolean condition){
         btnBack.setVisible(condition);
         btnShowDir.setVisible(condition);
+        lblPath.setVisible(condition);
+    }
+    private void setLblPath(String path)
+    {
+        lblPath.setText(path);
     }
 }
