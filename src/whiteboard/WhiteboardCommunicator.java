@@ -74,7 +74,7 @@ public class WhiteboardCommunicator extends UnicastRemoteObject implements IRemo
     public void connectToPublisher(){
         try{
             System.setProperty("java.rmi.server.hostname", String.valueOf(InetAddress.getLocalHost().getHostAddress()));
-            Registry registry = LocateRegistry.getRegistry("192.168.178.26", portNumber);
+            Registry registry = LocateRegistry.getRegistry("145.93.56.129", portNumber);
             publisherForDomain = (IRemotePublisherForDomain) registry.lookup(bindingName);
             publisherForListener = (IRemotePublisherForListener) registry.lookup(bindingName);
             connected = true;
